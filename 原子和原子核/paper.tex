@@ -1,0 +1,302 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+\usepackage{etoolbox}
+\usepackage{fontspec}
+\usepackage[margin=3cm,left=2cm,right=2cm,a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{nameref}
+\usepackage{pgfmath}
+\usepackage[T1]{fontenc}
+\usepackage{tcolorbox}
+\usepackage{thmtools}
+\usepackage{tikz}
+\usepackage[xcolor]{xcolor}
+\usepackage{xeCJK}
+\newCJKfontfamily[song]\mycustomfont{PingFangSaTuoTi.ttf}[Scale=1.6]
+% 修改 \section 后的行为，使其支持缩进
+\makeatletter
+\patchcmd{\@startsection}{\@afterindentfalse}{\@afterindenttrue}{}{}
+\makeatother
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
+\title{原子和原子核}
+\begin{document}
+\section{能量量子化}
+\subsection{黑体辐射}
+\indent 任何物体都能吸收光，并且可以将吸收的能量辐射出去。\\
+理想化模型黑体可以吸收所有波长的光，且辐射出的光的波长和温度有关。\\
+温度越高，辐射的能量越大，波长越短。
+
+\begin{tcolorbox}[colback=yellow!20, colframe=red!75!black, title=考试重点]
+    \begin{enumerate}
+        \item 能够判断图像中那条曲线是高温曲线，哪条是低温曲线。温度越高，图像越高，图像最高点越靠近短波。
+        \item 黑体辐射强度和两个因素有关，一个是温度，一个是波长。
+    \end{enumerate}
+\end{tcolorbox}
+
+\subsection{能量量子化}
+
+\indent 能量量子化是指能量不是连续的，而是分立的。能量量子化的概念最早由\textbf{\textcolor{red}{普朗克}}提出，他认为物质辐射能量不是连续的，而是以一定的单位进行辐射和吸收，存在一个最小的能量单位，称为“量子”。并且给出了任何能量子携带的能量和频率之间的关系：
+\begin{tcolorbox}[colback=green!10, colframe=green!75!black, sharp corners]
+    \begin{equation*}
+        E = h \nu
+    \end{equation*}
+\end{tcolorbox}
+其中$E$是能量，$h$是普朗克常数，$\nu$是频率。
+
+\section{光电效应}
+
+\indent 光电效应是指光照射到金属表面时，金属表面会发射出光电子的现象。
+光电效应实验有如下结论：
+\begin{tcolorbox}[colback=yellow!20, colframe=red!75!black, title=考试重点]
+    \begin{enumerate}
+        \item 存在截止频率$\nu_c$，当入射光的频率小于截止频率时，金属表面不会发射光电子。
+        \item 存在饱和电流，且随着入射光强度的增加，饱和电流也会增加。
+        \item 光电子的动能和入射光的强度无直接关系，入射光的强度越大，发射出的光电子的数量越多，但光电子的动能不变。
+        \item 光电子的动能和入射光的频率成正比，入射光的频率越高，光电子的动能越大。
+        \item 存在遏制电压$U_0$，当施加的电压大于等于$U_0$时，将没有光电子到达另一个极板产生光电流。
+        \item 光电效应是一个瞬时现象，光照射到金属，光电子立马产生，失去光的照射，立马停止产生光电子。
+    \end{enumerate}
+\end{tcolorbox}
+光电效应的公式为：
+\begin{tcolorbox}[colback=green!10, colframe=green!75!black, sharp corners]
+    \begin{equation*}
+        E_k = h \nu - W_0 = h \nu - h \nu_c
+    \end{equation*}
+\end{tcolorbox}
+其中$E_k$是光电子的最大初动能；$h$是普朗克常数，$\nu$是入射光的频率，$W_0$是金属的逸出功。
+由此遏制电压满足公式：
+\begin{tcolorbox}[colback=green!10, colframe=green!75!black, sharp corners]
+    \begin{equation*}
+        eU_0 = E_k = h \nu - W_0
+    \end{equation*}
+\end{tcolorbox}
+由此得到了光强的表达式：
+\begin{tcolorbox}[colback=green!10, colframe=green!75!black, sharp corners]
+    \begin{equation*}
+        I = N\varepsilon=Nh\nu
+    \end{equation*}
+\end{tcolorbox}
+其中$I$是光强，$N$是单位时间内发射的光电子数，$\varepsilon$是光电子的能量，$\nu$是入射光频率。
+\pagebreak
+\section{波粒二象性}
+\indent 根据质能方程$E=mc^2$，光子能量$E=hf$推出光的动量为：
+\begin{tcolorbox}[colback=green!10, colframe=green!75!black, sharp corners]
+    \begin{equation*}
+        p = mc = \frac{mc^2}c = \frac E c = \frac {h\nu} c = \frac{h}{\lambda}
+    \end{equation*}
+\end{tcolorbox}
+光既可以看作粒子，也可以看作波动。\textbf{\textcolor{red}{光的粒子性体现在光电效应中，光的波动性体现在干涉和衍射现象中}}。光具有波粒二象性。
+这个结论被德布罗意推广到物质粒子上，认为物质粒子也具有波动性。
+
+德布罗意波长公式为：
+\begin{tcolorbox}[colback=green!10, colframe=green!75!black, sharp corners]
+    \begin{equation*}
+        \lambda = \frac{h}{mv}
+    \end{equation*}
+\end{tcolorbox}
+其中$\lambda$是波长，$h$是普朗克常数，$m$是粒子质量，$v$是粒子速度。
+
+\section{玻尔原子模型}
+
+\indent 汤姆孙提出了原子是由电子和正电荷组成的“葡萄干布丁”模型。
+卢瑟福的$\alpha$粒子散射实验发现原子核的存在，但是无法解释原子的稳定性和不连续谱线现象。
+玻尔提出了量子化轨道模型。
+
+他认为：
+\begin{tcolorbox}[colback=yellow!20, colframe=red!75!black, title=考试重点]
+    \begin{enumerate}
+        \item 电子的轨道是量子化的，电子只能在某些特定的轨道上运动。并且在这些轨道上电子不会辐射能量。
+        \item 电子在特定的轨道上能量是量子化的，能量只能取某些特定的值，原子的电子处于这些轨道上时，原子称为处于定态
+        \item 在定态中，能量最小的状态称为基态，能量较高的状态称为激发态。
+        \item 原子的电子会在轨道之间移动，原子发生了跃迁。
+        \item 原子从能量高的状态跃迁到能量低的状态时，释放出能量，发射出光子，并且光子的能量一定等于跃迁前后的能量差。
+        \item 原子从能量低的状态跃迁到能量高的状态时，吸收光子。同样的只有吸收的光子的能量等于跃迁前后的能量差时，才能发生跃迁。
+        \item 原子从能量低的状态如果吸收的光子能量大于等于该状态的能量时，原子会发生电离现象，电子从原子中逸出。
+    \end{enumerate}
+\end{tcolorbox}
+跃迁公式可表示为：
+\begin{equation*}
+    E_n - E_m = h \nu
+\end{equation*}
+其中$E_n$是跃迁前的能量，$E_m$是跃迁后的能量，$h$是普朗克常数，$\nu$是光子的频率。
+\\
+下面图片是氢原子能级图，并且给大家算好了能级差。而且请记住，大量处于第三激发态（n=4）的原子跃迁会产生\textbf{\textcolor{red}{6种颜色的光，有3条紫外线，2条可见光，1条红外线}}。
+\begin{center}
+    \begin{tikzpicture}[scale=1]
+        \def\levels{
+            {1/-13.6},
+            {2/-3.4},
+            {3/-1.51},
+            {4/-0.85},
+            {5/-0.54},
+        }
+
+        % 绘制能级线和标签
+        \foreach \n/\e in \levels {
+            \ifx\n\empty\else
+                \draw[gray, thick] (0,\e) -- (6,\e); % 水平线
+                \node[left] at (0,\e) {$n=\n$};
+                \node[right] at (6,\e) {\e\ eV};
+            \fi
+        }
+
+        % 设置巴耳末系列 (n>=3 到 n=2)
+        % 手动列出起点：n/能量 和 终点：目标能级
+        \foreach \ni/\ei in {3/-1.51, 4/-0.85} {
+                \pgfmathsetmacro{\xf}{\ni/2 + 0.2*\ni}   % 箭头x位置，防重叠
+                \pgfmathsetmacro{\deltaE}{abs(\ei - (-3.4))}
+                \draw[->, blue, thick] (\xf,\ei) -- (\xf,-3.4);
+                \node[right, blue] at (\xf,{(\ei + (-3.4))/2}) {$\Delta E = \pgfmathprintnumber[fixed, precision=2]{\deltaE}\ \mathrm{eV}$};
+            }
+
+        % 也可以再加 n=3 系列（如 Lyman，跳到 n=1）
+        \foreach \ni/\ei in {2/-3.4, 3/-1.51, 4/-0.85} {
+                \pgfmathsetmacro{\xf}{\ni/2 - 0.3*\ni}   % 另一侧位置
+                \pgfmathsetmacro{\deltaE}{abs(\ei - (-13.6))}
+                \draw[->, red, thick] (\xf,\ei) -- (\xf,-13.6);
+                \node[right, red] at (\xf,{(\ei + (-13.6))/2}) {$\Delta E = \pgfmathprintnumber[fixed, precision=2]{\deltaE}\ \mathrm{eV}$};
+            }
+
+        \foreach \ni/\ei in {4/-0.85} {
+                \pgfmathsetmacro{\xf}{\ni/2 + 0.5*\ni}   % 另一侧位置
+                \pgfmathsetmacro{\deltaE}{abs(\ei - (-1.51))}
+                \draw[->, red, thick] (\xf,\ei) -- (\xf,-1.51);
+                \node[right, green] at (\xf,{(\ei + (-1.51))/2}) {$\Delta E = \pgfmathprintnumber[fixed, precision=2]{\deltaE}\ \mathrm{eV}$};
+            }
+
+    \end{tikzpicture}
+\end{center}
+
+在上面的例子中，
+\begin{itemize}
+    \item 如果原子处于基态吸收了$10.2eV$的光子，跃迁到$n=2$的激发态。
+    \item 如果原子不会吸收$10.1eV$的光子，因为没有对应的能量差。
+    \item 如果原子吸收了$13.6eV$的光子，原子会发生电离，电子脱离原子。
+    \item 如果处于第1激发态的原子跃迁到基态，发射出$10.2eV$的光子。
+\end{itemize}
+\pagebreak
+
+\section{原子核反应}
+\indent 三种射线：\\
+\begin{tcolorbox}[colback=yellow!20, colframe=red!75!black, title=考点]
+\begin{center}
+    \begin{tabular}{ccc}
+        \hline
+        射线类型       & 穿透力              & 电离空气能力 \\
+        \hline
+        $\alpha$射线 & 穿透力弱，被纸阻挡        & 很强     \\
+        $\beta$射线  & 穿透力中等，可穿铝板       & 较弱     \\
+        $\gamma$射线 & 穿透力强，需要几十厘米混凝土阻挡 & 很弱     \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{tcolorbox}
+
+\indent 常见核反应：\\
+
+\begin{tcolorbox}[colback=yellow!20, colframe=red!75!black, title=考点]
+\begin{center}
+    \begin{tabular}{ll}
+        \hline
+        反应类型          & 反应方程式                                                              \\
+        \hline
+        铀衰变           & \ce{^{238}_{92}U -> ^{234}_{90}Th + ^{4}_{2}He}                    \\
+        钍衰变           & \ce{^{234}_{90}Th -> ^{234}_{91}Pa + ^{0}_{-1}e}                   \\
+        卢瑟福发现质子       & \ce{^{14}_7N + ^{4}_{2}He -> ^{17}_{8}O + ^{1}_{0}H}               \\
+        查德威克发现中子      & \ce{^9_4Be + ^{4}_{2}He -> ^{12}_{6}C + ^1_0n}                     \\
+        居里夫妇发现正电子     & \ce{^{27}_{13}Al + ^{4}_{2}He -> ^{30}_{15}P + ^{0}_{1}e}          \\
+
+        核裂变           & \ce{^{235}_{92}U + ^1_0n -> ^{92}_{36}Kr + ^{141}_{56}Ba + 3^1_0n} \\
+        核聚变           & \ce{^{2}_{1}H + ^{3}_{1}H -> ^{4}_{2}He + ^1_0n}                   \\
+        $\beta$ 衰变原理  & \ce{^{1}_{0}n -> ^{1}_{1}H + ^{0}_{-1}e}                           \\
+        $\alpha$ 衰变原理 & \ce{2^1_1H + 2^1_0n -> ^4_2He}                                     \\
+        \hline
+    \end{tabular}
+\end{center}
+\end{tcolorbox}
+
+几乎所有使用$\alpha$粒子轰击其他原子核的都叫做人工转变，这是常见的人为研究手段。
+
+核裂变是指重核分裂成两个或多个轻核的过程，伴随释放出大量能量。
+
+核裂变反应中，通常会释放出中子，这些中子可以引发其他核的裂变反应，从而形成链式反应。
+
+当反应物的质量低于临界质量时，裂变反应无法持续进行。临界质量是指在核裂变反应中，能够维持链式反应的最小质量。
+
+重水反应堆使用重水作为中子慢化剂，重水的分子中含有氘（$^2_1H$），可以有效地减缓中子的速度，提高裂变反应的效率。轻水反应堆使用普通水作为中子慢化剂，轻水的分子中含有氢（$^1_1H$），也可以减缓中子的速度，但效率相对较低。
+
+核裂变通过消耗控制棒进行控制反应速率，控制棒是用来吸收中子的材料，通常由铅、镉或硼等元素制成。控制棒可以插入或拔出反应堆中，以调节中子的数量，从而控制裂变反应的速率。
+
+\section{半衰期}
+
+\indent 半衰期指的是放射性同位素衰变到一半所需的时间。
+有如下特征：
+\begin{tcolorbox}[colback=yellow!20, colframe=red!75!black, title=考试重点]
+    \begin{enumerate}
+        \item 半衰期很稳定，不会随外界条件的变化而变化，与原子参与的化学反应无关。
+        \item 半衰期是一个统计学的概念，不能用来预测单个原子核的衰变时间。任何包含个数的表述都是错的，可以使用质量。但是一定需要注明是元素的质量减少了一半，而不是一整个物质的质量减少了一半。因为衰变后的物质只是改变了元素没有消失。
+        \item 同一种放射性元素而言，半衰期是一个常数。不同的放射性元素，半衰期不同。
+    \end{enumerate}
+\end{tcolorbox}
+\section{质量亏损}
+
+\indent 因为原子核比组成的核子稳定，核子结合成原子核会放出能量，结合能是指核子结合成原子核时释放的能量。
+
+\textbf{\textcolor{red}{比结合能是结合能与核子数的比值，代表原子核的稳定性，比结合能越大的原子核越稳定}}。
+
+结合能与质量亏损有关，质量亏损是指原子核的质量小于组成它的核子质量之和。质量亏损可以用来计算结合能。
+
+这里可以用一个非常重要的知识来解释：
+\textbf{\textcolor{red}{中子的质量比质子大。}}
+
+然后举一个氦原子核的例子：
+\begin{equation*}
+    \Delta m = 2m_p + 2m_n - m_{He}
+\end{equation*}
+计算出质量亏损。
+\begin{equation*}
+    E = \Delta mc^2
+\end{equation*}
+得到放出能量。这个质量亏损放出的能量就是结合能。比结合能的计算也确实是用质量亏损得出的。
+
+再举我们前面的核聚变的例子来说明结合能的计算方法：
+\begin{equation*}
+    \ce{^{2}_{1}H + ^{3}_{1}H -> ^{4}_{2}He + ^{1}_{0}n}
+\end{equation*}
+\begin{equation*}
+    \Delta m = 2m_{D} + 3m_{T} - m_{He} - m_n
+\end{equation*}
+\textbf{\textcolor{red}{$D$代表氘，$T$代表氚，常见的氢是氕，只有一个质子}}。这是质量亏损算得核聚变放出能量。
+
+我们也可以用前后的元素的结合能计算核聚变放出能量。
+\begin{equation*}
+    \ce{^1_1p + ^1_0n -> ^1_1H + E_1}
+\end{equation*}
+\begin{equation*}
+    \ce{^1_1p + 2^1_0n -> ^2_1H + E_2}
+\end{equation*}
+\begin{equation*}
+    \ce{2^1_1p + 2^1_0n -> ^4_2He + E_3}
+\end{equation*}
+将上面的方程式进行组合可以得到：
+\begin{equation*}
+    \ce{^1_1p + ^1_0n + ^1_1p + 2^1_0n -> 2^1_1p + 2^1_0n - E_1 - E_2 + E_3 + ^1_0n}
+\end{equation*}
+也就是
+\begin{equation*}
+    E=E_3-E_1-E_2
+\end{equation*}
+
+于是总结为：
+\begin{tcolorbox}[colback=yellow!20, colframe=red!75!black, title=考试重点]
+质量亏损使用反应前的质量和减去反应后的质量
+
+结合能使用反应后的结合能和减去反应前的结合能。
+\end{tcolorbox}
+\end{document}

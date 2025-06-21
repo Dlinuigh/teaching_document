@@ -1,0 +1,255 @@
+\documentclass{../cheatsheet}
+\begin{document}
+\title{高二下 期中复习 Cheatsheet}
+\rowcolors{2}{white}{blue!10}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 机械振动}} \\
+	回复力      & $F=-kx$ \\
+	简谐振动方程   & $x(t)=A\sin(\omega t+\varphi_0)$ \\
+	弹簧振子周期   & $T=2\pi\sqrt{\frac{m}{k}}$\\
+	单摆回复力    & $F=-\frac {mg}{l} x$ \\
+	单摆周期     & $T=2\pi\sqrt{\frac{l}{g}}$ \\
+	水平弹簧振子能量 & $E=\frac{1}{2}kx^2+\frac{1}{2}mv^2=\frac12kA^2$ \\
+\end{tabularx}
+\textbf{注意}
+\begin{itemize}
+	\item 弹力和弹性势能相对于弹簧原长，振幅相对于平衡位置。
+	\item 学会绘制弹簧长度图像，标出弹簧原长、平衡位置、振幅位置。
+	\item 分离位置一般是弹簧原长、平衡位置或者是振幅位置
+	\item 振幅只能影响系统能量，但是需要控制在允许范围内
+	\item 如何判断是不是简谐运动？
+	\begin{itemize}
+		\item [] 找出平衡位置（轨迹上合力为0的点）
+		\item [] 移动一段小位移，计算当前位移方向上合力
+		\item [] 判断是否存在$F=-kx$
+	\end{itemize}
+\end{itemize}
+
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 机械波}} \\
+	机械波方程    & $y=A\sin(\frac{2\pi}{\lambda}x+\varphi_0)$ \\
+	任意点振动方程  & $y=A\sin(\omega (t-\frac{x}{v})+\varphi_0)$ \\
+	波速波长频率关系 & $v=\lambda f$  \\
+	\multicolumn{2}{l}{\textbf{两波源在该点起振方向相同}} \\
+	干涉加强条件   & $\Delta x=n\lambda$ \\
+	干涉减弱条件   & $\Delta x=n\lambda+\frac12\lambda$  \\
+	\multicolumn{2}{l}{\textbf{两波源在该点起振方向相反}} \\
+	干涉加强条件   & $\Delta x=n\lambda+\frac12\lambda$ \\
+	干涉减弱条件   & $\Delta x=n\lambda$ \\
+	衍射条件     & 尺寸越小、波长越大越明显，尺寸太小能量太少难以观察。\\
+	驻波条件     & 两列完全一样（频率，波长，振幅，相位）的机械波相向传播\\
+	多普勒效应    & 相互靠近，频率变高；相互远离，频率降低。\\
+\end{tabularx}
+\textbf{注意}
+\begin{itemize}
+	\item 学会使用平移法，或者找到波传播过程的对应点
+	\item 波速与介质性质有关，频率与振动源性质有关
+	\item 同侧法，振动方向和波传播方向在波形同一侧
+	\item 判断加强减弱必须要掌握的方法：双曲线法。
+	\begin{itemize}
+		\item [] 波源之间距离$S_1S_2>k\lambda$解出$k$，$k=0$为中垂线，$k=1$说明有一对加强双曲线
+		\item [] $S_1S_2>k\lambda+\frac12\lambda$解出$k$，$k=0$说明有一对减弱双曲线，以此类推。
+		\item [] $S_1S_2=k\lambda$有解说明波源连线以外直线上全是加强点，否则不存在。\item [] $S_1S_2=k\lambda+\frac12\lambda$有解说明波源连线以外直线上全是减弱点，否则不存在。
+	\end{itemize}
+	\item 受迫振动，频率与振动源频率相同
+	\item 共振，频率与固有频率相同，振幅最大
+\end{itemize}
+
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 物理光学}} \\
+	光程 & $L=ns$ ，也就是光进入介质可以认为路程变长，速度不变\\
+	\multicolumn{2}{l}{\textbf{双缝干涉}}\\
+	相邻明/暗条纹间距 & $\Delta x=\frac ld \lambda$\\
+	\multicolumn{2}{l}{\textbf{薄膜干涉}}\\
+	增透膜 & $d=\frac14\lambda=\frac{\lambda_0}{4n}$，$n$为折射率，$\lambda_0$为空气中波长\\
+	增反膜 & $d=\frac12\lambda=\frac{\lambda_0}{2n}$，$\lambda$表示介质中波长\\
+	\multicolumn{2}{l}{\textbf{劈尖干涉}}\\
+	相邻亮/暗条纹间距 & $\Delta x=\frac {\lambda_0}{2n\tan\theta}$\\
+	条纹与反射面平整 & 凹陷的反射面，条纹偏向更狭窄的边缘\\
+	&突起，条纹偏向更宽的夹层边缘\\
+	\multicolumn{2}{l}{\textbf{衍射}}\\
+	单缝衍射 & 中央亮纹最宽最亮，条纹间距不等，缝越窄，波长越长，中央亮纹越宽\\
+	圆孔衍射 & 圆形的单缝衍射，中央亮斑最大最亮，其余类似上面\\
+	圆盘衍射 & 中间亮点，有一圈最宽暗纹。条纹间距从疏变密\\
+\end{tabularx}
+\textbf{注意}
+\begin{itemize}
+	\item 双缝实验中央亮纹是两波源到该点的光程相等的点，通过这个条件判断中央亮纹的移动再的出条纹移动情况。
+	\item 劈尖干涉需要选择任意一条亮纹或暗纹，计算该亮纹的波程差将在哪个位置重新出现。
+	\item 平面镜形成一个虚像，可以认为存在一个等效的物体和光源
+	\item 薄膜干涉发生在空气中
+	\item 光的波源路程计算需要使用光程，每一段的光程相加等于总光程
+	\item 光经过折射反射都会进行分流
+	\item 入射角越大，反射光线强度越高
+	\item 入射角越大，折射光线强度越低
+	\item 双缝干涉实验，在任何一个孔放置玻璃片，会使得条纹向该方向移动
+	\item 滤光片的作用是获得单色光，控制光源频率
+	\item 洛埃德镜，平面镜会形成一个虚像，从而形成双缝结构
+\end{itemize}
+
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 几何光学}} \\
+	反射定律  & $\theta_{\text{入射角}}=\theta_{\text{出射角}}$，光线在同一平面，法线两侧\\
+	波速与折射率 & $v=\frac cn$\\
+	折射定律  & $\frac{\sin\theta_{\text{入}}}{\sin\theta_{\text{出}}}=\frac{n_{\text{出}}}{n_{\text{入}}}=\frac{v_{\text{入}}}{v_{\text{出}}}$\\
+	全反射定律 & $\sin C=\frac1n$，入射角大于$C$时，折射光线认为垂直法线射出\\
+	折射定律实验误差分析 & $d_{\text{玻璃砖}}>d_{\text{画的线}}$ 折射率偏大\\
+	紫光红光 & $n_{\text{紫光}}>n_{\text{红光}}$,$v_{\text{紫光}}<v_{\text{红光}}$\\
+\end{tabularx}
+\textbf{注意}
+\begin{itemize}
+	\item 光传播不改变频率
+	\item 光路可逆性
+	\item 紫光频率大于红光
+	\item 折射只是光线垂直于发现射出，并且能量很小，并不是真正意义上完全消失了
+	\item 光纤需要极容易发生全反射，那么内层的折射率希望远大于外层折射率，入射角与光纤方向夹角越小越好
+	\item 球形的法线是半径
+	\item 彩虹中，虹在水滴内反射1次，霓反射2次，虹是外红内紫，霓是内紫外红
+	\item 棱镜色散，因为白光是混合光，不同颜色光的折射率不同，折射角不同
+	\item 肥皂泡是干涉现象，严格说没有发生色散，只是同一位置不同颜色的光出现了不同的加强减弱情况
+	\item 偏振是光沿一个方向振动，偏振片方向相同或相反时传播不受干扰，垂直几乎无法传播。
+	\item 反射光就是天然的偏振光
+	\item 激光就是许多高强度的相干光源，相干性良好使得光线可以进行加强
+	\item 真空的折射率最小，为1
+	\item 延长入射光线与折射光线的夹角是偏角，折射率越大，偏角越大
+\end{itemize}
+
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 热学}} \\
+	\multicolumn{2}{l}{\textbf{热学基础概念}}\\
+	分子平均动能 & $E=\frac{3}{2}kT$，$k$为玻尔兹曼常数，别管是多少:) \\
+	分子平均速率 & $v=\sqrt{\frac{3kT}{m}}$，$m$为分子质量，不同分子平均速率一般不同 \\
+	气体分子速率分布曲线特点 & 高温更矮，低温集中分布于低速区，高温广泛分布在高速到低速区\\
+	同种物质同样条件下内能 & 固体 < 液体 < 气体 \\
+	热力学温标 & $T=273+t_{\text{摄氏度}}$ \\
+	竖直液柱压强 & $p_{\text{下}}-p_{\text{上}}=\rho gh$\\
+	竖直活塞压强 & $p_{\text{下}}-p_{\text{上}}=\frac MSg$\\
+	竖直液柱加速度向下 & $p_{\text{下}}-p_{\text{上}}=\rho g(h-a)$\\
+	竖直活塞加速度向下 & $p_{\text{下}}-p_{\text{上}}=\frac {M}S(g-a)$\\
+	\multicolumn{2}{l}{\textbf{气体状态方程}}\\
+	玻意耳定律   & $pV=C$ \\
+	查理定律    & $p=CT$  \\
+	盖-吕萨克定律 & $V=CT$ \\
+	理想气体状态方程 & $pV=nRT$，$n$为气体物质的量 \\
+	等容变化量方程 & $\frac {\Delta p}{\Delta T} = \frac pT$\\
+	等压变化量方程 & $\frac {\Delta V}{\Delta T} = \frac V{T}$\\
+	\multicolumn{2}{l}{\textbf{热力学定律}}\\
+	热力学第一定律 & $\Delta U=Q+W$ \\
+	内能与温度关系 & $U=\frac{3}{2}nRT$ ，$n$是物质的量，$T$是温度。\\
+	等容过程 & $W=0$\\
+	等压过程 & $W=p\Delta V$\\
+	等温过程 & $\Delta U=0$\\
+	绝热过程 & $Q=0$\\
+	\multicolumn{2}{l}{\textbf{热力学第二定律两大表述}}\\
+	开尔文表述 & 热量不可能全部用于做功，而不引起其他变化\\
+	克劳修斯表述 & 热量不可能自发地从低温物体传热到高温物体\\
+	热力学第三定律 & 绝对零度无法达到\\
+	能量守恒定律 & 能量的总量是不变的，能源在减少\\
+\end{tabularx}
+\textbf{注意}
+\begin{itemize}
+	\item 分子的体积一般情况下无法用于计算，除非给定分子的密度
+	\item 固体分子和液体分子认为紧密排列，可以使用分子体积计算物质体积
+	\item 固体和液体的压强来源于重力
+	\item 气体的压强来源于分子间的碰撞，所以物质的运动不改变气体压强
+	\item 物质的摩尔质量就是相对分子质量，单位是g/mol
+	\item 分子斥力和引力随距离增大而减小
+	\item 分子间作用力在$r_0$位置等于0，请记住图像多绘制几遍
+	\item 温度与撞击力成正比，温度越高，分子运动越快，撞击力越大
+	\item （从题目总结），压强降低，那么温度降低，碰撞次数不增，温度不降低，碰撞次数降低
+	\item 晶体有固定熔点，单晶体和液晶有各向异性
+	\item 液体的表面张力产生原因，表面层分子稀疏表现为引力
+	\item 液体浸润原因，附着层吸引力大于液体内部，（附着层密集表现为斥力）
+	\item 液体不浸润原因，附着层吸引力小于液体内部，（附着层稀疏表现为引力）
+	\item 液体在细管中上升和下降都是毛细现象，取决于管子和液体的材料性质
+	\item 如何判断液柱移动？
+	\begin{itemize}
+		\item[] $p_{\text{左}}>p_{\text{右}}$，液体有向右运动趋势
+		\item[] $\Delta p_{\text{左}}>\Delta p_{\text{右}}$，升温，液体有向右运动趋势，降温，液体有向左运动趋势
+	\end{itemize}
+	\item 理想气体分子间没有相互作用力，分子体积可以忽略不计
+	\item 理想气体的内能与温度成正比
+	\item 实际气体在高温低压下近似理想气体
+	\item 内能变化量判断两个方法：温度与内能成正比，热力学第一定律
+	\item 如何判断系统温度？只有一个方法，内能变化情况，注意热量无法判断温度
+	\item 热机效率小于1,因为热力学第二定律。
+	\item 第一类永动机无法实现，因为能量守恒定律
+	\item 第二类永动机无法实现，因为热力学第二定律
+\end{itemize}
+
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 原子与波粒二象性}} \\
+	\multicolumn{2}{l}{\textbf{光的粒子性}}\\
+	能量子携带能量 & $\varepsilon = h\nu$ \\
+	能量功率计算 & $P=\frac{E}{t}$ \\
+	光电效应方程  & $E_k=h\nu-W_0$ \\
+	逸出功计算式  & $W_0=h\nu_c$ \\
+	遏制电压    & $eU_c=E_k$  \\
+	光强定义    & $\Phi_{\text{光强}} = N\varepsilon = Nh\nu$ \\
+	\multicolumn{2}{l}{\textbf{原子结构}}\\
+	从高往低跃迁 & 释放光子能量等于能级差\\
+	从低往高跃迁 & 吸收光子能量等于能级差\\
+	电离时 & 吸收光子能量大于或等于当前能量\\
+	氢原子能量 & $E_n=-\frac{13.6}{n^2}$，$n$为能级数\\
+	一堆氢原子从$n=4$能级跃迁 & 放出6种频率光子，3条紫外线，2条可见光，1条红外线\\
+	\multicolumn{2}{l}{\textbf{波粒二象性}}\\
+	光的动量   & $p=\frac{h}{\lambda}$ \\
+	物质波波长 & $\lambda=\frac{h}{mv}$ \\
+\end{tabularx}
+\textbf{注意}
+\begin{itemize}
+	\item 几乎所有的微粒都可以视为能量子，使用公式计算能量
+	\item 逸出功是电子脱离金属束缚的最小功，只与金属有关
+	\item 光电效应是光子使金属原子电离，一般而言一个光子产生一个电子
+	\item 光电流方向是从负极到正极，$K\to A$
+	\item 增强光强，一定会增强光电流，饱和电流与光子数目成正比
+	\item 最大初动能只与光子频率和金属逸出功有关
+	\item 由于只能计算出最大初动能，实际是还有很多电子的初动能小于最大初动能
+	\item 从低能级开始到高能级，总能量增大，动能减小，电场势能增大
+	\item 光照射原子，如果能够放出光子，必存在频率等于吸收光的频率的光子
+\end{itemize}
+
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 原子核}} \\
+	衰变射线电离能力 & $\alpha > \beta > \gamma$  \\
+	衰变射线贯穿能力 & $\alpha(\text{难穿纸张}) < \beta(\text{穿透铝板}) < \gamma(\text{穿透铅板})$\\
+	\multicolumn{2}{l}{\textbf{常见核反应}}\\
+	发现质子     & $\ce{^4_2He + ^{14}_7N \to ^1_1H + ^{17}_8O}$ \\
+	发现中子    & $\ce{^4_2He + ^{9}_4Be \to ^1_0n + ^{12}_6C}$ \\
+	发现正电子 & $\ce{^4_2He + ^{27}_{13}Al \to ^{30}_{15}P + ^1_0n}$ \\
+	&$\ce{^{30}_{15}P \to ^{30}_{14}Si + ^0_1e}$ \\
+	核裂变   & $\ce{^{235}_{92}U + ^{1}_0n \to ^{92}_36Kr + ^{141}_56Ba + 3 ^1_0n}$ \\
+	核聚变   & $\ce{^{2}_1H + ^{3}_1H \to ^4_2He + ^{1}_0n}$ \\
+	$\alpha$衰变 & $\ce{^{238}_92U\to ^{234}_90Th + ^{4}_2He}$ \\
+	$\beta$衰变本质 & $\ce{^1_0n \to ^1_1p + e}$ \\
+	$\alpha$衰变本质 & $ \ce{2^1_1p + 2^1_0n \to ^4_2He}$ \\
+	结合能 & $\ce{2p + 2n\to ^4_2He + E_{\text{结合能}}}$\\
+	比结合能 & $\frac{E_{\text{结合能}}}{A}$，$A$为核子数，（质子数加中子数）\\
+	质量亏损与能量 & $\Delta E = \Delta mc^2$ \\
+	\multicolumn{2}{l}{\textbf{反应放能计算}} \\
+	质量亏损角度 & $\Delta E = (\varSigma m_{\text{反应前}}-\varSigma m_{\text{反应后}})c^2$ \\
+	结合能角度 & $\Delta E = \varSigma E_{\text{反应后}}-\varSigma E_{\text{反应前}}$，注意核子没有结合能，直接忽略\\
+\end{tabularx}
+\textbf{注意}
+\begin{itemize}
+	\item 半衰期很稳定，与外界环境和化学状态无关
+	\item 半衰期是统计规律。个数都是错的，比如100个$\ce{^238_92U}$；质量是对的，比如100g$\ce{^238_92U}$；100g物质变成50g物质是错的，因为衰变会留下其他的元素在物质里面
+	\item 一般而言，所有有$\alpha$参与的反应都是人工核反应
+	\item 核裂变和核聚变都属于核反应
+	\item 核裂变是重核分裂成轻核，核聚变是轻核结合成重核
+	\item 核裂变和核聚变都属于放热反应
+	\item $\alpha$衰变是原子核放出$\alpha$粒子，$\beta$衰变是原子核放出$\beta$粒子
+	\item $\alpha$衰变是原子核放出两个质子和两个中子，$\beta$衰变是中子转化为质子并放出一个电子
+	\item $\alpha$衰变和$\beta$衰变都属于放热反应
+	\item 比结合能越大，原子和越稳定。
+	\item 反应生成比结合能更大的物质，一般情况下都是放能反应。
+\end{itemize}
+\end{document}

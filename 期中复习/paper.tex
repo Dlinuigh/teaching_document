@@ -1,0 +1,157 @@
+\documentclass{../lesson}
+\begin{document}
+\section{机械振动}
+\subsection{概念公式}
+高中物理中，平衡包含两种：力学平衡和热力学平衡。
+\begin{itemize}
+\item 力学平衡一般发生在物体静止或匀速直线运动的状态下，\underline{物体所受的合力为零}。特别的，在高中阶段，\colorbox{red}{缓慢变化、缓慢移动都是认为是受力平衡的}。
+\item 热力学平衡指热力学系统的状态参量（压强、温度、体积）保持不变。
+\end{itemize}
+平衡的状态有以下几种：
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|p{5cm}|p{5cm}|}
+		\hline
+		\textbf{状态} & \textbf{定义}            & \textbf{示例}         \\
+		\hline
+		稳定平衡        & 物体在平衡位置附近受到的力使其回到平衡位置。 & 不倒翁，漂浮的物体。          \\
+		\hline
+		不稳定平衡       & 物体在平衡位置附近受到的力使其远离平衡位置。 & 立鸡蛋。                \\
+		\hline
+		随遇平衡        & 物体受到外力可以在新位置平衡。        & 悬浮的物体，在液体中任何位置都能平衡。 \\
+		\hline
+	\end{tabular}
+\end{table}
+偏离平衡位置后,物体受到的\colorbox{red}{合力}。对于简谐振动来说，回复力会让物体回到平衡位置。一般的\[F_\text{回复力}=F_{\text{位移方向上合力}}=-kx\]，$k$为弹性系数，$x$为\colorbox{red}{平衡位置指向物体的位移}。
+\theorem{简谐振动方程}{vibration equation}{
+	其中$A$为振幅，$\omega$为角频率，$\varphi$为初相位。
+}
+弹簧振子的振动周期为\[T = 2\pi\sqrt{\frac{m}{k}}\]，其中$m$为物体的质量，$k$为弹簧常数。
+\theorem{单摆的振动周期}{pendulum vibration period}{单摆的振动周期为\[T = 2\pi\sqrt{\frac{L}{g}}\]，其中$L$为摆长，$g$为重力加速度。}
+\theorem{水平弹簧振子的能量}{spring energy}{水平弹簧振子的能量为\[E = \frac{1}{2}kx^2+\frac12mv^2=\frac12kA^2\]，其中$k$为弹簧常数，$x$为位移。}
+\theorem{竖直情况重力势能处理}{vertical gravity}{只有一个问题：重力势能的零势能面选在哪里？\colorbox{red}{一般选择在平衡位置处，有时也可选在弹簧的原长位置}。}
+\theorem{竖直弹簧振子的能量}{vertical spring energy}{竖直弹簧振子的能量为\[E = \frac{1}{2}kx^2 + mgh+\frac12mv^2\]，其中$k$为弹簧常数，$x$为位移，$m$为物体的质量，$h$为高度。}
+\theorem{单摆的能量}{pendulum energy}{单摆的能量为\[E = \frac{1}{2}mv^2 + mgh\]，其中$m$为物体的质量，$v$为速度，$h$为高度。}
+一般而言，判定方法为：
+\begin{enumerate}
+	\item 找出平衡位置，也就是物体在运动轨迹方向上合力为0的点。
+	\item 让物体按照运动轨迹移动一段小位移，求出此时沿位移方向的合力，也就是回复力。
+	\item 计算回复力与位移的关系，验证其成正比的性质。
+\end{enumerate}
+包含弹簧振子的运动问题处理：
+\begin{enumerate}
+	\item 学会绘制弹簧长度图像。
+	\item 最高点和最低点关于平衡位置对称。
+	\item 记住\colorbox{red}{弹力和势能需要从原长位置计算}。
+	\item 记住\colorbox{red}{伸缩量需要从平衡位置计算}。
+	\item 极限情况：分离位置一般是平衡位置，力最值一般是最远端，比如静摩擦力。
+\end{enumerate}
+\subsection{典型例题}
+\section{机械波}
+\subsection{概念公式}
+纵波是指波动方向与振动方向相同的波，比如声波；横波是指波动方向与振动方向垂直的波，比如电磁波。
+波长是指波的一个完整周期所占的空间长度，通常用希腊字母$\lambda$表示。频率是指单位时间内波动的次数，通常用希腊字母$f$表示。波速是指波在单位时间内传播的距离，通常用$v$表示。它们之间的关系为\[v = f \cdot \lambda\]。
+\theorem{波动方程}{wave equation}{波动方程为\[y(x,t) = A \sin(kx - \omega t + \varphi_0)\]，其中$A$为振幅，$k$为波数，$\omega$为角频率，$\varphi_0$为初相位。波数是指单位长度内波的个数，通常用希腊字母$k$表示。它们之间的关系为\[k = \frac{2\pi}{\lambda}\]。}
+波的叠加原理是指当两列或多列波相遇时，它们在空间中的位移相加，形成新的波动。你知道是怎么叠加的吗？设想有两列波$A$和$B$，那么叠加就是在相遇的任何一个点满足：$y=y_A+y_B$，其中$y_A$为A波在该点的位移。
+\theorem{波中任何点的振动方程}{vibration equation at any point in wave}{在波动中，任意一点的振动方程可以表示为\[y(x,t) = A \sin(\omega (t-\frac xv) + \varphi_0)\]。}
+波的干涉条件：两波源频率相同，波速相同（一般而言，在相同介质中，同种波的波速相同。）和相位差恒定。
+假设有两个相干波源（能够相互干涉的波源）A和B，那么在某一点两个波相遇，并且有方程：
+\[\left\{
+	\begin{array}{l}
+		y_A=A\sin(\omega t+\varphi_A) \\
+		y_B=A\sin(\omega t+\varphi_B) \\
+	\end{array}
+	\right.\]
+进行叠加得到：
+\[y=y_A+y_B=A\sin(\omega t+\varphi_A)+B\sin(\omega t+\varphi_B)\]
+拆开得到：
+\[y=Asin\omega t\cos\varphi_A+B\sin\omega t\cos\varphi_B+A\sin\varphi_A\cos\omega t+B\sin\varphi_B\cos\omega t\]
+\[y=sin\omega t(A\cos\varphi_A+B\cos\varphi_B)+\cos\omega t(A\sin\varphi_A+B\sin\varphi_B)\]
+利用三角函数的合成公式：$y=a\sin x+b\cos x$可以合成一个三角函数：$y=\sqrt{a^2+b^2}\sin(x+\varphi)$，其中$a=\sqrt{a^2+b^2}\cos\varphi$和$b=\sqrt{a^2+b^2}\sin\varphi$
+得到：
+\[y=\sqrt{A^2+B^2+2AB\cos(\varphi_A-\varphi_B)}\sin(\omega t + \varphi)\]
+其中$\varphi=\arctan\frac{B\sin\varphi_B+A\sin\varphi_A}{A\cos\varphi_A+B\cos\varphi_B}$
+如果使用上面的结论，并假设两个波源的起振方向相同（也就是相位差为$2k\pi$），有下面关于两波源到任意点的结论：
+\[\varphi_A=\varphi_0-\omega\frac {x_A}v,\varphi_B=\varphi_0-\omega\frac {x_B}v\]
+\[\varphi_B-\varphi_A=\omega\frac{x_A-x_B}{v}\Rightarrow\varphi_B-\varphi_A=\omega\frac{\Delta x}{v}\]
+如果$\Delta x=k\lambda$，有$\varphi_B-\varphi_A=2k\pi$，此时有$y=A+B$；如果$\Delta x=k\lambda+\frac12\lambda$，有$\varphi_B-\varphi_A=(2k+1)\pi$，此时有$y=A-B$。
+如此我们就得到了各大教辅上的结论：当两个波源起振方向相同时，波源到点的距离差为波长整数倍时，干涉波为增强；当波源到点的距离差为波长整数倍加上半波长时，干涉波为减弱。
+上面的推导过程，高中不要求掌握，但是推导过程用到的知识都是在高中范围以内的。
+强调干涉的增强与减弱条件：
+当两个波源同时到达某点开始振动时，如果两波源的起振方向相同（也就是相位差为$2k\pi$），有：波程差为$k\lambda$，干涉波为增强；波程差为$k\lambda+\frac12\lambda$，干涉波为减弱。而如果起振方向相反（也就是相位差为$(2k+1)\pi$），有：波程差为$k\lambda$，干涉波为减弱；波程差为$k\lambda+\frac12\lambda$，干涉波为增强。
+判断增强减弱的方法：
+\begin{itemize}
+	\item 计算两波源到干涉点的距离差，判断相位差。
+	\item 计算两波源到干涉点的时间差，判断相位差,（因为同种均匀介质中波速相同，时间差就是波程差。
+	\item 绘制同心等距圆方法，从波源开始计算波当前传播的最远距离，从该距离往内绘制以半波长为间隔的同心圆，波峰和波谷交替出现，波峰与波峰或波谷与波谷相遇的点是增强点。
+	\item 隆重介绍双曲线方法：计算得出波源间增强减弱双曲线的图像个数。
+\end{itemize}
+驻波是指在空间中某些点的振动幅度为零，而其他点的振动幅度不为零的波动。驻波的形成是由于两列相同频率、相同振幅、相反方向传播的波相遇而产生的。
+惠更斯原理是描述波的衍射现象的基本原理。惠更斯原理认为，波前上的每一个点都可以看作是一个新的波源，新的波源发出的波在空间中传播，形成新的波前。衍射现象随着障碍物或狭缝的尺寸的减小而增强；波长的增大也会增强衍射现象。
+波的衍射是指波在遇到障碍物或狭缝时，发生弯曲和扩散的现象。
+多普勒效应是指当波源和观察者之间的相对运动时，观察到的波的频率和波长发生变化的现象。相对靠近时，观察到的频率增大，波长减小；相对远离时，观察到的频率减小，波长增大。
+波的反射是指波在遇到障碍物时，发生反弹的现象。反射现象与波的波长、障碍物的性质有关。反射时波的相位会发生变化，反射波的相位与入射波的相位相差180度。其余参数都不变。
+\subsection{典型例题}
+\section{物理光学}
+\subsection{概念公式}
+\theorem{双缝干涉相邻亮、暗条纹间距公式}{double slit interference}{相邻亮、暗条纹间距公式为\[ \Delta y = \frac{L}{d}\lambda \]，其中$\Delta y$为条纹间距，$\lambda$为光波波长，$L$为屏幕到狭缝的距离，$d$为狭缝间距。}
+\theorem{薄膜干涉}{thin film interference}{薄膜干涉是指光波在薄膜表面反射和折射时，发生的干涉现象。}
+\theorem{劈尖干涉}{knife-edge interference}{劈尖干涉是指光波经过一个狭缝或劈尖时，产生的干涉现象。}
+\theorem{光的衍射}{light diffraction}{光的衍射是指光波在遇到障碍物或狭缝时，发生弯曲和扩散的现象。}
+\theorem{光的偏振}{light polarization}{光的偏振是指光波的振动方向发生变化的现象。}
+\subsection{典型例题}
+\section{几何光学}
+\subsection{概念公式}
+\theorem{反射定律}{reflection law}{反射定律是指光线在平面镜或曲面镜上反射时，入射角等于反射角。}
+\theorem{折射定律}{refraction law}{折射定律是指光线在不同介质中传播时，入射角和折射角之间的关系。}
+\theorem{全反射}{total reflection}{全反射是指光线在从光密介质进入光疏介质时，入射角大于临界角时，光线完全反射的现象。}
+\subsection{典型例题}
+\section{热学前置概念}
+\subsection{概念公式}
+\theorem{分子动理论}{molecular dynamics theory}{分子动理论是指物质的性质和行为可以用分子和原子的运动来解释的理论。}
+\theorem{热平衡}{thermal equilibrium}{热平衡是指两个或多个物体之间没有热量交换的状态。}
+\theorem{油膜法测分子直径实验}{oil}{油酸溶液在水面上形成的油膜的厚度为分子直径的平方。}
+\theorem{分子间作用力}{intermolecular force}{分子间作用力是指分子之间的相互作用力，包括引力和斥力。}
+\theorem{分子热运动}{molecular thermal motion}{分子热运动是指分子由于热能而产生的随机运动。}
+\theorem{分子平均动能}{average kinetic energy of molecules}{分子平均动能是指在一定温度下，分子所具有的平均动能。}
+\theorem{分子平均动能与温度关系}{average kinetic energy and temperature}{分子平均动能与温度之间的关系为\[E = \frac{3}{2}kT\]，其中$E$为分子平均动能，$k$为玻尔兹曼常数，$T$为温度。}
+\subsection{典型例题}
+\section{气体实验定律}
+\subsection{概念公式}
+\theorem{理想气体状态方程}{ideal gas state equation}{理想气体状态方程为\[PV = nRT\]，其中$P$为气体的压强，$V$为气体的体积，$n$为气体的物质的量，$R$为理想气体常数，$T$为气体的温度。}
+\theorem{波义尔定律}{Boyle's law}{波义尔定律是指在一定温度下，气体的压强与体积成反比。}
+\theorem{查理定律}{Charles's law}{查理定律是指在一定压强下，气体的体积与温度成正比。}
+\theorem{盖-吕萨克定律}{Gay-Lussac's law}{盖-吕萨克定律是指在一定体积下，气体的压强与温度成正比。}
+\subsection{典型例题}
+\section{热力学定律}
+\subsection{概念公式}
+\theorem{热力学第一定律}{first law of thermodynamics}{做功和热传递在改变物体内能上是等效的，也就是
+	\[\Delta U = Q - W\]，其中$\Delta U$为内能的变化，$Q$为热量，$W$为做功。}
+\theorem{热力学第二定律}{second law of thermodynamics}{热量总是自发地从高温物体传递到低温物体。热量不可能完全用于做功，而不引起其他变化。}
+\theorem{热力学第三定律}{third law of thermodynamics}{绝对零度无法达到。}
+\theorem{能量守恒定律}{law of conservation of energy}{能量守恒定律是指在一个孤立系统中，能量的总量保持不变。}
+\subsection{典型例题}
+\section{原子和波粒二象性}
+\subsection{概念公式}
+\theorem{黑体辐射}{black body radiation}{黑体辐射是指理想黑体在热平衡状态下所发出的电磁辐射。黑体辐射图像
+}
+\theorem{光电效应}{photoelectric effect}{光电效应是指光照射到金属表面时，金属表面会释放出电子的现象。
+	爱因斯坦光电效应方程
+	遏制电压
+	光强表达式
+}
+\theorem{康普顿散射}{Compton scattering}{康普顿散射是指高能光子与物质中的电子发生碰撞，导致光子能量和动量发生变化的现象。}
+\theorem{光子动量}{photon momentum}{光子动量是指光子所具有的动量，其大小与光子的频率成正比，通常用公式$p = \frac{h}{\lambda}$表示，其中$h$为普朗克常数，$\lambda$为光子的波长。}
+\theorem{物质波}{matter wave}{物质波是指物质粒子在运动过程中表现出的波动性质，通常用德布罗意波长公式$\lambda = \frac{h}{p}$表示，其中$h$为普朗克常数，$p$为粒子的动量。}
+\theorem{波粒二象性}{wave-particle duality}{波粒二象性是指微观粒子在不同实验条件下表现出波动性或粒子性的现象。}
+\subsection{典型例题}
+\section{原子核}
+\subsection{概念公式}
+\theorem{原子核的组成}{atomic nucleus composition}{原子核是由质子和中子组成的，质子和中子统称为核子。
+}
+\theorem{天然放射现象}{natural radiation phenomenon}{天然放射现象是指某些原子核在不受外界影响的情况下，自发地发生放射性衰变，释放出粒子或电磁辐射的现象。}
+\theorem{半衰期}{half-life}{半衰期是指放射性物质的活度或质量减少一半所需的时间。半衰期是放射性物质的一个重要特征，通常用符号$T_{1/2}$表示。}
+\theorem{结合能}{binding energy}{结合能是指将原子核分裂成单个核子所需的能量。结合能越大，原子核越稳定。结合能通常用符号$E_b$表示。}
+\theorem{质量亏损}{mass defect}{质量亏损是指原子核的质量与组成它的核子质量之和之间的差值。质量亏损通常用符号$\Delta m$表示。}
+\subsection{典型例题}
+\end{document}

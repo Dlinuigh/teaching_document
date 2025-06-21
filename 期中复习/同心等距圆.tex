@@ -1,0 +1,45 @@
+\documentclass{../tikz_figure}
+\begin{document}
+\begin{tikzpicture}
+
+    % 设置波源位置
+    \def\A{(-2,0)}
+    \def\B{(2,0)}
+
+    % 绘制波源点
+    \filldraw[black] \A circle (2pt) node[above] {A};
+    \filldraw[black] \B circle (2pt) node[above] {B};
+
+    % 波前的最大半径
+    \def\maxcount{7}    % 圆的数量
+    \def\interval{0.5}   % 间距
+
+    % 从波源A画同心圆
+    \foreach \i in {1,...,\maxcount} {
+            \pgfmathparse{\i*\interval}
+            \let\radius\pgfmathresult
+            \ifodd\i
+                \draw[blue] \A circle (\radius); % 实线 - 波峰
+            \else
+                \draw[blue,dashed] \A circle (\radius); % 虚线 - 波谷
+            \fi
+        }
+
+    % 从波源B画同心圆
+    \foreach \i in {1,...,\maxcount} {
+            \pgfmathparse{\i*\interval}
+            \let\radius\pgfmathresult
+            \ifodd\i
+                \draw[red] \B circle (\radius); % 实线 - 波峰
+            \else
+                \draw[red,dashed] \B circle (\radius); % 虚线 - 波谷
+            \fi
+        }
+
+    % 标注说明
+    \node at (0,4) {\textbf{干涉图样}};
+    \draw[dashed, black] (4,3.3) -- +(0.5,0) node[right]{波谷（虚线）};
+    \draw[black] (4,2.9) -- +(0.5,0) node[right]{波峰（实线）};
+
+\end{tikzpicture}
+\end{document}

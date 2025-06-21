@@ -1,0 +1,32 @@
+\documentclass{../tikz_figure}
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+
+    % 支架
+    \fill[pattern=north west lines] (-1.5,0) rectangle (1.5,0.2);
+    \draw[thick] (-1.5,0.2) -- (1.5,0.2);
+
+    % 三条参考线
+    \draw[dashed, gray] (-1.2,-1) -- (1.2,-1) node[right] {原长位置};
+    \draw[dashed, gray] (-1.2,-2.5) -- (1.2,-2.5) node[right] {平衡位置};
+    \draw[dashed, gray] (-1.2,-3.5) -- (1.2,-3.5) node[right] {最大拉伸位置};
+
+    % 弹簧
+    \draw[
+        thick,
+        decorate,
+        decoration={
+                coil,
+                aspect=0.3,
+                segment length=3mm,
+                amplitude=2mm,
+                pre length=3mm,
+                post length=3mm
+            }
+    ] (0,0.2) -- (0,-2.5);
+
+    % 小球
+    \filldraw[fill=blue!30, draw=black] (0,-2.5) circle (0.3cm);
+
+\end{tikzpicture}
+\end{document}
