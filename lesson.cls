@@ -15,6 +15,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{mathtools}
 \RequirePackage{nameref}
+\RequirePackage{wrapfig}
 
 \RequirePackage[T1]{fontenc}
 \RequirePackage[most]{tcolorbox}
@@ -22,17 +23,31 @@
 \RequirePackage{titlesec}
 \RequirePackage{xcolor}
 \RequirePackage{xeCJK}
+\RequirePackage{soul}
 
-\setmainfont{Liberation Serif}
-\setsansfont{Liberation Sans}
-\setmonofont{Source Code Pro}
-\setCJKmainfont{FandolSong}
-\setCJKsansfont{FandolHei}
-\setCJKmonofont{Source Code Pro}
-\newCJKfontfamily[song]\songfont{FandolSong}
-\newCJKfontfamily[hei]\heifont{FandolHei}
-\newCJKfontfamily[kai]\kaifont{FandolKai}
-\newCJKfontfamily[fs]\fsfont{FandolFang}
+% \setmainfont{Liberation Serif}
+% \setsansfont{Liberation Sans}
+% \setmonofont{Source Code Pro}
+% \setCJKmainfont{FandolSong}
+% \setCJKsansfont{FandolHei}
+% \setCJKmonofont{Source Code Pro}
+% \newCJKfontfamily[song]\songfont{FandolSong}
+% \newCJKfontfamily[hei]\heifont{FandolHei}
+% \newCJKfontfamily[kai]\kaifont{FandolKai}
+% \newCJKfontfamily[fs]\fsfont{FandolFang}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+
+
 
 \titleformat{\section}{\normalfont\CJKfamily{song}\Large\bfseries}{\thesection}{1em}{}
 
@@ -103,7 +118,7 @@
 }
 
 % 定义一个彩色定理环境（带编号）
-\newtcbtheorem[number within=section]{mytheorem}{定理}
+\newtcbtheorem[number within=section]{mytheorem}{概念}
 {colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries}{th}
 
 \newcommand{\theorem}[3]{
@@ -121,6 +136,79 @@
     \begin{mydefinition}{#1}{#2}
     #3
     \end{mydefinition}
+}
+
+\newtcolorbox{conceptbox}[2][]{
+  colback=white,           % 内容区无背景色
+  colframe=cyan!60!black,  % 边框为蓝绿色
+  boxrule=0.7pt,           % 细边框
+  sharp corners,
+  enhanced,
+  before skip=10pt, after skip=10pt,
+  title={\hspace{1em}\strut\textcolor{white}{\bfseries #2}\hspace{1em}},
+  fonttitle=\bfseries,
+  coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=2mm},
+  boxed title style={
+    enhanced,
+    size=small,
+    colframe=cyan!60!black,
+    top=0mm,
+    bottom=0mm,
+    left=4mm,
+    right=6mm,
+    arc=1mm,
+    boxrule=0pt,
+    halign=center,
+    interior style={
+      left color=cyan!80!blue,
+      right color=cyan!10!white,
+      middle color=cyan!40!white
+    }
+  },
+  #1
+}
+
+\newcommand{\concept}[2]{%
+    \begin{conceptbox}{#1}
+        #2
+    \end{conceptbox}
+}
+
+\newtcolorbox{noticebox}[1][]{
+  colback=orange!20,        % 内容区背景
+  colframe=red!80!black,    % 边框
+  boxrule=1pt,
+  sharp corners,
+  enhanced,
+  before skip=10pt, after skip=10pt,
+  title={\strut\textcolor{white}{\bfseries 注意}},
+  fonttitle=\bfseries,
+  coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=2mm},
+  boxed title style={
+    enhanced,
+    size=small,
+    colframe=red!80!black,
+    top=0mm,
+    bottom=0mm,
+    left=6mm,
+    right=6mm,
+    arc=1mm,
+    boxrule=0pt,
+    interior style={
+      left color=red!80!black,
+      right color=yellow!80!orange,
+      middle color=orange!80!yellow
+    }
+  },
+  #1
+}
+
+\newcommand{\notice}[1]{%
+    \begin{noticebox}
+        #1
+    \end{noticebox}
 }
 
 \endinput
