@@ -1,0 +1,100 @@
+\documentclass{../cheatsheet}
+\begin{document}
+\setlist[itemize]{left=0pt}
+% \title{磁场力 Cheatsheet}
+\rowcolors{2}{white}{blue!10}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 磁场和磁场力}} \\
+    磁场强度&$B=\frac F{Il}$\\
+    安培力&$F=Il\times B=BIl\sin\theta$\\
+    洛伦兹力&$F=qv\times B=qvB\sin\theta$\\
+\end{tabularx}
+\notice{
+    \begin{itemize}
+        \item 地磁场水平方向上从南指向北
+        \item 竖直方向北半球有向下的分量，南半球有向上的分量
+        \item 磁场真实存在的特殊物质，磁感线是人为创造虚拟的
+        \item 磁感线在磁体外部从N极指向S极，在磁体内部从S极指向N极
+        \item 小磁针N极受力方向为磁场方向
+        \item 安培定则，右手握住导线，大拇指指向电流方向，此时四指环绕方向为磁场方向
+        \item 右手螺旋定则，右手握住螺线管，四指环绕方向为电流方向，大拇指指向磁体内部磁场方向
+    \end{itemize}
+}
+\notice{
+    \begin{itemize}
+        \item 同向电流导线相互吸引，反向电流导线相互排斥
+        \item 左手定则，四指伸直指向电流方向，磁感线穿过掌心，大拇指指向方向为安培力方向
+        \item 安培力方向与电流方向和磁场方向都垂直，电流方向和磁场方向垂直时，安培力最大
+    \end{itemize}
+}
+\notice{
+    \begin{itemize}
+        \item 左手定则，四指指向正电荷移动方向与负电荷移动反方向
+        \item 洛伦兹力方向与速度方向和磁场方向都垂直，速度方向和磁场方向垂直时，洛伦兹力最大
+        \item 洛伦兹力不能影响电荷的速度大小，只能改变电荷的运动方向
+        \item 洛伦兹力可以通过影响正压力的方式影响滑动摩擦力，进而影响速度
+        \item 沿电流方向速度引起的洛伦兹力的分力是安培力的微观本质
+        \item 洛伦兹力的分力可以做功，影响物体的能量分配
+    \end{itemize}
+}
+
+\notice{
+    \begin{itemize}
+        \item 直线性边界，进入夹角等于离开夹角，速度的偏转角度为$2\theta$
+        \item 速度的偏转角就是圆周运动的圆心角
+        \item 两个对称进入磁场的粒子，从同一点对称离开磁场
+        \item 圆形磁场沿半径进入磁场，沿半径离开磁场
+        \item 平抛运动中，离开极板区域的最小速度为$v_0=\sqrt{al}$，并且此时夹角为$45^{\circ}$
+    \end{itemize}
+}
+
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 带电粒子的运动}} \\
+    洛伦兹力做向心力&$qvB=m\frac{v^2}{R}=m\omega^2R=mv\omega$\\
+    半径&$R=\frac{mv}{qB}$\\
+    周期&$T=\frac{2\pi m}{qB}$\\
+    角速度&$\omega=\frac{qB}{m}$\\
+    运动时间&$t=\frac{\theta m}{qB}=\frac{\theta R}{v}$\\
+    加速电场进入磁场半径&$R=\frac1B\sqrt{\frac{2mU}{q}}$\\
+    \multicolumn{2}{l}{\textbf{平抛运动}}\\
+    水平位移&$l=v_0t$\\
+    竖直位移&$y=\frac{1}{2}at^2$\\
+    加速度&$a=\frac{qE}{m}=\frac{qU}{md}$\\
+    竖直速度&$v_y=at$\\
+    &$v_y^2=2ay$\\
+    夹角&$\tan\theta=\frac{v_y}{v_0}=\frac{2y}{l}$\\
+    &$v=\frac{v_0}{\cos\theta}$\\
+
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{XX}
+	\rowcolor{blue!30}
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 电磁应用}} \\
+    速度选择器&$qE=qvB$\\
+    质谱仪&$R=\frac1B\sqrt{\frac{2mU}{q}}$\\
+    霍尔电压&$U=\frac1{nq}\frac{IB}{d}$\\
+    \multicolumn{2}{l}{\textbf{回旋加速器}}\\
+    最大速度&$v_{max}=\frac{qBR}{m}$\\
+    最大动能&$E_{kmax}=\frac{q^2B^2R^2}{2m}$\\
+    电场周期&$T=\frac{2\pi m}{qB}$\\
+    加速次数&$n=\frac{qB^2R^2}{2mU}$\\
+    加速总时间&$t=\frac{\pi BR^2}{2U}$\\
+\end{tabularx}
+\notice{
+    \begin{itemize}
+        \item 速度选择器提高精度可以增加板长、减小板间距
+        \item 速度选择器只能从一个方向进入
+        \item 速度选择器无法分辨电性
+        \item 质谱仪根据不同的比荷得到不同的半径
+        \item 质谱仪，比荷越大半径越小；比荷越小，半径越大
+        \item 霍尔电压，载流子的电性直接影响电压的正负极
+        \item 回旋加速器，电场加速时间忽略不计
+        \item 回旋加速器，加速总时间和粒子的比荷无关
+        \item 回旋加速器加速不同比荷的粒子需要调整电压的频率。
+    \end{itemize}
+}
+
+\end{document}

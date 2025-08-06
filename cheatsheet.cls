@@ -10,7 +10,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{colortbl}
 \RequirePackage{chemfig}
-\RequirePackage{mhchem}
+\RequirePackage[version=4]{mhchem}
 \RequirePackage{fancyhdr}
 \RequirePackage{graphicx}
 \RequirePackage{hhline}
@@ -25,17 +25,41 @@
 \RequirePackage[table]{xcolor}
 \RequirePackage{xeCJK}
 
+\RequirePackage[T1]{fontenc}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{thmtools}
+\RequirePackage{titlesec}
+\RequirePackage{xcolor}
+\RequirePackage{xeCJK}
+\RequirePackage{soul}
+\RequirePackage{enumitem}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\RequirePackage{caption}
 
-\setmainfont{Liberation Serif}
-\setsansfont{Liberation Sans}
-\setmonofont{Source Code Pro}
-\setCJKmainfont{FandolSong}
-\setCJKsansfont{FandolHei}
-\setCJKmonofont{Source Code Pro}
-\newCJKfontfamily[song]\songfont{FandolSong}
-\newCJKfontfamily[hei]\heifont{FandolHei}
-\newCJKfontfamily[kai]\kaifont{FandolKai}
-\newCJKfontfamily[fs]\fsfont{FandolFang}
+\usetikzlibrary{calc}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{angles,quotes}
+
+
+% \setmainfont{Liberation Serif}
+% \setsansfont{Liberation Sans}
+% \setmonofont{Source Code Pro}
+% \setCJKmainfont{FandolSong}
+% \setCJKsansfont{FandolHei}
+% \setCJKmonofont{Source Code Pro}
+% \newCJKfontfamily[song]\songfont{FandolSong}
+% \newCJKfontfamily[hei]\heifont{FandolHei}
+% \newCJKfontfamily[kai]\kaifont{FandolKai}
+% \newCJKfontfamily[fs]\fsfont{FandolFang}
 
 % Page layout
 \geometry{top=1in,bottom=1in,left=0.5in,right=0.5in}
@@ -70,4 +94,40 @@
 % End document in two-column mode
 \AtEndDocument{
     \end{multicols*}
+}
+
+\newtcolorbox{noticebox}[1][]{
+  colback=orange!20,        % 内容区背景
+  colframe=red!80!black,    % 边框
+  boxrule=1pt,
+  sharp corners,
+  enhanced,
+  before skip=10pt, after skip=10pt,
+  title={\strut\textcolor{white}{\bfseries 注意}},
+  fonttitle=\bfseries,
+  coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=2mm},
+  boxed title style={
+    enhanced,
+    size=small,
+    colframe=red!80!black,
+    top=0mm,
+    bottom=0mm,
+    left=6mm,
+    right=6mm,
+    arc=1mm,
+    boxrule=0pt,
+    interior style={
+      left color=red!80!black,
+      right color=yellow!80!orange,
+      middle color=orange!80!yellow
+    }
+  },
+  #1
+}
+
+\newcommand{\notice}[1]{%
+    \begin{noticebox}
+        #1
+    \end{noticebox}
 }

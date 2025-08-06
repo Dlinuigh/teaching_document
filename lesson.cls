@@ -42,10 +42,11 @@
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes}
 \usetikzlibrary{decorations}
-\usetikzlibrary{decorations}
 \usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{positioning}
+\usetikzlibrary{angles,quotes}
 
 
 
