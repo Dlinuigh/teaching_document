@@ -1,12 +1,12 @@
 \documentclass{../cheatsheet}
 \begin{document}
 \setlist[itemize]{left=0pt}
-\title{高二下 期中复习 Cheatsheet}
+\title{高二 Cheatsheet}
 \rowcolors{2}{white}{blue!10}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabularx}{\columnwidth}{XX}
 	\rowcolor{blue!30}
-	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 静电场}} \\
+	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 静电场（防止大家忘记）}} \\
     场强定义&$E=\frac Fq$\\
     电势定义&$\varphi = \frac Wq$\\
     电势差定义&$U_{AB}=\varphi_A-\varphi_B$\\
@@ -28,6 +28,9 @@
         \item 在匀强电场中，两点所在直线的场强均匀，可以通过$E^{'}=\frac Ud$求出。
     \end{itemize}
 }
+\begin{center}
+    \includegraphics{}
+\end{center}
 \begin{tabularx}{\columnwidth}{XX}
 	\rowcolor{blue!30}
 	\multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 电路基本元件}} \\
@@ -51,9 +54,18 @@
 \end{tabularx}
 \notice{
     \begin{itemize}
+        \item 恒压源的正极电势恒定比负极大$E$。
+        \item 恒流源干路电流恒定为$I$。（实际上两种电源就是按照上面的原则列欧姆定律方程）
         \item 沿电流方向电势降低
-        \item 电势降低量等于$RI$
-        \item 对电路中任意节点：$\Sigma I_{in}=\Sigma I_{out}$
+        \item 电势降低量$U=RI$
+        \item 对电路中任意节点：$\Sigma I_{in}=\Sigma I_{out}$（如果定义的电流没有流出或者没有流入，那么认为是0。）
+        \item 导线的内阻为0，所以导线可以任意长度变化，注意测电阻率时，电阻丝不认为是导线，而是纯电阻。
+        \item 理想电流表视为导线，理想电压表视为断路。
+        \item 电容器充满电或者稳定状态都视为断路，
+        \item 电容器充电过程视为电阻，
+        \item 电容器放电视为理想电源。
+        \item 断路应该被视为是一个无穷大的电阻接在断路的导线两端。
+        \item 任何部分电阻增大都会导致总电阻增大，反之亦然。（该方法可以快速判断总电阻）
     \end{itemize}
 }
 \begin{tabularx}{\columnwidth}{XX}
@@ -62,16 +74,35 @@
     电流表简易改装&$R=\frac{I_gR_g}{I_{\text{量程}}-I_g}\approx \frac{I_gR_g}{I_{\text{量程}}}$\\
     电压表简易改装&$R=\frac{U_{\text{量程}}}{I_g}-R_g$\\
     欧姆表改装&$E=i(r+R_g+R_{\Omega}+R_x)$\\
-    欧姆表量程刻度&$R_x=\frac{E}{i}-\frac{E}{I_g}=\frac{E}{I_g}\frac{I_g-i}{i}$\\
-    欧姆表中值电阻&$R_{\text{中值电阻}}=\frac{E}{I_g}=r+R_g+R_{\Omega}$\\
+    欧姆表量程刻度&$R_x=\frac{E}{i}-\frac{E}{I_g}=E\frac{I_g-i}{iIg}$\\
+    &$R_x=R_{\text{内}}(\frac{I_g}{i}-1)$\\
+    欧姆表中值电阻&$R_{\text{中值电阻}}=\frac{E}{I_g}=R_{\text{内}}$\\
 \end{tabularx}
-\notice{
-    \begin{itemize}
-        \item 改装电表的电路可以很复杂，掌握原理即可
-        \item 改装电流表是维持通过的最大电流，并使得干路电流为量程最大电流。
-        \item 改装电压表类似，通过表头的电流和电压都有对应值。
-        \item 一旦改装完成，可以得到一个新的内阻与满偏电流，称之为封装。
-    \end{itemize}
+\hint{
+    多用电表使用，首先进行机械调零，旋转机械调零螺丝让指针指到电流表的0刻度线。注意这个名字，机械调零螺丝，欧姆调零旋钮。\\
+    如果使用欧姆表测电阻，\\
+    1. 首先选择合适挡位\\
+    2. 进行欧姆调零，红黑表笔短接，\\
+    3. 旋转欧姆调零旋钮让指针指到电流表满偏位置（同时也是欧姆表0刻度线）。\\
+    每次换挡都需要进行欧姆调零。
+
+}
+\hint{
+    上面的改装原理可以解释为什么电流表和电压表表盘是均匀的，而欧姆表的表盘不均匀。\\
+    通过电流表改装的公式可以得到：
+    \[\frac{i}{I}=\frac{R}{R+R_g}\]
+    \[\frac{i_{\text{表头电流}}}{I_{\text{干路电流}}}=\frac{I_g}{I_{\text{满偏}}}\]
+    即，改装后的电流表，表头电流与干路电流成正比，那么可以利用表头读数计算干路电流，并且是线性的关系。\\
+
+
+    通过电压表改装的公式可以得到：
+    \[i=\frac{U_\text{总}}{R+R_g}\]
+    即总电压与表头电流成正比，那么可以利用表头读数计算总电压，并且是线性的关系。\\
+    
+    
+    通过欧姆表改装的公式可以得到：
+    \[i=\frac{E}{R_{\text{内}}+R_x}\]
+    即，表头电流与被测电阻成反比，表盘才会不均匀，并且电阻越大，电流变化幅度越小，左边的刻度偏角间隔就会越小。\\
 }
 \begin{tabularx}{\columnwidth}{XX}
 	\rowcolor{blue!30}
@@ -79,7 +110,7 @@
     电功率定义式&$P=UI$\\
     \multicolumn{2}{l}{\textbf{用电器功率}}\\
     纯电阻功率&$P=P_{\text{热}}=I^2R=\frac{U^2}{R}$\\
-    非纯电阻总功率&$P=UI=$\\
+    非纯电阻总功率&$P=UI$\\
     非纯电阻热功率&$P=I^2R$\\
     非纯电阻输出功率&$P=UI-I^2R$\\
     \multicolumn{2}{l}{\textbf{电源功率}}\\
@@ -88,7 +119,7 @@
     电源输出功率&$P=UI=(E-Ir)I=(\frac{E}{r}-I)Ir$\\
     包含纯电阻电源输出功率&$P=(\frac{E}{R+r})^2R=\frac{E^2}{R+\frac{r^2}{R}+2r}\le \frac{E^2}{4r}$\\
 \end{tabularx}
-\notice{
+\hint{
     \begin{itemize}
         \item 正常工作意味着用电器的全部物理量为额定值
         \item 电动机这样的非纯电阻元器件，不能正常工作，可以看作纯电阻。
@@ -151,7 +182,7 @@
         ]
         \addplot[green, thick, domain=0:2] {(x*x)*1)}; % E = 4, r = 4 为例
         \end{axis}
-    \end{tikzpicture}
+    \end{tikzpicture}\\
     \columnbreak
     \textbf{电源热功率与外电阻图像}\\
     \begin{tikzpicture}

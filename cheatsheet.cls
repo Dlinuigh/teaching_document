@@ -36,6 +36,7 @@
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \RequirePackage{caption}
+\RequirePackage{circuitikz}
 
 \usetikzlibrary{calc}
 \usetikzlibrary{fadings}
@@ -48,11 +49,13 @@
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{positioning}
 \usetikzlibrary{angles,quotes}
+\usetikzlibrary{circuits}
+\usetikzlibrary{circuits.ee.IEC}
 
 
-% \setmainfont{Liberation Serif}
-% \setsansfont{Liberation Sans}
-% \setmonofont{Source Code Pro}
+% \setmainfont{simsun}
+% \setsansfont{simhei}
+% \setmonofont{Cascadia Code}
 % \setCJKmainfont{FandolSong}
 % \setCJKsansfont{FandolHei}
 % \setCJKmonofont{Source Code Pro}
@@ -130,4 +133,40 @@
     \begin{noticebox}
         #1
     \end{noticebox}
+}
+
+\newtcolorbox{hintbox}[1][]{
+  colback=blue!10,        % 内容区背景
+  colframe=blue!80!black, % 边框
+  boxrule=1pt,
+  sharp corners,
+  enhanced,
+  before skip=10pt, after skip=10pt,
+  title={\strut\textcolor{white}{\bfseries 你知道吗？}},
+  fonttitle=\bfseries,
+  coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=2mm},
+  boxed title style={
+    enhanced,
+    size=small,
+    colframe=blue!80!black,
+    top=0mm,
+    bottom=0mm,
+    left=6mm,
+    right=6mm,
+    arc=1mm,
+    boxrule=0pt,
+    interior style={
+      left color=blue!80!black,
+      right color=cyan!80!blue,
+      middle color=cyan!80!blue
+    }
+  },
+  #1
+}
+
+\newcommand{\hint}[1]{%
+    \begin{hintbox}
+        #1
+    \end{hintbox}
 }
