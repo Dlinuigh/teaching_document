@@ -1,22 +1,38 @@
+% -------------------------------------------------------------
+% 格式使用说明
+% \theory{} % 考试重点框
+% \equations{} % 方程框
+% \definition{标题}{标签}{内容} % 定义环境
+% \concept{标题}{内容} % 概念框
+% \notice{内容} % 注意框
+% \hint{内容} % 提示框
+% -------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lesson}[2025/04/19 教案模板]
 \LoadClass{article}
 
-\RequirePackage{animate}
-\RequirePackage{amssymb}
-\RequirePackage{amsthm}
-\RequirePackage[version=4]{mhchem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package Imports
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[T1]{fontenc}
+\RequirePackage[a4paper,margin=1in]{geometry}
+\RequirePackage{amsmath}
+\RequirePackage{colortbl}
 \RequirePackage{chemfig}
-\RequirePackage{etoolbox}
+\RequirePackage[version=4]{mhchem}
 \RequirePackage{fancyhdr}
-\RequirePackage{fontspec}
-\RequirePackage[margin=3cm,left=2cm,right=2cm,a4paper]{geometry}
 \RequirePackage{graphicx}
-\RequirePackage{hyperref}
-\RequirePackage{mathtools}
-\RequirePackage{nameref}
-\RequirePackage{wrapfig}
-
+\RequirePackage{hhline}
+\RequirePackage{lastpage}
+\RequirePackage{multicol}
+\RequirePackage{parskip}
+\RequirePackage{seqsplit}
+\RequirePackage{setspace}
+\RequirePackage{tabularx}
+\RequirePackage{tabulary}
+\RequirePackage{titlesec}
+\RequirePackage[table]{xcolor}
+\RequirePackage{xeCJK}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{thmtools}
@@ -24,18 +40,14 @@
 \RequirePackage{xcolor}
 \RequirePackage{xeCJK}
 \RequirePackage{soul}
-
-% \setmainfont{Liberation Serif}
-% \setsansfont{Liberation Sans}
-% \setmonofont{Source Code Pro}
-% \setCJKmainfont{FandolSong}
-% \setCJKsansfont{FandolHei}
-% \setCJKmonofont{Source Code Pro}
-% \newCJKfontfamily[song]\songfont{FandolSong}
-% \newCJKfontfamily[hei]\heifont{FandolHei}
-% \newCJKfontfamily[kai]\kaifont{FandolKai}
-% \newCJKfontfamily[fs]\fsfont{FandolFang}
-
+\RequirePackage{enumitem}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\RequirePackage{caption}
+\RequirePackage{circuitikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tikz Librarys
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usetikzlibrary{calc}
 \usetikzlibrary{fadings}
 \usetikzlibrary{patterns}
@@ -47,13 +59,20 @@
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{positioning}
 \usetikzlibrary{angles,quotes}
-
-
-
+\usetikzlibrary{circuits}
+\usetikzlibrary{circuits.ee.IEC}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page Format Settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\section}{\normalfont\CJKfamily{song}\Large\bfseries}{\thesection}{1em}{}
-
 \titleformat{\subsection}{\normalfont\CJKfamily{fs}\large\bfseries}{\thesubsection}{1em}{}
-
+% 去掉默认的缩进设定
+\makeatletter
+\patchcmd{\@startsection}{\@afterindentfalse}{\@afterindenttrue}{}{}
+\makeatother
+% 设置段落缩进量和段间距
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
 % Define custom headers and footers
 \fancypagestyle{lessonstyle}{
     \fancyhf{}
@@ -61,16 +80,9 @@
     \fancyhead[R]{\thepage}
     \renewcommand{\headrulewidth}{0.4pt}
 }
-
-% 去掉默认的缩进设定
-\makeatletter
-\patchcmd{\@startsection}{\@afterindentfalse}{\@afterindenttrue}{}{}
-\makeatother
-
-% 设置段落缩进量和段间距
-\setlength{\parindent}{2em}
-\setlength{\parskip}{0.5em}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Environments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 考试重点样式
 \tcbset{
     theory/.style={
@@ -88,15 +100,13 @@
             bottom=1mm
         }
 }
-
-\newcommand{\theory}[1]{%
+\newcommand{\theory}[1]{
     \begin{tcolorbox}[theory]
         #1
     \end{tcolorbox}
 }
 
 % 定义一个方程环境
-
 \tcbset{
     equation/.style={
             colback=green!10,
@@ -109,7 +119,6 @@
             bottom=1mm
         }
 }
-
 \newcommand{\equations}[1]{%
     \begin{tcolorbox}[equation]
         \begin{equation*}
@@ -121,7 +130,6 @@
 % 定义一个彩色定理环境（带编号）
 \newtcbtheorem[number within=section]{mytheorem}{概念}
 {colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries}{th}
-
 \newcommand{\theorem}[3]{
     \begin{mytheorem}{#1}{#2}
         #3
@@ -129,16 +137,15 @@
 }
 
 % 可选：定义其他类型的定理
-
 \newtcbtheorem[number within=section]{mydefinition}{定义}
 {colback=green!5!white,colframe=green!75!black,fonttitle=\bfseries}{def}
-
 \newcommand{\definition}[3]{
     \begin{mydefinition}{#1}{#2}
     #3
     \end{mydefinition}
 }
 
+% 概念框样式
 \newtcolorbox{conceptbox}[2][]{
   colback=white,           % 内容区无背景色
   colframe=cyan!60!black,  % 边框为蓝绿色
@@ -169,13 +176,13 @@
   },
   #1
 }
-
 \newcommand{\concept}[2]{%
     \begin{conceptbox}{#1}
         #2
     \end{conceptbox}
 }
 
+% 注意框样式
 \newtcolorbox{noticebox}[1][]{
   colback=orange!20,        % 内容区背景
   colframe=red!80!black,    % 边框
@@ -205,11 +212,47 @@
   },
   #1
 }
-
 \newcommand{\notice}[1]{%
     \begin{noticebox}
         #1
     \end{noticebox}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hint Box Definition
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{hintbox}[1][]{
+  colback=blue!10,        % 内容区背景
+  colframe=blue!80!black, % 边框
+  boxrule=1pt,
+  sharp corners,
+  enhanced,
+  before skip=10pt, after skip=10pt,
+  title={\strut\textcolor{white}{\bfseries 你知道吗？}},
+  fonttitle=\bfseries,
+  coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=2mm},
+  boxed title style={
+    enhanced,
+    size=small,
+    colframe=blue!80!black,
+    top=0mm,
+    bottom=0mm,
+    left=6mm,
+    right=6mm,
+    arc=1mm,
+    boxrule=0pt,
+    interior style={
+      left color=blue!80!black,
+      right color=cyan!80!blue,
+      middle color=cyan!80!blue
+    }
+  },
+  #1
+}
+\newcommand{\hint}[1]{%
+    \begin{hintbox}
+        #1
+    \end{hintbox}
+}
 \endinput
