@@ -146,11 +146,13 @@
 		\multicolumn{2}{l}{\textbf{电源功率}}\\
 		电源总功率&$P=EI=\frac{E^2}{R+r}\le \frac{E^2}{r}$\\
 		电源热功率&$P=I^2r=(\frac{E}{R+r})^2r\le \frac{E^2}{r}$\\
-		电源输出功率&$P=UI=(E-Ir)I=(\frac{E}{r}-I)Ir$\\
-		包含纯电阻电源输出功率&$P=(\frac{E}{R+r})^2R\le \frac{E^2}{4r}$\\
+		电源输出功率&$P=UI=(E-Ir)I=(\frac{E}{r}-I)Ir\le \frac{E^2}{4r}$\\
+		包含纯电阻电源输出功率&$P=(\frac{E}{R+r})^2R$\\
 		电源效率&$\eta=\frac{P_{\text{输出}}}{P_{\text{总}}}=\frac U E=\frac{R}{R+r}$\\
-	\end{tabularx}
-	\textit{上面的小于等于的意思是，存在一个极大值。}\\
+	\end{tabularx}\\
+	\notice{
+		上面的小于等于的意思是，存在一个极大值。
+	}
 	\hint{
 		\begin{itemize}
 			\item 正常工作意味着用电器的全部物理量为额定值
@@ -257,35 +259,45 @@
 		\\
 		电表量程选择时，可以略超量程，但是不能选择过大的量程，例如，电源电压为4V，选择3V的电压表是可行的。但是选择15V的电压表就不合适了。\\
 	}
+	
+	{
+		\centering
+		\textbf{电流表外接法与滑动变阻器分压式接法}\\
+		\begin{adjustbox}{scale=0.8,center}
+			\begin{circuitikz}[european resistors]
+				\tikzstyle{every node}=[font=\LARGE]
+				\draw (7.5,16.5) to[battery] (10,16.5);
+				\draw (7.5,17.75) to[potentiometer] (12.5,17.75);
+				\draw (10,16.5) to[normal open switch] (12.5,16.5);
+				\draw (10,18.25) to[short] (10,19);
+				\draw (10,19) to[short] (12.5,19);
+				\draw (12.5,16.5) to[short] (12.5,17.75);
+				\draw (12.5,19) to[short] (12.5,21.5);
+				\draw (7.5,21.5) to[rmeter, t=V] (12.5,21.5);
+				\draw (7.5,20.25) to[european resistor] (12.5,20.25);
+				\draw (7.5,16.5) to[rmeter, t=A] (7.5,21.5);
+			\end{circuitikz}
+		\end{adjustbox}
+	}\newpage
+	{
+		\centering
+		\textbf{电流表内接法与滑动变阻器限流式接法}\\
+		\begin{adjustbox}{scale=0.8,center}
+			\begin{circuitikz}[european resistors]
+				\tikzstyle{every node}=[font=\LARGE]
+				\draw (7.5,16.5) to[battery ] (10,16.5);
+				\draw (10,16.5) to[normal open switch] (11.25,16.5);
+				\draw (11.25,16.5) to[potentiometer] (13.75,16.5);
+				\draw (7.5,17.75) to[european resistor] (10,17.75);
+				\draw (10,17.75) to[rmeter, t=A] (12.5,17.75);
+				\draw (7.5,19) to[rmeter, t=V] (12.5,19);
+				\draw (7.5,16.5) to[short] (7.5,19);
+				\draw (12.5,17) to[short] (12.5,17.75);
+				\draw (12.5,17.75) to[short] (12.5,19);
+			\end{circuitikz}
+		\end{adjustbox}
+	}\\
 	\hint{
-		% \begin{figure}[!ht]
-		% \centering
-		% \resizebox{1\textwidth}{!}{%
-		\begin{circuitikz}[european resistors]
-		\tikzstyle{every node}=[font=\LARGE]
-		\draw (5,14.5) to[short] (5,15.75);
-		\draw (6.25,14.5) to[battery ] (7.5,14.5);
-		\draw (7.5,14.5) to[normal open switch] (8.75,14.5);
-		\draw (5,14.5) to[short] (6.25,14.5);
-		\draw (8.75,14.5) to[short] (10,14.5);
-		\draw (7.5,16.25) to[short] (7.5,17);
-		\draw (7.5,17) to[short] (10,17);
-		\draw (10,14.5) to[short] (10,15.75);
-		\draw (6.25,18.25) to[european resistor,l={ \LARGE $R_L$}] (8.75,18.25);
-		\draw (6.25,18.25) to[short] (5,18.25);
-		\draw (8.75,18.25) to[short] (10,18.25);
-		\draw (10,18.25) to[short] (10,17);
-		\draw (5,15.75) to[rmeter, t=A] (5,18.25);
-		\draw (5,18.25) to[short] (5,19.5);
-		\draw (5,19.5) to[short] (6.25,19.5);
-		\draw (8.75,19.5) to[short] (10,19.5);
-		\draw (10,19.5) to[short] (10,18.25);
-		\draw (6.25,19.5) to[rmeter, t=V] (8.75,19.5);
-		\draw (5,15.75) to[potentiometer] (10,15.75);
-		\end{circuitikz}
-	% 	}
-	% 	\label{fig:my_label}
-	% \end{figure}
 		滑动变阻器选取按照如下原则，依次进行。
 		\begin{itemize}
 			\item 要求大范围，电压或电流从0开始，测量用电器伏安特性曲线，分压式接法。
@@ -294,4 +306,5 @@
 			\item 需要节省能量，尽可能节约，限流式接法。
 		\end{itemize}
 	}
+
 \end{document}

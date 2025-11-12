@@ -36,7 +36,8 @@
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \RequirePackage{caption}
-\RequirePackage{circuitikz}
+\RequirePackage[siunitx, RPvoltages]{circuitikz}
+\RequirePackage{adjustbox}
 
 \usetikzlibrary{calc}
 \usetikzlibrary{fadings}
@@ -49,8 +50,9 @@
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{positioning}
 \usetikzlibrary{angles,quotes}
-\usetikzlibrary{circuits}
-\usetikzlibrary{circuits.ee.IEC}
+% \usetikzlibrary{circuits}
+% \usetikzlibrary{circuits.ee.IEC}
+
 
 
 % \setmainfont{simsun}
@@ -59,10 +61,10 @@
 % \setCJKmainfont{FandolSong}
 % \setCJKsansfont{FandolHei}
 % \setCJKmonofont{Source Code Pro}
-% \newCJKfontfamily[song]\songfont{FandolSong}
-% \newCJKfontfamily[hei]\heifont{FandolHei}
-% \newCJKfontfamily[kai]\kaifont{FandolKai}
-% \newCJKfontfamily[fs]\fsfont{FandolFang}
+\newCJKfontfamily[song]\songfont{FandolSong}
+\newCJKfontfamily[hei]\heifont{FandolHei}
+\newCJKfontfamily[kai]\kaifont{FandolKai}
+\newCJKfontfamily[fs]\fsfont{FandolFang}
 
 % Page layout
 \geometry{top=1in,bottom=1in,left=0.5in,right=0.5in}
