@@ -1,0 +1,74 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{xeCJK}
+\usepackage{pgfplots}
+\begin{document}
+\section{霍尔效应}
+磁场中通过电流会在电流的上下产生电压差，\textbf{电压差的正负与载流子的类型有关，正负电荷的电压相反，
+载流子的偏转方向与电流有关，与载流子正负无关。}\\
+相关公式，载流子偏转平衡方程$q\frac{U}{h}=qvB$，利用电流的微观表达式得到，霍尔电压表达式
+$U=\frac1{nq}\frac{BI}{d}$，$h$垂直于$B$，$d$平行于$B$。定义$\frac1{nq}$为霍尔系数。
+\section{磁流体发电机}
+磁流体发电机要利用稳定时的电压求电动势，\\
+相关公式，同样的载流子偏转平衡方程$q\frac{U}{d}=qvB$，和上面霍尔效应类似。如果有发电机
+内等离子体的电阻率，可以求出内阻$R=\rho \frac Sl$，其中，$S$为极板面积，$l$是极板间距。
+\section{电磁流量计}
+电磁流量计和上面的类似，利用流体内部的载流子通过平行极板产生电压。偏转平衡条件也不变，洛伦兹力等于电场力。\\
+\section{质谱仪}
+粒子通过电场加速进入磁场偏转，磁场中一般做半个圆周运动。\\
+相关公式，加速后速度$\frac12mv^2=qU$，求出速度$v=\frac{2qU}{m}$。然后磁场偏转半径公式
+$R=\frac{mv}{qB}=\frac1B\frac{2mU}{q}$，运动半圆那么粒子会因为半径有差别落在不同的位置。\\
+注意到上面的半径公式里面固定的磁场和电场，那么偏转的位置只与比荷有关，并且\textbf{比荷越大半径越小。}
+\section{回旋加速器}
+回旋加速器，电场加速，磁场偏转，通过偏转使得原本直线型加速电场进行不断“对折”缩减了加速器的空间。
+否则想要把电子加速到接近光速所需要的空间就不止现在了。\\
+使用D形盒装置，中间的部分是加速电场，粒子先进入电场加速，接着进入磁场偏转，偏转的时间为$t=frac{\pi m}{qB}$
+并且时间不会因为速度增加而改变。偏转后反向进入电场，那么如果电场不改变方向，粒子会做减速运动，所以最晚要在此时调整电场的方向，
+粒子进而电场二次加速，也就是重复了，加速——偏转这个过程。并且两次相邻加速开始时电场方向必须不同。\\
+一般会使用标准交流电，并且设置加速电场很短，缩短每次加速的时间。题目多数时候会忽略电场加速时间，那样考虑更方便。\\
+此时电场需要以$T=\frac{2\pi m}{qB}$为周期进行调整方向。最终粒子离开时半径可以认为是D形盒的半径，此时的加速速度可以求出
+$R=\frac{mv}{qB}$，如果需要动能的话有$E_k=\frac{q^2B^2R^2}{2m}$，也就是说，加速电场的电压不影响最终速度。\\
+\textbf{通过增大磁感应强度与D形盒的半径时增大加速速度的主要方法。}\\
+谈一下如果需要考虑电场加速时间时，周期会不会受影响，电场的加速时间会随着加速越来越小，找到了电压持续时间的合适的解，就可以使得交流电
+的频率固定。关于上面的周期结果如何得到的，这里给出一个图片解释：\\
+\begin{tikzpicture}
+\coordinate (orig) at (0,0);
+\draw[->] (0,0) -- (8,0) node[below] {$t$};
+\draw[->]  (0,-2) -- (0,2) node [left] {$U$};
+\draw (0,1.5) -- (1,1.5) node[below] {$t_1$};
+\draw[dashed] (1,1.5) -- (2.5,1.5) node [below] (v1) {$\frac{\pi m}{qB}$};
+\draw (2.5,-1.5) node (v2) {} -- (3.3,-1.5) node[below] {$t_2$};
+\draw[dashed] (3.3,-1.5) -- (4.8,-1.5) node [below] (v3) {$\frac{\pi m}{qB}$};
+\draw[dashed]  (v1) edge (v2);
+\draw (4.8,1.5) node (v2) {} -- (5.4,1.5) node[below] {$t_3$};
+\draw[dashed] (5.4,1.5) -- (6.9,1.5) node[below] {$\frac{\pi m}{qB}$};
+\draw[dashed]  (v2) edge (v3);
+\end{tikzpicture}\\
+这是粒子运动需要的电压图像，虚线是因为这段时间粒子在磁场中，电压并没有任何要求。实线电压
+是必须要满足的条件。\\
+\begin{tikzpicture}
+\coordinate (orig) at (0,0);
+\draw[->] (0,0) -- (6,0) node[below] {$t$};
+\draw[->]  (0,-2) -- (0,2) node [left] {$U$};
+\draw (0,1.5) -- (0.5,1.5) node[below] {$t_1$};
+\draw[dashed] (0.5,1.5) -- (2,1.5) node [below] (v1) {$\frac{\pi m}{qB}$};
+\draw (2,-1.5) node (v2) {} -- (2.4,-1.5) node[below] {$t_2$};
+\draw[dashed] (2.4,-1.5) -- (3.9,-1.5) node [below] (v3) {$\frac{\pi m}{qB}$};
+\draw[dashed]  (v1) edge (v2);
+\draw (3.9,1.5) node (v2) {} -- (4.2,1.5) node[below] {$t_3$};
+\draw[dashed] (4.2,1.5) -- (5.7,1.5) node[below] {$\frac{\pi m}{qB}$};
+\draw[dashed]  (v2) edge (v3);
+\coordinate (v4) at (0,1) {};
+\coordinate (v5) at (1.5,1) {};
+\coordinate (v6) at (1.5,-1) {};
+\coordinate (v7) at (3,-1) {};
+\coordinate (v8) at (3,1) {};
+\coordinate (v9) at (4.5,1) {};
+\draw[blue]  (v4) edge (v5);
+\draw[blue]  (v6) edge (v7);
+\draw[dashed]  (v5) edge (v6);
+\draw[dashed]  (v8) edge (v7);
+\draw[blue]  (v8) edge (v9);
+\end{tikzpicture}\\
+这是通过计算得到的一个交流电持续周期解，一共加速了三次，并且其实每一次加速时间缩短非常快，
+基本接近一个二次函数的减小速率，所以求解也不会很难。
+\end{document}
