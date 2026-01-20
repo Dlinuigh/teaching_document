@@ -1,0 +1,73 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{xeCJK}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{tikz}
+\begin{document}
+\section{传送带问题}
+\subsection*{水平传送带}
+\subsubsection*{同向运动}
+传送带速度为$v_0$，物体速度为$v$。\\
+\textbf{1. $v>v_0$}\\
+\begin{tikzpicture}
+\draw[->] (0,0) -- (6,0) node [below] {$t$};
+\draw[->] (0,0) node (v1) {} -- (0,5) node [right] {$v$};
+\draw [dashed, red] (0,2.5) -- (6,2.5) node[pos=0, left] {$v_0$};
+\draw (4,2.5) -- (1.5,2.5) -- (0,4) node [pos=1, left] {$v_1$};
+\end{tikzpicture}\\
+\textbf{2. $v<v_0$}\\
+\begin{tikzpicture}
+\draw[->] (0,0) -- (6,0) node [below] {$t$};
+\draw[->] (0,0) node (v1) {} -- (0,5) node [right] {$v$};
+\draw [dashed, red] (0,2.5) -- (6,2.5) node[pos=0, left] {$v_0$};
+\draw[blue] (0,0) -- (3,2.5) -- (6,2.5);
+\end{tikzpicture}
+\subsubsection*{反向运动}
+\begin{tikzpicture}
+\draw[->] (0,0) -- (6,0) node[below] {$t$};
+\draw[->] (0,-2) -- (0,2) node[left] {$v$};
+\draw[dashed, red] (0,1.5) -- (6,1.5) node[pos=0, left] {$v_0$};
+\draw (4.5,1.5) -- (3,1.5) -- (0,-1) node [left] {$v_1$};
+\end{tikzpicture}
+\subsection*{倾斜传送带}
+传送带速度为$v_0$，物体速度为$v$（如果有的话）。定义$a_1=g(\sin\theta+\mu\cos\theta)$，
+$a_2=g|\sin\theta-\mu\cos\theta|$。\\
+\subsubsection*{底部，传送带向上}
+\textbf{1. $\mu > \tan\theta$}\\
+物块有初速度，大于传送带速度，\\
+\begin{tikzpicture}
+\draw[->] (0,0) -- (6,0) node[below] {$t$};
+\draw[->] (0,0) -- (0,3) node[left] {$v$};
+\draw[dashed, red] (0,1.5) -- (6,1.5) node[pos=0, left] {$v_0$};
+\draw (4.5,1.5) -- (2.5,1.5) -- (0,2.5) node[pos=1, left] {$v_1$} node[pos=0, above, midway] {$a_1$};
+\end{tikzpicture}
+物块初速度小于传送带速度，\\
+\begin{tikzpicture}
+\draw[->] (0,0) -- (6,0) node[below] {$t$};
+\draw[->] (0,0) -- (0,3) node[left] {$v$};
+\draw[dashed, red] (0,1.5) -- (6,1.5) node[pos=0, left] {$v_0$};
+\draw (4.5,1.5) -- (2.5,1.5) -- (0,0.5) node[pos=1, left] {$v_1$} node[pos=0, above, midway] {$a_2$};
+\end{tikzpicture}
+\textbf{2. $\mu < \tan\theta$}\\
+物块必须要有初速度，\\
+
+\subsubsection*{顶部，传送带向下}
+\textbf{1. $\mu > \tan\theta$}\\
+物块有初速度，并且初速度大于传送带速度，\\
+物块初速度小于传送带速度，\\
+\textbf{2. $\mu < \tan\theta$}\\
+\section{板块问题}
+物体初速度定义为$v_1$，木板初速度定义为$v_2$，物体与木板之间摩擦因数定义为$\mu_1$，木板
+与地面之间摩擦因数定义为$\mu_2$，系统受到的外力定义为$F$。\\
+\subsection*{地面光滑}
+\textbf{1. 物体有初速度}\\
+\textbf{2. 木板有初速度}\\
+\textbf{3. 物体有外力}\\
+\textbf{4. 木板有外力}\\
+\subsection*{地面粗糙}
+\textbf{1. 物体有初速度}\\
+\textbf{2. 木板有初速度}\\
+\textbf{3. 物体有外力}\\
+\textbf{4. 木板有外力}\\
+\end{document}
