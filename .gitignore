@@ -7,3 +7,5 @@
 *.fls
 *.xdv
 *.fdb_latexmk
+*(busy)
+.DS_Store
