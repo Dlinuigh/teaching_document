@@ -1,0 +1,184 @@
+\documentclass{../cheatsheet}
+
+% 定义反三角函数命令
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+
+\begin{document}
+
+% 设置表格行高和隔行颜色
+% \renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{white}{blue!10}
+
+\section*{常用微积分公式速查}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 基本求导公式}} \\
+  \multicolumn{2}{l}{\textbf{幂函数求导}}\\
+  $\dfrac{d}{dx}(x^n)$ & $= n x^{n-1}$ \\
+  $\dfrac{d}{dx}(c)$ & $= 0 \quad (c \text{为常数})$ \\
+  $\dfrac{d}{dx}(\sqrt{x})$ & $= \dfrac{1}{2\sqrt{x}}$ \\
+  $\dfrac{d}{dx}\left(\dfrac{1}{x}\right)$ & $= -\dfrac{1}{x^2}$ \\
+  $\dfrac{d}{dx}\left(\dfrac{1}{x^n}\right)$ & $= -\dfrac{n}{x^{n+1}}$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{指数函数求导}}\\
+  $\dfrac{d}{dx}(e^x)$ & $= e^x$ \\
+  $\dfrac{d}{dx}(a^x)$ & $= a^x \ln a \quad (a > 0, a \neq 1)$ \\
+  $\dfrac{d}{dx}(e^{kx})$ & $= k e^{kx}$ \\
+  $\dfrac{d}{dx}(x e^x)$ & $= e^x(x+1)$ \\
+  $\dfrac{d}{dx}(x^n e^x)$ & $= e^x(x^n + n x^{n-1})$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{对数函数求导}}\\
+  $\dfrac{d}{dx}(\ln x)$ & $= \dfrac{1}{x}$ \\
+  $\dfrac{d}{dx}(\log_a x)$ & $= \dfrac{1}{x \ln a} \quad (a > 0, a \neq 1)$ \\
+  $\dfrac{d}{dx}(\ln|x|)$ & $= \dfrac{1}{x}$ \\
+  $\dfrac{d}{dx}(\ln(f(x)))$ & $= \dfrac{f'(x)}{f(x)}$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{三角函数求导}}\\
+  $\dfrac{d}{dx}(\sin x)$ & $= \cos x$ \\
+  $\dfrac{d}{dx}(\cos x)$ & $= -\sin x$ \\
+  $\dfrac{d}{dx}(\tan x)$ & $= \sec^2 x$ \\
+  $\dfrac{d}{dx}(\cot x)$ & $= -\csc^2 x$ \\
+  $\dfrac{d}{dx}(\sec x)$ & $= \sec x \tan x$ \\
+  $\dfrac{d}{dx}(\csc x)$ & $= -\csc x \cot x$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{反三角函数求导}}\\
+  $\dfrac{d}{dx}(\arcsin x)$ & $= \dfrac{1}{\sqrt{1-x^2}}$ \\
+  $\dfrac{d}{dx}(\arccos x)$ & $= -\dfrac{1}{\sqrt{1-x^2}}$ \\
+  $\dfrac{d}{dx}(\arctan x)$ & $= \dfrac{1}{1+x^2}$ \\
+  $\dfrac{d}{dx}(\arccot x)$ & $= -\dfrac{1}{1+x^2}$ \\
+  $\dfrac{d}{dx}(\arcsec x)$ & $= \dfrac{1}{|x|\sqrt{x^2-1}}$ \\
+  $\dfrac{d}{dx}(\arccsc x)$ & $= -\dfrac{1}{|x|\sqrt{x^2-1}}$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 基本积分公式}} \\
+  \multicolumn{2}{l}{\textbf{幂函数积分}}\\
+  $\int x^n dx$ & $= \dfrac{x^{n+1}}{n+1} + C \quad (n \neq -1)$ \\
+  $\int \dfrac{1}{x} dx$ & $= \ln|x| + C$ \\
+  $\int \sqrt{x} dx$ & $= \dfrac{2}{3}x^{3/2} + C$ \\
+  $\int \dfrac{1}{\sqrt{x}} dx$ & $= 2\sqrt{x} + C$ \\
+  $\int \dfrac{1}{x^2} dx$ & $= -\dfrac{1}{x} + C$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{指数函数积分}}\\
+  $\int e^x dx$ & $= e^x + C$ \\
+  $\int a^x dx$ & $= \dfrac{a^x}{\ln a} + C \quad (a > 0, a \neq 1)$ \\
+  $\int xe^{ax} dx$ & $= \dfrac{e^{ax}(ax-1)}{a^2} + C$ \\
+  $\int x^2 e^{ax} dx$ & $= e^{ax}\left(\dfrac{x^2}{a} - \dfrac{2x}{a^2} + \dfrac{2}{a^3}\right) + C$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{对数函数积分}}\\
+  $\int \ln x dx$ & $= x\ln x - x + C$ \\
+  $\int \log_a x dx$ & $= x\log_a x - \dfrac{x}{\ln a} + C$ \\
+  $\int x\ln x dx$ & $= \dfrac{x^2}{2}\ln x - \dfrac{x^2}{4} + C$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{三角函数积分}}\\
+  $\int \sin x dx$ & $= -\cos x + C$ \\
+  $\int \cos x dx$ & $= \sin x + C$ \\
+  $\int \tan x dx$ & $= -\ln|\cos x| + C$ \\
+  $\int \cot x dx$ & $= \ln|\sin x| + C$ \\
+  $\int \sec x dx$ & $= \ln|\sec x + \tan x| + C$ \\
+  $\int \csc x dx$ & $= \ln|\csc x - \cot x| + C$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{三角函数平方积分}}\\
+  $\int \sin^2 x dx$ & $= \dfrac{x}{2} - \dfrac{\sin 2x}{4} + C$ \\
+  $\int \cos^2 x dx$ & $= \dfrac{x}{2} + \dfrac{\sin 2x}{4} + C$ \\
+  $\int \tan^2 x dx$ & $= \tan x - x + C$ \\
+  $\int \cot^2 x dx$ & $= -\cot x - x + C$ \\
+  $\int \sec^2 x dx$ & $= \tan x + C$ \\
+  $\int \csc^2 x dx$ & $= -\cot x + C$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{反三角函数积分}}\\
+  $\int \dfrac{1}{\sqrt{1-x^2}} dx$ & $= \arcsin x + C = -\arccos x + C'$ \\
+  $\int \dfrac{1}{1+x^2} dx$ & $= \arctan x + C = -\arccot x + C'$ \\
+  $\int \dfrac{1}{|x|\sqrt{x^2-1}} dx$ & $= \arcsec|x| + C = -\arccsc|x| + C'$ \\
+  $\int \arcsin x dx$ & $= x\arcsin x + \sqrt{1-x^2} + C$ \\
+  $\int \arccos x dx$ & $= x\arccos x - \sqrt{1-x^2} + C$ \\
+  $\int \arctan x dx$ & $= x\arctan x - \dfrac{1}{2}\ln(1+x^2) + C$ \\
+  $\int \arccot x dx$ & $= x\arccot x + \dfrac{1}{2}\ln(1+x^2) + C$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{有理函数积分}}\\
+  $\int \dfrac{1}{x^2 + a^2} dx$ & $= \dfrac{1}{a}\arctan\dfrac{x}{a} + C \quad (a > 0)$ \\
+  $\int \dfrac{1}{x^2 - a^2} dx$ & $= \dfrac{1}{2a}\ln\left|\dfrac{x-a}{x+a}\right| + C$ \\
+  $\int \dfrac{1}{\sqrt{a^2 - x^2}} dx$ & $= \arcsin\dfrac{x}{a} + C \quad (a > 0)$ \\
+  $\int \dfrac{1}{\sqrt{x^2 \pm a^2}} dx$ & $= \ln\left|x + \sqrt{x^2 \pm a^2}\right| + C$ \\
+  $\int \sqrt{a^2 - x^2} dx$ & $= \dfrac{x}{2}\sqrt{a^2-x^2} + \dfrac{a^2}{2}\arcsin\dfrac{x}{a} + C$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{双曲函数积分}}\\
+  $\int \sinh x dx$ & $= \cosh x + C$ \\
+  $\int \cosh x dx$ & $= \sinh x + C$ \\
+  $\int \tanh x dx$ & $= \ln(\cosh x) + C$ \\
+  $\int \coth x dx$ & $= \ln|\sinh x| + C$ \\
+  $\int \dfrac{1}{\sqrt{x^2+1}} dx$ & $= \sinh^{-1} x + C = \ln(x+\sqrt{x^2+1}) + C$ \\
+  $\int \dfrac{1}{\sqrt{x^2-1}} dx$ & $= \cosh^{-1} x + C = \ln(x+\sqrt{x^2-1}) + C$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{重要微积分法则}}\\
+  \multicolumn{2}{l}{\textbf{乘积法则（求导）}} \\
+  $\dfrac{d}{dx}[f(x)g(x)]$ & $= f'(x)g(x) + f(x)g'(x)$ \\
+  \multicolumn{2}{l}{\textbf{商法则（求导）}} \\
+  $\dfrac{d}{dx}\left[\dfrac{f(x)}{g(x)}\right]$ & $= \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2} \quad (g(x) \neq 0)$ \\
+  \multicolumn{2}{l}{\textbf{链式法则（求导）}} \\
+  $\dfrac{d}{dx}[f(g(x))]$ & $= f'(g(x)) \cdot g'(x)$ \\
+  \multicolumn{2}{l}{\textbf{分部积分法（积分）}} \\
+  $\int u dv$ & $= uv - \int v du$ \\
+  \multicolumn{2}{l}{\textbf{换元积分法（积分）}} \\
+  $\int f(g(x))g'(x)dx$ & $= \int f(u)du \quad (u = g(x))$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{\textbf{三角换元积分法}}\\
+  $\sqrt{a^2-x^2}$ 代换 & $x = a\sin\theta$ \\
+  $\sqrt{a^2+x^2}$ 代换 & $x = a\tan\theta$ \\
+  $\sqrt{x^2-a^2}$ 代换 & $x = a\sec\theta$ \\
+\end{tabularx}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=0.3\hsize}X>{\hsize=0.7\hsize}X}
+  \rowcolor{red!30}
+  \multicolumn{2}{l}{\textbf{特殊函数积分（不能用初等函数表示）}}\\
+  $\int e^{-x^2} dx$ & $= \dfrac{\sqrt{\pi}}{2} \text{erf}(x) + C$ \\
+  $\int \dfrac{\sin x}{x} dx$ & $= \text{Si}(x) + C$ \\
+  $\int \dfrac{\cos x}{x} dx$ & $= \text{Ci}(x) + C$ \\
+  $\int \dfrac{e^x}{x} dx$ & $= \text{Ei}(x) + C$ \\
+  $\int \ln(\ln x) dx$ & $= x\ln(\ln x) - \text{li}(x) + C$ \\
+\end{tabularx}
+
+\end{document}

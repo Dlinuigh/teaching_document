@@ -53,18 +53,16 @@
 % \usetikzlibrary{circuits}
 % \usetikzlibrary{circuits.ee.IEC}
 
-
-
 % \setmainfont{simsun}
 % \setsansfont{simhei}
 % \setmonofont{Cascadia Code}
 % \setCJKmainfont{FandolSong}
 % \setCJKsansfont{FandolHei}
 % \setCJKmonofont{Source Code Pro}
-\newCJKfontfamily[song]\songfont{FandolSong}
-\newCJKfontfamily[hei]\heifont{FandolHei}
-\newCJKfontfamily[kai]\kaifont{FandolKai}
-\newCJKfontfamily[fs]\fsfont{FandolFang}
+% \newCJKfontfamily[song]\songfont{FandolSong}
+% \newCJKfontfamily[hei]\heifont{FandolHei}
+% \newCJKfontfamily[kai]\kaifont{FandolKai}
+% \newCJKfontfamily[fs]\fsfont{FandolFang}
 
 % Page layout
 \geometry{top=1in,bottom=1in,left=0.5in,right=0.5in}
@@ -93,12 +91,12 @@
 
 % Begin document in two-column mode
 \AtBeginDocument{
-    \begin{multicols*}{2}
-}
+  \begin{multicols*}{2}
+  }
 
-% End document in two-column mode
-\AtEndDocument{
-    \end{multicols*}
+  % End document in two-column mode
+  \AtEndDocument{
+  \end{multicols*}
 }
 
 \newtcolorbox{noticebox}[1][]{
@@ -132,9 +130,9 @@
 }
 
 \newcommand{\notice}[1]{%
-    \begin{noticebox}
-        #1
-    \end{noticebox}
+  \begin{noticebox}
+    #1
+  \end{noticebox}
 }
 
 \newtcolorbox{hintbox}[1][]{
@@ -168,7 +166,7 @@
 }
 
 \newcommand{\hint}[1]{%
-    \begin{hintbox}
-        #1
-    \end{hintbox}
+  \begin{hintbox}
+    #1
+  \end{hintbox}
 }
