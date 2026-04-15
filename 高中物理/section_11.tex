@@ -1,0 +1,328 @@
+
+\subsection{电路}
+
+\begin{tabularx}{\columnwidth}{XX}
+  \rowcolor{blue!30}
+  \multicolumn{2}{l}{
+    \parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 电路}
+  }\\
+  \multicolumn{2}{l}{\textbf{电流}}\\
+  电流定义式&$I=\frac{Q}{t}$\\
+  电流决定式&$I = nqSv$\\
+  \multicolumn{2}{l}{\textbf{电阻}}\\
+  电阻定义式&$R=\frac{U}{I}$\\
+  电阻决定式&$R=\rho\frac{l}{S}$\\
+  \multicolumn{2}{l}{\textbf{电容}}\\
+  电容定义式&$C=\frac{Q}{U}$\\
+  电容决定式&$C=\frac{\epsilon S}{4\pi kd}$\\
+  电容器能量&$W=\frac{1}{2} CU^2=\frac{Q^2}{2C}=\frac{1}{2} QU$\\
+  \multicolumn{2}{l}{\textbf{电源}}\\
+  电动势&$E=\frac{W_{\text{非静电力}}}{q}$\\
+  \multicolumn{2}{l}{\textbf{闭合电路欧姆定律}}\\
+  含有外电阻和内阻&$E=I(R+r)$\\
+  不含外电路电压（纯电阻）&$U=IR$\\
+  不含外电阻&$U=E-Ir$\\
+  不含电流（纯电源）&$U=E\frac{R}{R+r}$\\
+  \multicolumn{2}{l}{\textbf{电阻的连接}}\\
+  串联规律&$R=R_1+R_2+\cdots R_n$\\
+  并联规律&$\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+\cdots \frac{1}{R_n}$\\
+  \multicolumn{2}{l}{\textbf{电表改装}}\\
+  电流表简易改装（分流）&$R=\frac{I_gR_g}{I_{\text{量程}}-I_g}\approx \frac{I_gR_g}{I_{\text{量程}}}$\\
+  电压表简易改装（增压）&$R=\frac{U_{\text{量程}}}{I_g}-R_g$\\
+  欧姆表改装&$E=i(r+R_g+R_{\Omega}+R_x)$\\
+  $R_x$表达式&$R_x=\frac{E}{i}-\frac{E}{I_g}=E\frac{I_g-i}{iI_g}$\\
+  欧姆表中值电阻&$R_{\text{中值电阻}}=\frac{E}{I_g}=R_{\text{内}}$\\
+  \multicolumn{2}{l}{\textbf{电流表改装的线性关系}}\\
+  \multicolumn{2}{l}{\textbf{电功率}}\\
+  电功率定义式&$P=UI$\\
+  纯电阻功率&$P=P_{\text{热}}=I^2R=\frac{U^2}{R}$\\
+  非纯电阻总功率&$P=UI$\\
+  非纯电阻热功率&$P=I^2R$\\
+  非纯电阻输出功率&$P=UI-I^2R$\\
+  电源总功率&$P=EI=\frac{E^2}{R+r}\le \frac{E^2}{r}$\\
+  电源热功率&$P=I^2r=\left(\frac{E}{R+r}\right)^2r\le \frac{E^2}{r}$\\
+  电源输出功率&$P=UI=(E-Ir)I=\left(\frac{E}{r}-I\right)Ir\le \frac{E^2}{4r}$\\
+  含纯电阻的输出功率&$P=\left(\frac{E}{R+r}\right)^2R=\frac{E^2}{R+\frac{r^2}{R}+2r}\le \frac{E^2}{4r}$\\
+  电源效率&$\eta=\frac{P_{\text{输出}}}{P_{\text{总}}}=\frac{U}{E}=\frac{R}{R+r}$\\
+  \multicolumn{2}{l}{\textbf{电桥测电阻}}\\
+  电桥平衡条件&$R_x=\frac{R_2}{R_1}R_{\Omega}=\frac{l_L}{l_R}R_\Omega$\\
+\end{tabularx}
+
+表头电流与被测电阻成反比，表盘才会不均匀。
+
+\textbf{游标卡尺和螺旋测微器使用}
+\begin{center}
+  \includegraphics[width=0.6\columnwidth]{../assets/游标卡尺读数.jpg}
+\end{center}
+\textbf{游标卡尺读数方法：}\\
+有两种方法读游标卡尺读数，\\
+\textbf{方法一}：下方副尺0刻度线所在位置主尺的读数记为$N$（上图应该是\SI{3}{cm}处，但是不到\SI{31}{mm}）\\
+然后找到副尺上与主尺刻度线对齐的刻度线的小格数，记为$m$，\\
+游标卡尺读数$=N+m\times \text{游标卡尺精度}$mm\\
+如上，为$ 30+6\times 0.1 \text{mm} = 30.6\text{mm}$\\
+\textbf{方法二}：找到主尺与副尺刻度线\textbf{对齐}所在位置的读数，记为$N$，\\
+找到副尺上与主尺刻度线\textbf{对齐}的刻度线对应的小格数，记为$m$，\\
+游标卡尺读数为$=N-\frac{\text{副尺总长度}}{\text{副尺总格子数}}\times m$mm\\
+如上，为$ 36 - \frac{6}{10}\times 9 \text{mm} = 30.6\text{mm}$\\
+\begin{center}
+  \includegraphics[width=0.6\columnwidth]{../assets/螺旋测微器读数.jpg}
+\end{center}
+\textbf{螺旋测微器读数方法：}\\
+先确定右侧旋转筒左侧线所指的主尺半格数，注意上面也有一排刻度线，当超过主尺刻度线时，主尺读数需要加\SI{0.5}{mm}，\\
+然后读取右侧旋转筒上与主尺左侧线对齐的刻度线数，乘以螺旋测微器的精度\SI{0.01}{mm}，注意需要估读一位，尽量估读准确一点。\\
+最后螺旋测微器读数$=$主尺读数$+$旋转筒读数。\\
+如上，为$ 6.5 \text{mm} + 20.3\times 0.01 \text{mm} = 6.703\text{mm}$
+
+\textbf{电路中的基本认识：}
+\begin{itemize}
+  \item 恒压源的正极电势恒定比负极大$E$
+  \item 恒流源干路电流恒定为$I$
+  \item 沿电流方向电势降低
+  \item 电势降低量$U=RI$
+  \item 对电路中任意节点：$\sum I_{in}=\sum I_{out}$
+  \item 导线的内阻为0，所以导线可以任意长度变化
+  \item 理想电流表视为导线，理想电压表视为断路
+  \item 电容器充满电或稳定状态都视为断路
+  \item 电容器充电过程视为电阻
+  \item 电容器放电视为理想电源
+  \item 断路应该被视为是一个无穷大的电阻接在断路的导线两端
+  \item 任何部分电阻增大都会导致总电阻增大，反之亦然
+\end{itemize}
+
+\textbf{电源功率图像：}
+{
+  \centering
+  \textbf{电源总功率与电流图像}\\
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=10cm, height=6cm,
+        axis lines=middle,
+        xlabel={$I$},
+        ylabel={$P = EI$},
+        xmin=0, xmax=5,
+        ymin=0, ymax=10,
+        grid=both,
+        samples=100,
+        domain=0:5,
+        enlargelimits
+      ]
+      \addplot[blue, thick] {2*x}; % E = 4V 为示例
+    \end{axis}
+  \end{tikzpicture}\\
+  \textbf{电源总功率与外电阻图像}\\
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=10cm, height=6cm,
+        axis lines=middle,
+        xlabel={$R$},
+        ylabel={$P = \dfrac{E^2}{R + r}$},
+        xmin=0, xmax=6,
+        ymin=0, ymax=5,
+        grid=both,
+        samples=200,
+        domain=0:6,
+        enlargelimits,
+        legend pos=south east
+      ]
+      \addplot[red, thick, domain=0:10] {4/(x + 1)}; % E = 4, r = 4 为例
+    \end{axis}
+  \end{tikzpicture}\\
+  \textbf{电源热功率与电流图像}\\
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=10cm, height=6cm,
+        axis lines=middle,
+        xlabel={$R$},
+        ylabel={$P = I^2r$},
+        xmin=0, xmax=2,
+        ymin=0, ymax=5,
+        grid=both,
+        samples=200,
+        domain=0:2,
+        enlargelimits,
+        legend pos=south east
+      ]
+      \addplot[green, thick, domain=0:2] {x^2}; % E = 4, r = 4 为例
+    \end{axis}
+  \end{tikzpicture}\\
+  \textbf{电源热功率与外电阻图像}\\
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=10cm, height=6cm,
+        axis lines=middle,
+        xlabel={$R$},
+        ylabel={$P = \dfrac{E^2}{(R + r)^2}r$},
+        xmin=0, xmax=2,
+        ymin=0, ymax=5,
+        grid=both,
+        samples=200,
+        domain=0:6,
+        enlargelimits,
+        legend pos=south east
+      ]
+      \addplot[black, thick, domain=0:2] {4/(x + 1)^2};
+    \end{axis}
+  \end{tikzpicture}\\
+  \textbf{电源输出功率与电流图像}\\
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=10cm, height=6cm,
+        axis lines=middle,
+        xlabel={$R$},
+        ylabel={$P = (\dfrac{E}{r}-I)Ir$},
+        xmin=0, xmax=2,
+        ymin=0, ymax=1,
+        grid=both,
+        samples=200,
+        domain=0:2,
+        enlargelimits,
+        legend pos=south east
+      ]
+      \addplot[blue, thick, domain=0:2] {x*(2-x)};
+    \end{axis}
+  \end{tikzpicture}\\
+  \textbf{电源输出功率与外电阻图像}\\
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=10cm, height=6cm,
+        axis lines=middle,
+        xlabel={$R$},
+        ylabel={$P = \dfrac{E^2}{(R + r)^2}R$},
+        xmin=0, xmax=6,
+        ymin=0, ymax=1,
+        grid=both,
+        samples=200,
+        domain=0:6,
+        enlargelimits,
+        legend pos=south east
+      ]
+      \addplot[red, thick, domain=0:6] {4/(x + 1)^2};
+    \end{axis}
+  \end{tikzpicture}\\
+}
+\textbf{电源功率图像说明：}
+\begin{itemize}
+  \item 上面的小于等于的意思是，存在一个极大值
+  \item $\frac{E}{r}$为短路电流
+  \item 蓝色直线为电源总功率
+  \item 绿色抛物线为电源热功率
+  \item 红色抛物线为电源输出功率
+  \item 电阻线经过了放大，这样能够清晰地看出输出功率随电阻变化先增大后减小，在内阻等于外阻的时候取得极值
+\end{itemize}
+
+\textbf{电功率注意事项：}
+\begin{itemize}
+  \item 正常工作意味着用电器的全部物理量为额定值
+  \item 电动机这样的非纯电阻元器件不能正常工作时，可看作纯电阻
+  \item 灯泡虽然会发热，但仍然看成定值电阻
+  \item \textbf{不要使用非纯电阻两端电压得到电流或电阻。}$r\neq \frac{U}{I}$
+  \item 非纯电阻的内阻也不要与其他电路电阻进行串并联
+  \item 通过输出功率最大时电阻情况，此时内外电压相等，大小为$\frac{E}{2}$
+  \item 外电阻增大，电源总功率和电源热功率都会减小，电源效率也会升高
+  \item 外电压增大，输出功率先增大后减小，当外电压等于$\frac{E}{2}$时，输出功率最大
+  \item 此时电源效率为50\%
+\end{itemize}
+
+\textbf{电路实验：电表接法选择}
+
+\textbf{电流表的内外接判断：}
+\begin{itemize}
+  \item 电流表内接时，因为电流表分压，电阻测量值偏大
+  \item 电流表外接时，因为电压表分流，电阻测量值偏小
+\end{itemize}
+
+\textbf{判断电表接法方法一：临界值法}
+\begin{itemize}
+  \item 如果$R_x<\sqrt{R_VR_A}$，采用外接法
+  \item 如果$R_x>\sqrt{R_VR_A}$，采用内接法
+\end{itemize}
+
+\textbf{判断电表接法方法二：试触法}
+\begin{itemize}
+  \item 如果两次内外接过程中，电流表读数变化较大，即电压表分流明显，采用内接法
+  \item 如果电压表读数变化较大，即电流表分压明显，采用外接法
+\end{itemize}
+
+\textbf{判断电表接法方法三：内阻已知法}
+\begin{itemize}
+  \item 电流表内阻已知，采用内接法
+  \item 电流表内阻未知，采用外接法
+\end{itemize}
+
+\textbf{电表量程选择：}
+\begin{itemize}
+  \item 可以略超量程，但是不能选择过大的量程
+  \item 例如电源电压为4V，选择3V的电压表是可行的
+  \item 但是选择15V的电压表就不合适了
+\end{itemize}
+
+\textbf{电路实验：滑动变阻器选取原则}
+
+按照如下原则依次进行：
+\begin{itemize}
+  \item 要求大范围，电压或电流从0开始，测量用电器伏安特性曲线，分压式接法
+  \item 滑动变阻器总电阻小于用电器，分压式接法
+  \item 滑动变阻器总电阻和用电器接近，限流式接法
+  \item 需要节省能量，尽可能节约，限流式接法
+\end{itemize}
+
+\textbf{滑动变阻器阻值选择简化版：}
+\begin{itemize}
+  \item 限流式：$R_{\text{滑动变阻器}}$略大于或约为 $3\sim 5$ 倍 $R_x$
+  \item 分压式：$R_{\text{滑动变阻器}}<R_x$（需要电压能从0开始）
+\end{itemize}
+
+\textbf{电路连接示例：}
+
+\textbf{电流表外接法与滑动变阻器分压式接法：}
+\begin{center}
+  \begin{circuitikz}[european resistors]
+    \tikzstyle{every node}=[font=\LARGE]
+    \draw (7.5,16.5) to[battery] (10,16.5);
+    \draw (7.5,17.75) to[potentiometer] (12.5,17.75);
+    \draw (10,16.5) to[normal open switch] (12.5,16.5);
+    \draw (10,18.25) to[short] (10,19);
+    \draw (10,19) to[short] (12.5,19);
+    \draw (12.5,16.5) to[short] (12.5,17.75);
+    \draw (12.5,19) to[short] (12.5,21.5);
+    \draw (7.5,21.5) to[rmeter, t=V] (12.5,21.5);
+    \draw (7.5,20.25) to[european resistor] (12.5,20.25);
+    \draw (7.5,16.5) to[rmeter, t=A] (7.5,21.5);
+  \end{circuitikz}
+\end{center}
+
+\textbf{电流表内接法与滑动变阻器限流式接法：}
+\begin{center}
+  \begin{circuitikz}[european resistors]
+    \tikzstyle{every node}=[font=\LARGE]
+    \draw (7.5,16.5) to[battery ] (10,16.5);
+    \draw (10,16.5) to[normal open switch] (11.25,16.5);
+    \draw (11.25,16.5) to[potentiometer] (13.75,16.5);
+    \draw (7.5,17.75) to[european resistor] (10,17.75);
+    \draw (10,17.75) to[rmeter, t=A] (12.5,17.75);
+    \draw (7.5,19) to[rmeter, t=V] (12.5,19);
+    \draw (7.5,16.5) to[short] (7.5,19);
+    \draw (12.5,17) to[short] (12.5,17.75);
+    \draw (12.5,17.75) to[short] (12.5,19);
+  \end{circuitikz}
+\end{center}
+
+\textbf{电路实验：半偏法测电阻}
+
+\textbf{半偏法测电阻一定有误差}
+
+\textbf{限流式电路中的半偏法：}
+\begin{itemize}
+  \item 半偏法假定干路电流不变
+  \item 但先满偏后半偏时，干路电流将会变大
+  \item 另一条未确定电流的支路电流将会比计算值偏大
+\end{itemize}
+
+\textbf{结论：限流式，半偏法测量值偏小；分压式，半偏法测量值偏大}
+
+\textbf{电桥测电阻所需设备：}
+\begin{itemize}
+  \item 高精度电流计（可以左右偏转，量程越小越好，精度越大越好）
+  \item 两个已知阻值的定值电阻（或者使用均匀的电阻丝，通过长度比值得到电阻之比）
+  \item 一个电阻箱
+\end{itemize}
