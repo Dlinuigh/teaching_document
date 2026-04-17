@@ -2,21 +2,100 @@
 \subsection{运动学}
 \begin{tabularx}{\columnwidth}{XX}
   \rowcolor{blue!30}
-  \multicolumn{2}{l}{
-    \parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 运动学}
-  }\\
-  \multicolumn{2}{l}{\textbf{匀速直线运动}}\\
-  速度&$v=\frac{x}{t}$\\
+  \multicolumn{2}{l}{\parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 运动学}} \\
+  瞬时速度&$v=\lim_{t\to0} \frac{\Delta x}{\Delta t}$\\
+  平均速度&$v=\frac{\Delta x}{\Delta t}$\\
+  瞬时速率&$v=$瞬时速度大小\\
+  平均速率&$v=\frac{\Delta s}{\Delta t}$\\
+  平均加速度&$a=\frac{\Delta v}{\Delta t}$\\
   \multicolumn{2}{l}{\textbf{匀变速直线运动}}\\
-  加速度&$a=\bar{a}$\\
+  位移&$x=v_0t+\frac{1}{2}at^2$\\
+  &$x=\frac{v_0+v}{2}t$\\
   速度&$v=v_0+at$\\
-  位移&$x=v_0 t + \frac12 a t^2$\\
-  位移&$x=\frac12(v+v_0)t$\\
-  速度-位移关系&$v^2-v_0^2=2ax$\\
+  速度平方&$v^2=v_0^2+2ax$\\
+  中间位移速度&$v=\sqrt{\frac{x_1^2+x_2^2}2}$\\
+  中间时刻速度&$v=\frac{x_1+x_2}{2}$\\
+  第M段与第N段Ts时间内位移差&$(M-N)aT^2$\\
+  \multicolumn{2}{l}{\textbf{从静止开始加速}}\\
+  相等时间每段位移比&$1:3:5:\cdots:2n-1$\\
+  相等时间总计位移比&$1:4:9:\cdots:n^2$\\
+  相等位移间隔每段用时比&$1:\sqrt2-1:\cdots:\sqrt n-\sqrt{n-1}$\\
+  相等位移间隔总计用时比&$1:\sqrt2:\cdots:\sqrt n$\\
 \end{tabularx}
+\hfill
+\begin{minipage}{0.48\columnwidth}
+  \centering
+  \begin{tikzpicture}[scale=1.1]
+    % 坐标轴
+    \draw[->] (0,0) -- (0,2.5) node[left] {$v$};
+    \draw[->] (0,0) -- (4.5,0) node[right] {$t$};
+    % 等时间间隔
+    \foreach \i in {1,2,3,4}
+    \draw[dashed] (\i,0) -- (\i,\i*0.5);
+    \foreach \i in {1,2,3}
+    \draw[dashed] (4,\i*0.5) -- (\i,\i*0.5);
+    \foreach \i in {1,2,3}
+    \draw[dashed] (\i,0) -- (4,2-\i*0.5);
+    % 匀加速直线
+    \draw[thick,blue] (0,0) -- (4,2);
+    % 速度标记
+    \foreach \i/\v in {0/1,1/2,2/3,3/4}
+    \node[left] at (\i+1,\i*0.5+0.6) {$v_{\the\numexpr\i+1}$};
+    \foreach \i/\col in {0/blue!10, 1/green!20, 2/orange!30, 3/red!20} {
+      \fill[\col,opacity=0.7] (\i,0) -- (\i+1,0) -- (\i+1,\i*0.5+0.5) -- (\i,\i*0.5);
+      \node at (\i+0.5,\i*0.25+0.15) {\tiny $s_{\the\numexpr\i+1}$};
+    }
+  \end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\columnwidth}
+  \centering
+  \begin{tikzpicture}[scale=1.1]
+    % 坐标轴
+    \draw[->] (0,0) -- (0,2.5) node[above] {$v$};
+    \draw[->] (0,0) -- (4.5,0) node[right] {$t$};
+    % 匀加速直线
+    \draw[thick,blue] (0,0) -- (4,2);
+    % 等位移间隔
+    \foreach \i in {1,2,3,4}
+    \draw[dashed] ({2*sqrt(\i)},0) -- ({2*sqrt(\i)},{sqrt(\i)});
+    % 时间标记
+    \node[below] at (2,0) {$t_1$};
+    \node[below] at ({2*sqrt(2)},0) {$t_2$};
+    \node[below] at ({2*sqrt(3)},0) {$t_3$};
+    \node[below] at ({2*sqrt(4)},0) {$t_4$};
+    % % 位移阴影
+    \foreach \i/\col in {1/blue!10, 2/green!20, 3/orange!30, 4/red!20} {
+      \fill[\col,opacity=0.7] ({2*sqrt(\i-1)},0) -- ({2*sqrt(\i)},0) -- ({2*sqrt(\i)},{sqrt(\i)}) -- ({2*sqrt(\i-1)},{sqrt(\i-1)});
+      \node at ({(sqrt(\i)+sqrt(\i-1))},{sqrt(\i)*0.5-0.2}) {\tiny $s_{\the\numexpr\i}$};
+    }
+    \foreach \i in {1,2,3,4}
+    \node[above] at ({2*sqrt(\i)},{sqrt(\i)}) {$v_{\the\numexpr\i}$};
+  \end{tikzpicture}
+\end{minipage}
 
-位移和路程、速度和平均速度、速率和平均速率、加速度是运动学中的基础物理量。
+\begin{formulanotebox}
+匀变速公式（如 $x=v_0t+\frac{1}{2}at^2$、$v=v_0+at$、$v^2=v_0^2+2ax$）仅适用于\textbf{加速度恒定}的一维直线运动，使用前先判断研究过程是否为同一段匀变速过程。
 
-\textbf{曲线运动判定}
+“中间位移速度”“中间时刻速度”以及“相等时间/相等位移间隔比值”都建立在\textbf{从静止出发且做匀加速直线运动}的条件下，非此条件不可直接套用。
+\end{formulanotebox}
 
-曲线运动发生在合力与速度不共线时。当力与速度夹角小于 $90^{\circ}$ 时加速，等于 $90^{\circ}$ 时匀速，超过 $90^{\circ}$ 时减速。
+\begin{keypointbox}
+\textbf{位移、路程与速度概念区分}：平均速度由位移决定，平均速率由路程决定，往返运动中两者通常不相等。
+
+\textbf{图像物理意义}：$v$-$t$ 图像斜率表示加速度，图线与时间轴围成的面积表示位移；判断“加速/减速”要结合速度方向与加速度方向，而非只看速度大小变化。
+
+\textbf{曲线运动判定}：曲线运动发生在合力与速度不共线时。当力与速度夹角小于 $90^{\circ}$ 时速率增大，等于 $90^{\circ}$ 时速率不变，超过 $90^{\circ}$ 时速率减小。
+\end{keypointbox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：自由落体}}]
+忽略空气阻力时，自由落体是初速度为零、加速度为 $g$ 的匀加速直线运动。常用思路：先选正方向，再用 $v=gt$、$h=\frac{1}{2}gt^2$、$v^2=2gh$ 联立求解。
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：竖直上抛}}]
+竖直上抛可分为“上升减速”和“下降加速”两个阶段，且全程加速度恒为 $g$（方向竖直向下）。解题时优先统一坐标方向并分段列式，或直接用全程匀变速公式处理。
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：追击相遇问题}}]
+% TODO: 追击相遇问题题型解析待补充
+\end{casetypebox}

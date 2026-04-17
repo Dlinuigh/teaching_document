@@ -5,21 +5,62 @@
   \multicolumn{2}{l}{
     \parbox[c][2.5\ht\strutbox][c]{0.9\columnwidth}{\Large 万有引力}
   }\\
-  \multicolumn{2}{l}{\textbf{万有引力}}\\
-  万有引力&$F=\frac{GMm}{R^2}$\\
-  \multicolumn{2}{l}{\textbf{开普勒三大定律}}\\
-  周期定律&$\frac{a^3}{T^2}=k$\\
-  \multicolumn{2}{l}{\textbf{黄金代换}}\\
-  黄金代换&$\frac{GMm}{R^2}=mg$\\
-  \multicolumn{2}{l}{\textbf{宇宙速度}}\\
-  第一宇宙速度&$v=\sqrt{\frac{GM}{R}}$\\
-\end{tabularx}
+  球体万有引力&$ F_{\text{万}}=\left\{
+    \begin{array}{ll}
+      \frac{GMm}{r^2}&r\ge R\\
+      \frac{GMmr}{R^3}&r<R\\
+    \end{array}
+    \right.$\\ % }
+    向心力简化式&$GM=v^2r$\\
+    &$GM=\omega^2r^3$\\
+    &$GM=ar^2$\\
+    &$GM=4\pi^2\frac{r^3}{T^2}$\\
+    密度公式&$\rho=\frac{3\pi}{GT^2}$\\
+    \multicolumn{2}{l}{\textbf{开普勒三大定律}}\\
+    周期定律&$\frac{a^3}{T^2}=k=\frac{GM}{4\pi^2}$\\
+    \multicolumn{2}{l}{\textbf{黄金代换}}\\
+    黄金代换&$GM=gR^2$\\
+    \multicolumn{2}{l}{\textbf{宇宙速度}}\\
+    第一宇宙速度&$v=\sqrt{\frac{GM}{R}}=\sqrt{Rg}$\\
+    \multicolumn{2}{l}{\textbf{追及问题}}\\
+    同向（最近到最远）&$t=\frac12\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}-T_{\text{小}}}$\\
+    同向（最近到最近）&$t=\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}-T_{\text{小}}}$\\
+    反向（最近到最远）&$t=\frac12\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}+T_{\text{小}}}$\\
+    反向（最近到最近）&$t=\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}+T_{\text{小}}}$\\
+    \multicolumn{2}{l}{\textbf{双星问题}}\\
+    质量半径关系&$m_1r_1=m_2r_2$\\
+    质量角速度关系&$G(m_1+m_2)=\omega^2(r_1+r_2)^3$\\
+  \end{tabularx}
 
-\textbf{开普勒定律补充}
+  \textbf{开普勒定律}
 
-\begin{itemize}
-  \item 轨道定律：行星绕太阳的轨道是椭圆。
-  \item 面积定律：行星与太阳的连线在单位时间内扫过的面积相等，近太阳时快、远太阳时慢。
-\end{itemize}
+  \begin{itemize}
+    \item 轨道定律：行星绕太阳的轨道是椭圆。
+    \item 面积定律：行星与太阳的连线在单位时间内扫过的面积相等，近太阳时快、远太阳时慢。
+    \item 周期定律：行星绕太阳的周期的平方与轨道半长轴的立方成正比。
+  \end{itemize}
+  常见考法：
+  面积定律是\textbf{同一行星}在不同位置的连线扫过面积速度相等。
+  周期定律是\textbf{同一中心天体}的不同行星周期与半长轴的关系。
 
-从低轨道到高轨道需要加速。
+  \textbf{行星变轨问题}
+
+\begin{formulanotebox}
+万有引力与轨道运动公式使用时要先明确轨道类型（圆轨道、椭圆轨道）和研究对象（单星绕中心天体、双星系统），避免混用。
+
+“向心力简化式”本质上来自 $F_{\text{万}}=F_{\text{向}}$，只适用于对应轨道条件，不可脱离轨道条件单独套用。
+\end{formulanotebox}
+
+\begin{keypointbox}
+\textbf{开普勒定律适用范围}：周期定律要求“同一中心天体”；面积定律比较的是同一行星在不同位置的面积速度。
+
+\textbf{变轨核心判断}：由椭圆轨道近地点/远地点速度比较与机械能变化判断推进或减速，不能只凭“离中心远近”判断速度变化。
+\end{keypointbox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：开普勒定律应用}}]
+% TODO: 开普勒定律综合题型解析待补充
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：行星变轨问题}}]
+% TODO: 行星变轨问题题型解析待补充
+\end{casetypebox}
