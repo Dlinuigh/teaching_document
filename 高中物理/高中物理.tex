@@ -1,36 +1,57 @@
 \documentclass{../paper}
+% 如果要编辑该项目，请注意：
+% 1. 分章节编辑，每一小节按照内容多少划分，尽量使得每个文件的代码在200行以内。
+% 2. 每个文件的框架是：公式表格、公式的注解、知识点、常见题型类型（不要独创，如果不清楚题型那么留空，加上TODO）、例题（如果有的话）、例题解析（如果有的话）。
+% 3. 上面的框架需要环境的支持，所有的环境定义需要放在 ../paper.cls 文件中，减少在各部分文件中的环境定义，除非万不得已或者没有相应的环境支持。
+% 4. 内容如果只有浅显无重要内容那么不要添加。直接加一个TODO给有能力的人来补充完善。
+% 5. 鼓励将所有的tikz图片保存到一个单独文件，然后通过\input{文件名}的方式引入、或者直接导出png图片到assets文件夹，这样尽量保证section中内容简洁，代码和格式减少。
 \begin{document}
+\begin{titlepage}
+  \thispagestyle{empty}
+  \input{cover_page}
+  \null
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
 \section{力学}
-\include{section_1}
-\include{section_2}
-\include{section_3}
-\include{section_4}
-\include{section_5}
-\include{section_6}
-\include{section_7}
-\include{section_8}
-\include{section_9}
+\input{section_1} % 运动学：位移、速度、加速度与图像关系
+\input{section_2} % 平抛运动：分解为水平方向匀速与竖直方向自由落体
+\input{section_3} % 匀速圆周运动：线速度、角速度、向心加速度与向心力
+\input{section_4} % 万有引力：引力定律、天体运动与卫星问题
+\input{section_5} % 静力学：受力分析、平衡条件与整体隔离法
+\input{section_6} % 动力学：牛顿定律与连接体、临界问题
+\input{section_7} % 动能定理：合外力做功与动能变化关系
+\input{section_8} % 能量守恒：机械能守恒条件与能量转化
+\input{section_9} % 动量定理：冲量、动量守恒与碰撞模型
+\input{section_24} % 机械振动：简谐振动、弹簧振子与单摆
+\input{section_25} % 机械波：波动方程、干涉衍射与多普勒效应
+\input{section_27} % 高一力学基础：图像判读、受力分析与牛顿定律入门
+\input{section_28} % 高一力学方法：摩擦判定、绳杆模型与动态平衡
+\input{section_29} % 力学思想基础：伽利略理想实验与惯性参考系
 
 \section{电学}
-\include{section_10}
-\include{section_11}
-\include{section_12}
-\include{section_13}
+\input{section_10} % 静电场：电场强度、电势、电势能与电场线
+\input{section_11} % 电路：欧姆定律、电功率与串并联分析
+\input{section_12} % 磁场：洛伦兹力、安培力与带电粒子运动
+\input{section_13} % 电磁感应：法拉第定律、楞次定律与感应电流
 
 \section{光学}
-\include{section_14}
-\include{section_15}
+\input{section_14} % 物理光学：干涉、衍射、偏振等波动现象
+\input{section_15} % 几何光学：反射折射、成像规律与透镜作图
 
 \section{热学}
-\include{section_16}
-\include{section_17}
-\include{section_18}
-\include{section_19}
+\input{section_16} % 基础概念：温度、内能、热量与状态量
+\input{section_17} % 气体实验定律：玻意耳、查理、盖吕萨克定律
+\input{section_18} % 热力学定律：第一定律与能量转化方向
+\input{section_19} % 能量守恒与永动机：第二定律及不可能性判断
 
 \section{近代物理}
-\include{section_20}
-\include{section_21}
-\include{section_22}
-\include{section_23}
+\input{section_26} % 能量量子化：黑体辐射规律与普朗克关系
+\input{section_20} % 波粒二象性：德布罗意关系与微观粒子性质
+\input{section_21} % 光电效应：爱因斯坦方程、截止频率与截止电压
+\input{section_22} % 原子模型：玻尔理论与能级跃迁
+\input{section_23} % 原子核：核反应、质量亏损与结合能
 
 \end{document}

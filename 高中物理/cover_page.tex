@@ -1,0 +1,108 @@
+\begin{tikzpicture}[remember picture,overlay]
+  % Background layers
+  \path[fill=blue!3] (current page.south west) rectangle (current page.north east);
+  \path[fill=cyan!30, opacity=0.20] (current page.center) circle (7.5cm);
+  \path[fill=blue!30, opacity=0.16] ($(current page.center)+(2.4,3.8)$) circle (2.6cm);
+  \path[fill=teal!25, opacity=0.12] ($(current page.center)+(-2.8,-4.4)$) circle (3.1cm);
+
+  % Star points
+  \foreach \x/\y in {
+    -8.1/12.1,-6.9/9.7,-4.3/11.6,-2.2/10.8,0.8/12.2,2.3/10.6,4.5/11.4,
+    6.7/9.9,8.2/11.8,-7.8/5.1,-5.6/4.2,-3.6/6.5,-0.7/5.8,1.4/6.9,3.4/5.1,
+    5.8/6.4,7.8/4.7,-8.2/0.8,-5.9/-0.7,-2.8/1.2,0.0/0.4,2.6/1.7,5.2/0.5,8.0/1.1
+  }{
+    \fill[blue!45!black, opacity=0.5] ($(current page.center)+(\x,\y)$) circle (0.45pt);
+  }
+
+  % Magnetic field periodic motion (5-fold), adapted from GeoGebra construction
+  \begin{scope}[shift={($(current page.center)+(5.1,-4.6)$)}, rotate=-12, x=0.72cm, y=0.72cm]
+    % Magnetic field into page outside the field-free circle
+    \foreach \xx in {-8,-7,...,8}{
+      \foreach \yy in {-8,-7,...,8}{
+        \node[blue!55!black, scale=0.50] at (\xx,\yy) {$\times$};
+      }
+    }
+    \fill[white, opacity=0.96] (0,0) circle (3.95);
+
+    % Field-free circular region and radial segments
+    \draw [line width=1.2pt, cyan!70!black] (0,0) circle (4);
+    \draw [line width=1.2pt,color=cyan!70!black] (-1.2360679774997902,3.804226065180614)-- (1.2360679774997902,-3.804226065180614);
+    \draw [line width=1.2pt,color=cyan!70!black] (-3.2360679774997894,-2.3511410091698934)-- (3.2360679774997894,2.3511410091698934);
+    \draw [line width=1.2pt,color=cyan!70!black] (3.236067977499791,-2.3511410091698908)-- (-3.236067977499791,2.3511410091698908);
+    \draw [line width=1.2pt,color=cyan!70!black] (1.2360679774997902,3.804226065180614)-- (-1.2360679774997902,-3.804226065180614);
+    \draw [line width=1.2pt,color=cyan!70!black] (-4,0)-- (4,0);
+
+    % Periodic arc trajectory
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(-4,2.906170112021443)}]  plot[domain=0.3141592653589795:4.71238898038469,variable=\t]({1*2.9061701120214427*cos(\t r)+0*2.9061701120214427*sin(\t r)},{0*2.9061701120214427*cos(\t r)+1*2.9061701120214427*sin(\t r)});
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(-1.5278640450004195,-4.702282018339785)}]  plot[domain=-4.084070449666731:0.3141592653589795,variable=\t]({1*2.906170112021443*cos(\t r)+0*2.906170112021443*sin(\t r)},{0*2.906170112021443*cos(\t r)+1*2.906170112021443*sin(\t r)});
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(1.5278640450004217,-4.702282018339785)}]  plot[domain=-3.455751918948772:0.9424777960769382,variable=\t]({1*2.9061701120214454*cos(\t r)+0*2.9061701120214454*sin(\t r)},{0*2.9061701120214454*cos(\t r)+1*2.9061701120214454*sin(\t r)});
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(4,2.906170112021445)}]  plot[domain=-1.5707963267948966:2.8274333882308142,variable=\t]({1*2.906170112021445*cos(\t r)+0*2.906170112021445*sin(\t r)},{0*2.906170112021445*cos(\t r)+1*2.906170112021445*sin(\t r)});
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(-4,-2.9061701120214454)}]  plot[domain=1.5707963267948963:5.969026041820608,variable=\t]({1*2.9061701120214454*cos(\t r)+0*2.9061701120214454*sin(\t r)},{0*2.9061701120214454*cos(\t r)+1*2.9061701120214454*sin(\t r)});
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(1.5278640450004208,4.702282018339784)}]  plot[domain=-0.9424777960769379:3.455751918948772,variable=\t]({1*2.906170112021442*cos(\t r)+0*2.906170112021442*sin(\t r)},{0*2.906170112021442*cos(\t r)+1*2.906170112021442*sin(\t r)});
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(-4.944271909999157,0)}]  plot[domain=0.9424777960769385:5.340707511102647,variable=\t]({1*2.90617011202144*cos(\t r)+0*2.90617011202144*sin(\t r)},{0*2.90617011202144*cos(\t r)+1*2.90617011202144*sin(\t r)});
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(4,-2.9061701120214423)}]  plot[domain=-2.827433388230814:1.5707963267948974,variable=\t]({1*2.906170112021446*cos(\t r)+0*2.906170112021446*sin(\t r)},{0*2.906170112021446*cos(\t r)+1*2.906170112021446*sin(\t r)});
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(-1.5278640450004202,4.7022820183397815)}]  plot[domain=-0.3141592653589784:4.08407044966673,variable=\t]({1*2.9061701120214427*cos(\t r)+0*2.9061701120214427*sin(\t r)},{0*2.9061701120214427*cos(\t r)+1*2.9061701120214427*sin(\t r)});
+    \draw [line width=1.2pt,color=cyan!80!blue] [shift={(4.944271909999159,0)}]  plot[domain=-2.199114857512855:2.1991148575128556,variable=\t]({1*2.9061701120214427*cos(\t r)+0*2.9061701120214427*sin(\t r)},{0*2.9061701120214427*cos(\t r)+1*2.9061701120214427*sin(\t r)});
+  \end{scope}
+
+
+  % Prism dispersion: small parameter scan of incident angle
+  \newcommand{\DrawPrismScan}[3]{%
+    \begin{scope}[shift={(#2,#3)}, x=0.55cm, y=0.55cm]
+      \pgfmathsetmacro{\a}{3.0}
+      \pgfmathsetmacro{\h}{sqrt(3)*\a/2}
+      \pgfmathsetmacro{\xm}{-\a/4}
+      \pgfmathsetmacro{\ym}{\h/2}
+      \pgfmathsetmacro{\sqrtthree}{sqrt(3)}
+      \pgfmathsetmacro{\iOne}{#1}
+      \pgfmathsetmacro{\dirAir}{-30 + \iOne}
+      \pgfmathsetmacro{\xSrc}{-3.2}
+      \pgfmathsetmacro{\ySrc}{\ym - tan(\dirAir)*(\xm - \xSrc)}
+
+      \path[fill=cyan!14, draw=blue!60!black, line width=0.7pt]
+        (-\a/2,0) -- (\a/2,0) -- (0,\h) -- cycle;
+      \draw[line width=0.75pt, black!80] (\xSrc,\ySrc) -- (\xm,\ym);
+
+      \newcommand{\DrawDispersionRay}[2]{%
+        \pgfmathsetmacro{\lambda}{##1}
+        \pgfmathsetmacro{\Acoef}{1.500}
+        \pgfmathsetmacro{\Bcoef}{0.0120}
+        \pgfmathsetmacro{\nmed}{\Acoef + \Bcoef/(\lambda*\lambda)}
+        \pgfmathsetmacro{\rOne}{asin(sin(\iOne)/\nmed)}
+        \pgfmathsetmacro{\dirIn}{-30 + \rOne}
+        \pgfmathsetmacro{\mIn}{tan(\dirIn)}
+        \pgfmathsetmacro{\xHit}{(\h - \ym + \mIn*\xm)/(\mIn + \sqrtthree)}
+        \pgfmathsetmacro{\yHit}{\ym + \mIn*(\xHit - \xm)}
+        \draw[line width=0.65pt, ##2] (\xm,\ym) -- (\xHit,\yHit);
+        \pgfmathsetmacro{\iTwo}{30 - \dirIn}
+        \pgfmathsetmacro{\sinOutRaw}{\nmed*sin(\iTwo)}
+        \pgfmathsetmacro{\sinOut}{min(\sinOutRaw,0.999)}
+        \pgfmathsetmacro{\rTwo}{asin(\sinOut)}
+        \pgfmathsetmacro{\dirOut}{30 - \rTwo}
+        \draw[->, line width=0.65pt, ##2] (\xHit,\yHit) -- ++({1.9*cos(\dirOut)},{1.9*sin(\dirOut)});
+      }
+      \DrawDispersionRay{0.700}{red!85!black}
+      \DrawDispersionRay{0.620}{orange!90!black}
+      \DrawDispersionRay{0.580}{yellow!75!black}
+      \DrawDispersionRay{0.530}{green!60!black}
+      \DrawDispersionRay{0.470}{blue!75!black}
+      \DrawDispersionRay{0.420}{violet!70!black}
+      % \node[blue!45!black, font=\tiny] at (0,-0.45) {$i=#1^\circ$};
+    \end{scope}
+  }
+
+  \begin{scope}[shift={($(current page.center)+(-4,4.8)$)}, rotate=45, scale=8, transform shape]
+    \DrawPrismScan{35}{0.0}{0.0}
+  \end{scope}
+
+
+  % Title and metadata
+  \node[blue!85!black, font=\bfseries\fontsize{34}{40}\selectfont] at ($(current page.center)+(0,6.6)$) {高中物理手册};
+  \node[cyan!55!black, font=\Large] at ($(current page.center)+(0,5.45)$) {Physics Handbook};
+  \node[black!75, font=\large] at ($(current page.center)+(0,-8.55)$) {Linghui Ding};
+  \node[black!65, font=\normalsize] at ($(current page.center)+(0,-9.35)$) {\today};
+
+  % Border frame
+  \draw[line width=0.8pt, blue!45!black] ($(current page.south west)+(1.0,1.0)$)
+    rectangle ($(current page.north east)+(-1.0,-1.0)$);
+\end{tikzpicture}

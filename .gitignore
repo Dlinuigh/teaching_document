@@ -9,3 +9,4 @@
 *.fdb_latexmk
 *(busy)
 .DS_Store
+.tmp_image_export/
