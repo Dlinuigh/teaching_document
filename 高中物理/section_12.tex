@@ -2,27 +2,27 @@
 \subsection{磁场}
 
 \begin{tabularx}{\columnwidth}{XX}
-  \multicolumn{2}{l}{\textbf{磁场强度与力}}\\
-  磁场强度&$B=\frac{F}{Il}$\\
-  安培力&$F=Il\times B=BIl\sin\theta$\\
-  洛伦兹力&$F=qv\times B=qvB\sin\theta$\\
-  \multicolumn{2}{l}{\textbf{带电粒子的运动}}\\
-  洛伦兹力做向心力&$qvB=m\frac{v^2}{R}=m\omega^2R=mv\omega$\\
-  半径&$R=\frac{mv}{qB}$\\
-  周期&$T=\frac{2\pi m}{qB}$\\
-  角速度&$\omega=\frac{qB}{m}$\\
-  运动时间&$t=\frac{\theta m}{qB}=\frac{\theta R}{v}$\\
-  加速电场进入磁场半径&$R=\frac1B\sqrt{\frac{2mU}{q}}$\\
-  \multicolumn{2}{l}{\textbf{电磁应用}}\\
-  速度选择器&$qE=qvB$\\
-  质谱仪&$R=\frac1B\sqrt{\frac{2mU}{q}}$\\
-  霍尔电压&$U=\frac1{nq}\frac{IB}{d}$\\
-  \multicolumn{2}{l}{\textbf{回旋加速器}}\\
-  最大速度&$v_{max}=\frac{qBR}{m}$\\
-  最大动能&$E_{kmax}=\frac{q^2B^2R^2}{2m}$\\
-  电场周期&$T=\frac{2\pi m}{qB}$\\
-  加速次数&$n=\frac{qB^2R^2}{2mU}$\\
-  加速总时间&$t=\frac{\pi BR^2}{2U}$\\
+  \multicolumn{2}{l}{\textbf{磁场强度与力}}                     \\
+  磁场强度       & $B=\frac{F}{Il}$                           \\
+  安培力        & $F=Il\times B=BIl\sin\theta$               \\
+  洛伦兹力       & $F=qv\times B=qvB\sin\theta$               \\
+  \multicolumn{2}{l}{\textbf{带电粒子的运动}}                    \\
+  洛伦兹力做向心力   & $qvB=m\frac{v^2}{R}=m\omega^2R=mv\omega$   \\
+  半径         & $R=\frac{mv}{qB}$                          \\
+  周期         & $T=\frac{2\pi m}{qB}$                      \\
+  角速度        & $\omega=\frac{qB}{m}$                      \\
+  运动时间       & $t=\frac{\theta m}{qB}=\frac{\theta R}{v}$ \\
+  加速电场进入磁场半径 & $R=\frac1B\sqrt{\frac{2mU}{q}}$            \\
+  \multicolumn{2}{l}{\textbf{电磁应用}}                       \\
+  速度选择器      & $qE=qvB$                                   \\
+  质谱仪        & $R=\frac1B\sqrt{\frac{2mU}{q}}$            \\
+  霍尔电压       & $U=\frac1{nq}\frac{IB}{d}$                 \\
+  \multicolumn{2}{l}{\textbf{回旋加速器}}                      \\
+  最大速度       & $v_{max}=\frac{qBR}{m}$                    \\
+  最大动能       & $E_{kmax}=\frac{q^2B^2R^2}{2m}$            \\
+  电场周期       & $T=\frac{2\pi m}{qB}$                      \\
+  加速次数       & $n=\frac{qB^2R^2}{2mU}$                    \\
+  加速总时间      & $t=\frac{\pi BR^2}{2U}$                    \\
 \end{tabularx}
 
 \textbf{磁场力注意事项：}
@@ -68,37 +68,135 @@
 \end{itemize}
 
 \begin{formulanotebox}
-安培力与洛伦兹力都满足叉乘方向关系，公式里的 $\sin\theta$ 反映的是速度（或电流方向）与磁场方向夹角，不垂直时要取分量。
+  安培力与洛伦兹力都满足叉乘方向关系，公式里的 $\sin\theta$ 反映的是速度（或电流方向）与磁场方向夹角，不垂直时要取分量。
 \end{formulanotebox}
 
 \begin{keypointbox}
-\textbf{磁场力本质}：磁场力始终垂直于瞬时速度，通常不改变速率，只改变运动方向；若速率变化，多由其他力做功导致。
+  \textbf{磁场力本质}：磁场力始终垂直于瞬时速度，通常不改变速率，只改变运动方向；若速率变化，多由其他力做功导致。
 
-\textbf{圆周偏转模型}：带电粒子入磁场问题常转化为几何关系+半径关系 $R=\frac{mv}{qB}$ 的联立。
+  \textbf{圆周偏转模型}：带电粒子入磁场问题常转化为几何关系+半径关系 $R=\frac{mv}{qB}$ 的联立。
 \end{keypointbox}
 
-\begin{casetypebox}
-% TODO: 本节题型短标题未提供，请补充后逐题型填写
-旋转圆
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：旋转圆法}}]
+旋转圆法是带电粒子在匀强磁场中做圆周运动的总方法。已知入射点和速度方向时，轨迹圆心一定在入射点速度方向的垂线上。先由
+\[
+  R=\frac{mv}{qB}
+\]
+确定半径，再由边界条件确定轨迹圆，最后用
+\[
+  t=\frac{\theta}{2\pi}T=\frac{\theta m}{qB}
+\]
+求运动时间。
 
-直线性边界——起始点在边界上
-
-直线性边界——起始点在磁场中
-
-双直线边界——宽度小于半径
-
-双直线边界——宽度大于半径
-
-圆形磁场
-
-圆环形磁场
-
-缩放圆
-
-磁聚焦
-
-圆形磁场
-
-叶形磁场
-
+若粒子从直线边界上一点射入，速度方向可在磁场内转动且半径 $R$ 固定，则粒子再次打到该边界的位置到入射点的距离为
+\[
+  x=2R\sin\alpha ,
+\]
+其中 $\alpha$ 为速度方向与边界的夹角。因此边界上能留下的最远距离为
+\[
+  x_{\max}=2R,
+\]
+对应 $\alpha=90^\circ$。这就是“旋转圆”求边界范围的基本结论。
 \end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：直线边界（旋转圆子问题）}}]
+\textbf{出发点在边界上}：设入射速度与边界夹角为 $\alpha$，轨迹半径为 $R$。入射点到再次出边界点的距离为
+\[
+  x=2R\sin\alpha .
+\]
+圆心角为 $2\alpha$，所以粒子在磁场中的运动时间为
+\[
+  t=\frac{2\alpha m}{qB}.
+\]
+这里 $\alpha$ 用弧度代入。
+
+\textbf{出发点在距边界 $h$ 处}：若速度平行边界，且 $0<h<2R$，轨迹圆与边界相交。设粒子第一次打到边界的水平距离为 $x$，则由弦长关系
+\[
+  x^2+(R-h)^2=R^2
+\]
+得
+\[
+  x=\sqrt{2Rh-h^2}.
+\]
+若题目给的是一般入射角，应先确定圆心到边界的距离，再用“弦长平方 + 弦心距平方 = 半径平方”求交点。
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：双直线边界（旋转圆子问题）}}]
+设两边界平行，间距为 $d$，粒子从一侧边界垂直射入，轨迹半径为 $R$。到达另一边界时，沿宽度方向的位移满足
+\[
+  d=R(1-\cos\theta),
+\]
+其中 $\theta$ 为粒子转过的圆心角。于是
+\[
+  \cos\theta=1-\frac{d}{R},\qquad
+  x=R\sin\theta=\sqrt{2Rd-d^2}.
+\]
+这里 $x$ 是沿边界方向的位移。
+
+若 $d<R$，则 $0<\theta<90^\circ$，粒子穿出时偏转较小；若 $R<d<2R$，则 $90^\circ<\theta<180^\circ$，粒子仍可到达另一边界，但出射方向已经明显回转。若 $d\ge 2R$，该入射条件下粒子不能到达另一边界，会从入射侧返回。
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：圆形磁场（旋转圆子问题）}}]
+设圆形磁场区域半径为 $r$，粒子从边界沿半径方向射入，粒子轨迹半径为 $R$。磁场圆心 $O$、入射点 $P$、轨迹圆心 $C$ 构成直角三角形：
+\[
+  OP=r,\qquad CP=R,\qquad OC=\sqrt{r^2+R^2}.
+\]
+设粒子在磁场中转过的圆心角为 $\theta$，由几何对称性有
+\[
+  \theta=2\arctan\frac{r}{R}.
+\]
+因此运动时间为
+\[
+  t=\frac{\theta m}{qB}
+  =\frac{2m}{qB}\arctan\frac{r}{R}.
+\]
+出射点由两个圆的另一个交点确定，出射速度方向与入射速度方向的夹角就是该圆心角 $\theta$。
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：缩放圆问题}}]
+矩形区域中，粒子从固定位置沿固定方向入射且速度可调时，轨道半径
+\[
+  R=\frac{mv}{qB}
+\]
+随速度改变。临界轨迹通常与某条边或某个顶点相切。
+
+若入射方向平行于矩形下边界，轨迹圆心到下边界距离为 $R$。要刚好碰到上边界，高度 $H$ 需满足
+\[
+  H=2R \quad\Rightarrow\quad R=\frac{H}{2}.
+\]
+要刚好经过右上顶点 $(L,H)$，则由圆方程
+\[
+  L^2+(H-R)^2=R^2
+\]
+得
+\[
+  R=\frac{L^2+H^2}{2H}.
+\]
+这类题本质上就是把“速度可调”转化为“半径可缩放”，再比较各个临界半径。
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：磁聚焦}}]
+同速同荷质比粒子在同一匀强磁场中半径相同：
+\[
+  R=\frac{mv}{qB}.
+\]
+磁聚焦题不要逐条轨迹硬算，优先寻找入射方向、出射方向和轨迹圆心的对称关系。
+
+\textbf{圆形磁场聚焦}：若磁场边界和粒子轨迹满足对称关系，所有粒子转过相同圆心角 $\theta$，运动时间相同：
+\[
+  t=\frac{\theta m}{qB}.
+\]
+
+\textbf{叶形磁场聚焦}：若边界由两个 $\frac14$ 圆弧组成，粒子在每段中常对应转过 $90^\circ$，单段运动时间为
+\[
+  t_1=\frac{T}{4}=\frac{\pi m}{2qB}.
+\]
+两段合计时间为
+\[
+  t=2t_1=\frac{\pi m}{qB}.
+\]
+\end{casetypebox}
+
+\begin{center}
+  \input{assets/magnetic_focusing}
+\end{center}

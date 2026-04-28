@@ -1,0 +1,52 @@
+\begin{tikzpicture}[scale=0.78, >=Stealth, line cap=round, line join=round]
+  \begin{scope}
+    \draw[thick, fill=blue!5] (0,0) circle (1.8);
+    \node at (0,-2.25) {\small 圆形磁场聚焦};
+    \node[blue!65!black] at (0,1.45) {\small $B$};
+
+    \coordinate (A) at (-1.8,0);
+    \coordinate (F) at (1.8,0);
+    \coordinate (C1) at (0,1.8);
+    \coordinate (C2) at (0,0.95);
+    \coordinate (C3) at (0,0.25);
+
+    \draw[->, thick] (-2.55,1.15) -- (-1.82,1.15);
+    \draw[->, thick] (-2.55,0.00) -- (-1.82,0.00);
+    \draw[->, thick] (-2.55,-1.15) -- (-1.82,-1.15);
+
+    \draw[orange!85!black, very thick, ->] (-1.38,1.15)
+      .. controls (-0.45,1.65) and (0.95,1.15) .. (1.45,0.15);
+    \draw[orange!85!black, very thick, ->] (A)
+      .. controls (-0.55,1.25) and (0.65,1.25) .. (F);
+    \draw[orange!85!black, very thick, ->] (-1.38,-1.15)
+      .. controls (-0.15,-0.15) and (0.9,0.05) .. (1.45,-0.15);
+
+    \fill (F) circle (1.6pt);
+    \node[right] at (F) {\small 焦点};
+  \end{scope}
+
+  \begin{scope}[xshift=6.1cm]
+    \draw[thick, fill=blue!5] (-1.2,0) arc (180:90:1.2) -- (1.2,1.2)
+      arc (90:0:1.2) -- cycle;
+    \node at (0,-2.25) {\small 叶形磁场聚焦};
+    \node[blue!65!black] at (0,1.35) {\small $B$};
+
+    \coordinate (P) at (-1.2,0);
+    \coordinate (M) at (0,1.2);
+    \coordinate (Q) at (1.2,0);
+
+    \draw[->, thick] (-2.2,0) -- (P);
+    \draw[orange!85!black, very thick, ->] (P) arc (180:90:1.2);
+    \draw[orange!85!black, very thick, ->] (M) arc (90:0:1.2);
+    \draw[->, thick] (Q) -- (2.2,0);
+
+    \fill (P) circle (1.5pt);
+    \fill (M) circle (1.5pt);
+    \fill (Q) circle (1.5pt);
+    \node[below] at (P) {\small 入射};
+    \node[above] at (M) {\small 转接};
+    \node[below] at (Q) {\small 出射};
+    \node at (-0.62,0.58) {\small $\frac14 T$};
+    \node at (0.62,0.58) {\small $\frac14 T$};
+  \end{scope}
+\end{tikzpicture}

@@ -1,11 +1,22 @@
 
 \subsection{几何光学}
-\textbf{反射定律}：反射角等于入射角，入射光线、反射光线与法线共面。\\
-\textbf{折射定律}：满足 $n_1\sin\theta_1=n_2\sin\theta_2$，光在不同介质中传播方向发生改变。\\
-\textbf{全反射}：光从光密介质射向光疏介质，且入射角大于临界角时发生全反射。
+\begin{tabularx}{\columnwidth}{XX}
+  反射定律 & $i=r$ \\
+  折射定律 & $n_1\sin i=n_2\sin r$ \\
+  折射率定义 & $n=\frac{c}{v}$ \\
+  相对折射率 & $n_{21}=\frac{n_2}{n_1}=\frac{\sin i}{\sin r}$ \\
+  全反射临界角 & $\sin C=\frac{n_2}{n_1}\quad(n_1>n_2)$ \\
+  透镜成像公式 & $\frac{1}{f}=\frac{1}{u}+\frac{1}{v}$ \\
+  放大率 & $m=\frac{h'}{h}=\frac{v}{u}$ \\
+\end{tabularx}
 
 \begin{formulanotebox}
-% TODO: 本节公式表格与公式注意事项待补充
+\begin{itemize}[leftmargin=1.5em]
+  \item 入射角、反射角、折射角都以法线为基准，不是以界面为基准。
+  \item 光从光疏介质进入光密介质时，折射角小于入射角；反向传播时光路可逆。
+  \item 全反射必须同时满足“从光密到光疏”和“入射角大于等于临界角”。
+  \item 透镜成像列式前先画主光线，实像可用光屏承接，虚像不能用光屏承接。
+\end{itemize}
 \end{formulanotebox}
 
 \begin{keypointbox}
@@ -13,13 +24,25 @@
 \end{keypointbox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：反射定律}}]
-% TODO: 反射作图题型解析待补充
+\begin{itemize}[leftmargin=1.5em]
+  \item 作图时先作法线，再按反射角等于入射角确定反射光线。
+  \item 平面镜成像中，像与物关于镜面对称，像距等于物距，所成像为正立等大的虚像。
+  \item 多镜面问题可用“像的对称点”或“展开镜面”简化光路。
+\end{itemize}
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：折射定律}}]
-% TODO: 折射作图与折射率题型解析待补充
+\begin{itemize}[leftmargin=1.5em]
+  \item 已知角度和折射率，用 $n_1\sin i=n_2\sin r$ 求折射角。
+  \item 光进入折射率较大的介质时向法线偏折；进入折射率较小的介质时远离法线偏折。
+  \item 视深问题常用近似关系 $h'=\frac{h}{n}$，表示从空气中看水中物体变浅。
+\end{itemize}
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：全反射}}]
-% TODO: 全反射临界条件题型解析待补充
+\begin{itemize}[leftmargin=1.5em]
+  \item 先判断传播方向是否从光密介质到光疏介质，再比较入射角与临界角。
+  \item 临界角满足 $\sin C=\frac{n_{\text{疏}}}{n_{\text{密}}}$；入射角小于 $C$ 时仍发生折射。
+  \item 光导纤维、棱镜全反射题常转化为几何角度关系和临界角条件。
+\end{itemize}
 \end{casetypebox}

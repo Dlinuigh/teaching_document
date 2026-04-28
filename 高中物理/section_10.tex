@@ -4,26 +4,18 @@
 \begin{tabularx}{\columnwidth}{XX}
   \multicolumn{2}{l}{\textbf{基本定义与等式}}\\
   场强定义&$E=\frac{F}{q}$\\
-  电势定义&$\varphi = \frac{W}{q}$\\
+  电势定义&$\varphi = \frac{E_p}{q}$\\
   电势差定义&$U_{AB}=\varphi_A-\varphi_B$\\
-  电场力做功&$W=qU_{AB}=W_A-W_B=\sum qE\Delta d$\\
+  电场力做功&$W_{AB}=qU_{AB}=E_{pA}-E_{pB}$\\
+  电势能变化&$\Delta E_p=-W_{\text{电}}$\\
   \multicolumn{2}{l}{\textbf{匀强电场规律}}\\
-  电势差与场强关系&$U=Ed$\\
+  电势差与场强关系&$U=Ed$（$d$ 为沿电场方向距离）\\
   \multicolumn{2}{l}{\textbf{点电荷}}\\
   库仑定律&$F=\frac{kQq}{r^2}$\\
   点电荷电场强度&$E=\frac{kQ}{r^2}$\\
-  点电荷电势&$\varphi=\frac{kQ}{r}$\\
-  点电荷电势能&$W=\frac{kQq}{r}$\\
-  \multicolumn{2}{l}{\textbf{连续分布电荷}}\\
-  无限长直导线电场强度&$E=\frac{2k\lambda}{r}$\\
-  无限大平面电场强度&$E=2\pi k\sigma$\\
-  环形带电体轴线上电场强度&$E=\frac{kQL}{(L^2+R^2)^{3/2}}$\\
-  环形带电体轴线上电势&$\varphi=\frac{kQ}{\sqrt{L^2+R^2}}$\\
-  球形带电体外电场强度&$E=\frac{kQ}{r^2}$\\
-  球形带电体外电势&$\varphi=\frac{kQ}{r}$\\
-  球形带电体内电场强度&$E=0$\\
-  球形带电体内电势&$\varphi=\frac{kQ}{R}$\\
+  电场叠加&$\vec E=\vec E_1+\vec E_2+\cdots$\\
   \multicolumn{2}{l}{\textbf{电容器}}\\
+  电容定义&$C=\frac{Q}{U}$\\
   电容决定式&$C=\varepsilon_0 \varepsilon_r \frac{S}{d}$\\
   真空介电常数关系&$k = \frac{1}{4\pi \varepsilon_0}$\\
   电容器能量&$E = \frac{1}{2} C U^2 = \frac{1}{2}\frac{Q^2}{C} = \frac{Q U}{2}$\\
@@ -51,7 +43,6 @@
 
 \textbf{静电场注意事项：}
 \begin{itemize}
-  \item $\lambda$为线电荷密度，$\sigma$为面电荷密度，$R$为球体半径，$L$为轴线上距离球心的距离
   \item 电场力做功只与电荷初末位置有关，与路径无关
   \item 电势能增加，一般情况下，机械能减少
   \item 电场力做功时需要进行投影：$W=qEd\cos\theta$
@@ -72,9 +63,18 @@
 \textbf{电容器动态分析}：断开电源看 $Q$ 不变，接电源看 $U$ 不变，再结合 $C$ 的变化判断其他量变化。
 \end{keypointbox}
 
-\begin{casetypebox}
-% TODO: 本节题型短标题未提供，请补充后逐题型填写
-电容器动态分析（电压不变）
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：电场做功与电容器动态分析}}]
+\textbf{电场做功与电势能：}
+\begin{itemize}[leftmargin=1.5em]
+  \item 先确定电荷正负，再用 $W_{AB}=qU_{AB}$ 判断电场力做功正负。
+  \item 电场力做正功时电势能减少，电场力做负功时电势能增加。
+  \item 匀强电场中只取沿电场方向的位移，$U=Ed$。
+\end{itemize}
 
-电容器动态分析（电荷量不变）
+\textbf{电容器动态分析：}
+\begin{itemize}[leftmargin=1.5em]
+  \item 接电源时 $U$ 不变，先由 $C=\varepsilon_0\varepsilon_r\frac{S}{d}$ 判断 $C$，再由 $Q=CU$ 判断 $Q$。
+  \item 断开电源时 $Q$ 不变，先判断 $C$，再由 $U=\frac{Q}{C}$ 和 $E=\frac{U}{d}$ 判断电压、电场强度。
+  \item 插入电介质或增大极板面积会使 $C$ 增大，增大板间距会使 $C$ 减小。
+\end{itemize}
 \end{casetypebox}

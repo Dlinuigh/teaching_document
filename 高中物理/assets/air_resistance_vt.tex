@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=0.95, >=Stealth]
+  \draw[->] (0,-2.4) -- (0,2.7) node[above] {$v$};
+  \draw[->] (0,0) -- (7.4,0) node[right] {$t$};
+
+  \draw[dashed] (0,-1.75) -- (7.1,-1.75) node[right] {$-v_t$};
+  \draw[blue, very thick, domain=0:2.75, samples=100]
+    plot (\x,{2.2*exp(-0.72*\x)-0.72*(1-exp(-0.72*\x))});
+  \draw[blue, very thick, domain=2.75:7.0, samples=120]
+    plot (\x,{-1.75*(1-exp(-0.58*(\x-2.75)))});
+
+  \draw[dashed] (2.75,0) -- (2.75,-2.05);
+  \node[above] at (2.75,0) {\small 最高点};
+  \node[left] at (0,2.2) {\small $v_0$};
+  \node[align=center, font=\small] at (1.25,1.55) {上升\\阻力向下};
+  \node[align=center, font=\small] at (5.4,-0.9) {下降\\趋近收尾速度};
+\end{tikzpicture}

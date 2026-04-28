@@ -339,13 +339,25 @@
 \end{keypointbox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：电表接法选择}}]
-% TODO: 电表内外接判断题型解析待补充
+\begin{itemize}[leftmargin=1.5em]
+  \item 伏安法测电阻时，电流表内接会使电压表读数包含电流表分压，测量值偏大。
+  \item 电流表外接会使电流表读数包含电压表支路电流，测量值偏小。
+  \item 大电阻常用电流表内接，小电阻常用电流表外接；也可比较 $\frac{R_x}{R_A}$ 与 $\frac{R_V}{R_x}$ 判断系统误差。
+\end{itemize}
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：滑动变阻器选取}}]
-% TODO: 限流式与分压式选择题型解析待补充
+\begin{itemize}[leftmargin=1.5em]
+  \item 限流式电路结构简单、耗能较小，适合负载阻值与滑动变阻器阻值相近且不要求电压从零调起的情况。
+  \item 分压式可使待测元件两端电压从零开始连续调节，适合要求测量范围宽、待测电阻较大或保护元件的实验。
+  \item 选择滑动变阻器时要同时看最大阻值、额定电流和调节是否灵敏。
+\end{itemize}
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：半偏法测电阻}}]
-% TODO: 半偏法误差分析题型解析待补充
+\begin{itemize}[leftmargin=1.5em]
+  \item 半偏法利用电流表示数变为原来一半时，支路电阻与电表内阻近似相等。
+  \item 限流式半偏法中，接入电阻后总电流改变，通常导致测得的电表内阻偏小。
+  \item 分压式半偏法能更好保持电表两端电压近似不变，误差较小；若考虑电源内阻和分压电路变化，需按实际电路重新判断。
+\end{itemize}
 \end{casetypebox}

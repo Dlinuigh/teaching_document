@@ -21,6 +21,59 @@
 动量定理适合处理“时间已知、速度变化已知、要求平均作用力”的问题；动量守恒适合处理“某一方向外力冲量为零”的系统问题；机械能守恒经常与水平方向动量守恒一起使用。
 \end{keypointbox}
 
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：线性空气阻力下的竖直上抛}}]
+设空气阻力大小为 $f=kv$，方向始终与速度方向相反。物体质量为 $m$，初速度 $v_0$ 竖直向上。收尾速度大小记为
+\[
+  v_t=\frac{mg}{k}.
+\]
+
+\textbf{上升阶段}：取向上为正，速度 $v>0$，阻力和重力都向下。微元动量定理为
+\[
+  (-mg-kv)\,dt=m\,dv.
+\]
+从 $v_0$ 减小到 $0$，积分得上升时间
+\[
+  t_{\text{上}}=\frac{m}{k}\ln\left(1+\frac{kv_0}{mg}\right)
+  =\frac{m}{k}\ln\left(1+\frac{v_0}{v_t}\right).
+\]
+上升高度由 $v(t)$ 积分得到
+\[
+  h_{\text{上}}=\frac{m}{k}v_0-\frac{m^2g}{k^2}
+  \ln\left(1+\frac{kv_0}{mg}\right).
+\]
+因为上升时重力和阻力都向下，速度减小得比无阻力时更快，所以上升时间小于 $\frac{v_0}{g}$。
+
+\textbf{下降阶段}：从最高点由静止下落，取向下为正，速度 $u>0$。此时重力向下、阻力向上：
+\[
+  (mg-ku)\,dt=m\,du.
+\]
+从 $0$ 增大到某一速度 $u$，积分得
+\[
+  t_{\text{下}}(u)=\frac{m}{k}\ln\frac{v_t}{v_t-u}.
+\]
+因此 $u$ 只能逐渐接近 $v_t$，精确达到收尾速度需要无限长时间。下降位移 $s$ 与速度 $u$ 的关系为
+\[
+  s=\frac{m}{k}\left(v_t\ln\frac{v_t}{v_t-u}-u\right).
+\]
+也可以直接对下降过程用动量定理：
+\[
+  mg\,t-ks=mu,
+\]
+因为空气阻力冲量为
+\[
+  I_f=-\int_0^t ku\,dt=-k\int_0^t u\,dt=-ks.
+\]
+所以若已知下降位移 $s$ 和该点速度 $u$，下降时间可写为
+\[
+  t_{\text{下}}=\frac{mu+ks}{mg}.
+\]
+
+\textbf{$v$--$t$ 图像}：上升段速度从 $v_0$ 弯曲下降到 $0$，斜率大小逐渐减小；最高点之后速度取负，下降段逐渐接近 $-v_t$，但不会在有限时间内真正达到。
+\begin{center}
+  \input{assets/air_resistance_vt}
+\end{center}
+\end{casetypebox}
+
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：平均作用力}}]
 平均作用力问题的核心是先求冲量，再除以作用时间。若一个物体质量为$m$，某一方向速度从$v_1$变为$v_2$，作用时间为$\Delta t$，则
 \[

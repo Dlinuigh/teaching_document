@@ -21,6 +21,71 @@
   动能定理只关心初末状态的动能变化和过程中的总功。若要求速度大小，尤其是合速度大小，动能定理通常非常直接；若要求速度方向或运动时间，则还需要结合运动学或受力分析。
 \end{keypointbox}
 
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：下落压缩竖直弹簧}}]
+设质量为 $m$ 的物体从弹簧上方高度 $h$ 处由静止释放，竖直下落后接触劲度系数为 $k$ 的轻弹簧，并继续向下压缩直到瞬时静止。取接触弹簧后向下的压缩量为 $x$，弹簧原长位置为 $x=0$。接触弹簧瞬间速度为
+\[
+  v_0=\sqrt{2gh}.
+\]
+
+\textbf{动能定理方程}：从释放点到压缩量为 $x$ 的位置，重力做正功 $mg(h+x)$，弹簧弹力做负功 $-\frac12kx^2$，所以
+\[
+  mg(h+x)-\frac12kx^2=\frac12mv^2.
+\]
+等价地，从接触弹簧瞬间开始写为
+\[
+  \frac12mv^2=\frac12mv_0^2+mgx-\frac12kx^2.
+\]
+因此速度随压缩量变化为
+\[
+  v^2=2g(h+x)-\frac{k}{m}x^2.
+\]
+
+\textbf{加速度与速度最大位置}：接触弹簧后受重力和弹力，取向下为正：
+\[
+  a=g-\frac{kx}{m}.
+\]
+当
+\[
+  x=\frac{mg}{k}
+\]
+时，加速度为零，速度达到最大。最大速度满足
+\[
+  v_{\max}^2=2gh+\frac{mg^2}{k},
+  \qquad
+  v_{\max}=\sqrt{2gh+\frac{mg^2}{k}}.
+\]
+此时动能最大：
+\[
+  E_{k\max}=\frac12mv_{\max}^2
+  =mgh+\frac{m^2g^2}{2k}.
+\]
+
+\textbf{最大压缩量}：物体最终瞬时静止时 $v=0$，设最大压缩量为 $x_m$，则
+\[
+  mg(h+x_m)=\frac12kx_m^2.
+\]
+解得正根
+\[
+  x_m=\frac{mg+\sqrt{m^2g^2+2kmgh}}{k}.
+\]
+最大弹性势能为
+\[
+  E_{p\max}=\frac12kx_m^2=mg(h+x_m).
+\]
+
+\textbf{加速度特殊点}：接触弹簧前为自由下落，$a=g$。接触后 $a=g-\frac{kx}{m}$，随压缩量线性减小；在 $x=\frac{mg}{k}$ 处为零；在 $x=x_m$ 处方向向上且大小最大：
+\[
+  |a|_{\text{上,max}}=\frac{kx_m}{m}-g.
+\]
+若比较整个过程的加速度大小，应取 $g$ 与 $\frac{kx_m}{m}-g$ 中较大的一个。
+
+\textbf{变化过程}：接触弹簧前，速度增大、动能增大，弹簧弹性势能为零；接触后到 $x=\frac{mg}{k}$，速度和动能继续增大，但加速度逐渐减小；从 $x=\frac{mg}{k}$ 到 $x_m$，弹力大于重力，速度和动能减小，弹性势能继续增大；到 $x_m$ 时速度为零，弹性势能最大。\\
+
+\begin{center}
+  \input{assets/spring_drop_vt}
+\end{center}
+\end{casetypebox}
+
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：平抛运动中的动能定理}}]
   平抛运动中只有重力做功，所以可以直接在轨迹上的任意两点之间列动能定理。设物体从点$A$运动到点$B$，高度下降量为$h_A-h_B$，则
   \[

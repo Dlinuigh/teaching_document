@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=0.95, >=Stealth]
+  \draw[->] (0,0) -- (7.2,0) node[right] {$t$};
+  \draw[->] (0,0) -- (0,3.2) node[above] {$v$};
+
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (1.9,1.25);
+  \coordinate (B) at (4.1,2.55);
+  \coordinate (C) at (6.4,0);
+
+  \draw[blue, very thick] (O) -- (A)
+    .. controls (2.6,1.95) and (3.35,2.45) .. (B)
+    .. controls (4.9,2.45) and (5.85,1.15) .. (C);
+
+  \draw[dashed] (A) -- (1.9,0) node[below] {\small 接触弹簧};
+  \draw[dashed] (B) -- (4.1,0) node[below] {\small $a=0$};
+  \draw[dashed] (C) -- (6.4,0) node[below] {\small 最大压缩};
+
+  \node[left] at (0,1.25) {\small $v_0$};
+  \draw[dashed] (0,1.25) -- (A);
+  \node[left] at (0,2.55) {\small $v_{\max}$};
+  \draw[dashed] (0,2.55) -- (B);
+
+  \node[align=center, font=\small] at (1.0,2.45) {自由下落\\$a=g$};
+  \node[align=center, font=\small] at (3.2,3.0) {压缩弹簧\\加速度减小};
+  \node[align=center, font=\small] at (5.7,2.25) {弹力大于重力\\速度减小};
+\end{tikzpicture}
