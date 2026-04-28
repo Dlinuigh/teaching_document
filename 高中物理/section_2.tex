@@ -1,30 +1,85 @@
-
 \subsection{平抛运动}
 \begin{tabularx}{\columnwidth}{XX}
-  水平位移&$x=v_0 t$\\
-  竖直位移&$y=\frac12 a t^2$\\
-  竖直速度&$v_y=a t=\sqrt{\frac{2y}{a}}=v_0\tan\theta$\\
-  合速度&$v=\sqrt{v_y^2+v_0^2}=\frac{v_0}{\cos\theta}$\\
-  \multicolumn{2}{l}{\textbf{平抛运动推论}}\\
-  速度偏角&$\tan\theta=\frac{v_y}{v_0}=\frac{gt}{v_0}=\frac{2y}{x}$\\
-  斜面抛回斜面&$\tan\theta=2\tan\text{斜面倾角}$\\
+  水平位移    & $x=v_0 t$                                                \\
+  竖直位移    & $y=\frac12 a t^2$                                        \\
+  竖直速度    & $v_y=a t=\sqrt{\frac{2y}{a}}=v_0\tan\theta$              \\
+  合速度     & $v=\sqrt{v_y^2+v_0^2}=\frac{v_0}{\cos\theta}$            \\
+  轨迹抛物线方程 & $y=\frac{ax^2}{2v_0^2}$                                  \\
+  \multicolumn{2}{l}{\textbf{平抛运动推论}}                                \\
+  速度偏角    & $\tan\theta=\frac{v_y}{v_0}=\frac{gt}{v_0}=\frac{2y}{x}$ \\
+  斜面抛回斜面  & $\tan\theta=2\tan\text{斜面倾角}$                            \\
+  垂直打到斜面上 & $\tan\theta \tan\alpha = 1 $                             \\
 \end{tabularx}
 
 \begin{formulanotebox}
-平抛运动的本质是\textbf{水平方向匀速直线运动}与\textbf{竖直方向自由落体运动}的合运动；列式时必须分解到正交方向，不能把合速度直接代入匀变速位移公式。
+  平抛运动的本质是\textbf{水平方向匀速直线运动}与\textbf{竖直方向自由落体运动}的合运动；列式时必须分解到正交方向，不能把合速度直接代入匀变速位移公式。
 
-表中竖直方向公式默认取加速度大小为 $g$。若坐标正方向向上，应写为 $a=-g$ 并保持符号一致。
+  表中竖直方向公式默认取加速度大小为 $g$。若坐标正方向向上，应写为 $a=-g$ 并保持符号一致。
 \end{formulanotebox}
 
 \begin{keypointbox}
-\textbf{独立性原理}：水平方向与竖直方向互不影响，二者共享同一运动时间 $t$，联立时通常用“时间桥梁”把两个方向联系起来。
+  \textbf{独立性原理}：水平方向与竖直方向互不影响，二者共享同一运动时间 $t$，联立时通常用“时间桥梁”把两个方向联系起来。
 
-\textbf{轨迹特征}：平抛轨迹为抛物线，常见处理是先由 $x=v_0t$ 得 $t=\frac{x}{v_0}$，再代入 $y=\frac{1}{2}gt^2$ 得轨迹方程。
+  \textbf{轨迹特征}：平抛轨迹为抛物线，常见处理是先由 $x=v_0t$ 得 $t=\frac{x}{v_0}$，再代入 $y=\frac{1}{2}gt^2$ 得轨迹方程。
 
-\textbf{速度方向变化}：水平分速度恒定，竖直分速度线性增大，因此合速度方向不断下偏；“位移偏角”和“速度偏角”一般不相同，审题时要区分。
+  \textbf{速度方向变化}：水平分速度恒定，竖直分速度线性增大，因此合速度方向不断下偏；“位移偏角”和“速度偏角”一般不相同，审题时要区分。
 \end{keypointbox}
 
-\begin{casetypebox}
-% TODO: 本节题型短标题未提供，请补充后逐题型填写
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：台阶时间}}]
+  问题不一定有台阶，台阶指的是一个从斜面上水平抛出的物体，有三种可能，\\
+  \begin{center}
+    \begin{tikzpicture}[scale=0.85]
+      % L型台阶：竖直壁 + 下方水平边（下方边超出虚线与下边的交点）
+      \draw[thick] (3.2,0.385) -- (3.2,-1.2);
+      \draw[thick] (3.2,-1.2) -- (7.5,-1.2);
+
+      % 虚线斜面：自抛出点延伸至 L 型下方边上的一点
+      \draw[dashed,gray] (0,2.5) -- (5.6,-1.2);
+      \node[gray,rotate=-33] at (2.4,0.55) {\scriptsize 斜面（虚线）};
+
+      % 抛出点与初速度
+      \filldraw (0,2.5) circle (1.4pt);
+      \draw[->,thick] (0,2.5) -- (1.2,2.5);
+      \node[above] at (0.6,2.55) {\scriptsize $v_0$};
+
+      % 三条平抛轨迹（均越过 L 型上沿，对应三种落点）
+      % 蓝：穿过虚线后落在交点左侧（下方边内侧，即"虚线左下方"）
+      \draw[thick,blue,domain=0:4.6,samples=80,smooth] plot(\x,{2.5-0.1749*\x*\x});
+      % 橙：恰好落在虚线与下方边的交点
+      \draw[thick,orange!85!black,domain=0:5.6,samples=100,smooth] plot(\x,{2.5-0.1180*\x*\x});
+      % 红：落在下方边的右侧超出部分
+      \draw[thick,red,domain=0:6.7,samples=100,smooth] plot(\x,{2.5-0.0824*\x*\x});
+
+      % 落点与标注
+      \filldraw[blue] (4.6,-1.2) circle (1.35pt);
+      \filldraw[orange!85!black] (5.6,-1.2) circle (1.35pt);
+      \filldraw[red] (6.7,-1.2) circle (1.35pt);
+      \node[blue,below] at (4.6,-1.25) {\scriptsize 交点左侧};
+      \node[orange!85!black,below] at (5.6,-1.25) {\scriptsize 交点};
+      \node[red,below] at (6.7,-1.25) {\scriptsize 交点右侧};
+    \end{tikzpicture}
+  \end{center}
+
+  \begin{itemize}
+    \item 落到斜面上，此时有两大结论：$\tan\theta=2\tan\text{斜面倾角}$，也就是速度偏角固定。根据该结论带入速度可知 $\frac{v_y}{v_0}=\frac{gt}{v_0}=\tan\theta$，也就是飞行时间与初速度成正比，也会与射程、高度、在斜面上的距离成正比。
+    \item 落到斜面以下，或者说延迟落地，本应该在斜面的延长线上停止运动，但是因为“台阶”而可以下落到低于延长线的区域。结论是下落后时间长于原本初速度应该正常飞行的时间，所以速度更大、射程、下落高度、距离、偏角都变得更大。
+    \item 落到斜面以上，或者说提前落地，本应该斜面的延长线上停止运动，但是因为“平台”而减少飞行时间，所以速度更小，射程、高度、距离、偏角都会更小。注意比较的时候是与同样的初速度进行的。
+  \end{itemize}
 \end{casetypebox}
 
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：斜面抛出最高点}}]
+  一般不是斜抛运动，即使是斜抛处理方法也是一样的。将物体的初速度、加速度分别垂直于斜面与沿斜面分解。分解后垂直斜面一般是一个类竖直上抛，可以求出下落所花的时间与上升时最大高度，当然还有上升到最大高度的时间。通过两个时间可以求出最高点的沿斜面距离，以及最大射程的沿斜面距离。这也是题目完全可以考察斜抛运动的原因，处理方法是完全一样的。
+  下面举一个具体的例子，从斜面顶端水平抛出一个物体，求物体距离斜面最高点的位置与高度。\\
+  已知条件为：$v_0$，$g$，$\theta$。这样就够了。\\
+  首先分解速度和加速度，接着列出两个方向的方程。
+  \[
+    \left\{
+    \begin{aligned}
+      v_0\sin\theta                          & = \frac12gt (\text{往返}) \\
+      v_0\cos\theta t+\frac12g\sin\theta t^2 & =x                      \\
+      \frac{(v_0\sin\theta)^2}{2g\cos\theta} & =h
+    \end{aligned}
+    \right.
+  \]
+  【图先欠着】
+\end{casetypebox}

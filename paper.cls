@@ -16,6 +16,7 @@
 \RequirePackage{hhline}
 \RequirePackage{lastpage}
 \RequirePackage{multicol}
+\RequirePackage{mathrsfs}
 \RequirePackage{needspace}
 \RequirePackage{parskip}
 \RequirePackage{siunitx}
@@ -41,6 +42,7 @@
 \RequirePackage{adjustbox}
 
 \usetikzlibrary{angles,quotes}
+\usetikzlibrary{arrows}
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{calc}
 \usetikzlibrary{decorations}
@@ -107,7 +109,7 @@
 
 % ========== 内容盒子 ==========
 \newtcolorbox{formulanotebox}[1][]{
-  colback=blue!8,
+  colback=white!0,
   colframe=blue!75!black,
   boxrule=1pt,
   arc=2.2mm,
@@ -137,7 +139,7 @@
 }
 
 \newtcolorbox{keypointbox}[1][]{
-  colback=teal!8,
+  colback=white!0,
   colframe=teal!65!black,
   boxrule=1pt,
   arc=2.2mm,
@@ -167,7 +169,7 @@
 }
 
 \newtcolorbox{casetypebox}[1][]{
-  colback=orange!8,
+  colback=white!0,
   colframe=orange!75!black,
   boxrule=1pt,
   arc=2.2mm,
@@ -197,7 +199,7 @@
 }
 
 \newtcolorbox{examplebox}[1][]{
-  colback=purple!7,
+  colback=white!0,
   colframe=purple!65!black,
   boxrule=1pt,
   arc=2.2mm,
@@ -227,7 +229,7 @@
 }
 
 \newtcolorbox{examplesolutionbox}[1][]{
-  colback=gray!8,
+  colback=white!0,
   colframe=gray!60!black,
   boxrule=1pt,
   arc=2.2mm,

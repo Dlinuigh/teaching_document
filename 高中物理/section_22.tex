@@ -3,8 +3,10 @@
 \begin{tabularx}{\columnwidth}{XX}
   卢瑟福散射角判定&大角散射对应近核强库仑作用\\
   玻尔能级公式（氢原子）&$E_n=-\frac{13.6\ \mathrm{eV}}{n^2}$\\
-  轨道半径（氢原子）&$r_n=n^2a_0$\\
+  轨道半径（氢原子）&$r_n=n^2a_0$，$a_0\approx 0.53\times 10^{-10}\ \mathrm{m}$\\
+  类氢离子轨道半径&$r_n=\frac{n^2}{Z}a_0$\\
   频率条件&$h\nu=|E_m-E_n|$\\
+  最大谱线数（从第 $n$ 能级向下）&$N=\frac{n(n-1)}{2}$\\
 \end{tabularx}
 \textbf{枣糕模型}
 \paragraph{阴极射线} 发现原子可再分，揭示电子存在。
@@ -24,6 +26,16 @@
 \]
 $n$ 越大，能级越高（数值上越接近 0），电子束缚越弱。
 
+\textbf{轨道半径}：氢原子第 $n$ 条定态轨道半径为
+\[
+  r_n=n^2a_0.
+\]
+其中 $a_0$ 为第一轨道半径。类氢离子（核电荷数为 $Z$，核外只有一个电子）常用
+\[
+  r_n=\frac{n^2}{Z}a_0.
+\]
+同一原子中 $n$ 越大，轨道半径越大，相邻轨道半径并不是等差增加。
+
 \textbf{跃迁规律}：
 \begin{itemize}
   \item 电子从高能级跃迁到低能级（$n_i>n_f$）时，释放光子，满足
@@ -39,24 +51,26 @@ $n$ 越大，能级越高（数值上越接近 0），电子束缚越弱。
 
 \textbf{跃迁情形判定要点}：先判断“升能级还是降能级”，再判断“吸收还是辐射”；频率和波长由能级差唯一决定，不由轨道编号本身单独决定。
 
+\textbf{谱线所属区域}：氢原子向 $n=1$ 能级跃迁形成莱曼系，光子能量较大，属于紫外线；向 $n=2$ 能级跃迁形成巴耳末系，其中部分谱线位于可见光区域；向 $n=3$ 能级跃迁形成帕邢系，属于红外线。
+
 \begin{formulanotebox}
 玻尔模型的能级、半径公式主要适用于氢原子及类氢体系，不能直接机械套用到任意多电子原子。
 
 跃迁辐射频率由能级差决定，与电子“所在轨道编号大小”无直接线性关系。
+
+若题目说“大量氢原子处于第 $n$ 能级”，可出现所有低能级之间的辐射跃迁；若只讨论“一个电子一次从第 $n$ 能级回到基态”，一次只发出一条光谱线，但可能路径不同。
 \end{formulanotebox}
 
 \begin{keypointbox}
 原子模型演化体现“实验推动理论修正”：从阴极射线发现电子（汤姆孙）到 $\alpha$ 散射建立核式结构（卢瑟福），再到离散能级与跃迁规律（波尔）。
 \end{keypointbox}
 
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：枣糕模型}}]
-% TODO: 枣糕模型相关题型解析待补充
-\end{casetypebox}
-
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：核式结构模型}}]
-% TODO: 核式结构模型题型解析待补充
-\end{casetypebox}
-
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：波尔模型与能级跃迁}}]
-% TODO: 波尔模型（能级图、吸收/发射谱线）题型解析待补充
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{能级计算}：先写出初、末能级能量，再用 $\Delta E=|E_m-E_n|$，由 $h\nu=\Delta E$ 或 $c=\lambda\nu$ 求频率、波长。
+  \item \textbf{吸收与发射判定}：低能级到高能级为吸收，高能级到低能级为发射；吸收光子时能量必须恰好等于两个定态能级差。
+  \item \textbf{谱线条数}：大量氢原子从第 $n$ 能级向下跃迁，最多产生 $\frac{n(n-1)}{2}$ 条谱线。
+  \item \textbf{第 4 能级向下跃迁}：共有 $4\to3$、$4\to2$、$4\to1$、$3\to2$、$3\to1$、$2\to1$ 六条谱线，其中 $4\to1$、$3\to1$、$2\to1$ 为紫外线，$4\to2$、$3\to2$ 为可见光，$4\to3$ 为红外线。
+  \item \textbf{轨道半径判断}：氢原子用 $r_n=n^2a_0$，类氢离子用 $r_n=\frac{n^2}{Z}a_0$；半径比可直接按 $n^2$ 或 $\frac{n^2}{Z}$ 比较。
+\end{itemize}
 \end{casetypebox}

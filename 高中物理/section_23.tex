@@ -4,6 +4,8 @@
   半衰期定义&$T$：核数减半所需时间\\
   质量亏损&$\Delta m=m_{\text{初}}-m_{\text{末}}$\\
   质能关系&$E=\Delta mc^2$\\
+  原子质量单位换算&$1\ \mathrm{u}c^2\approx 931.5\ \mathrm{MeV}$\\
+  结合能法放能&$Q=\sum E_{b,\text{生成物}}-\sum E_{b,\text{反应物}}$\\
   比结合能&$\bar E_b=\frac{E_b}{A}$\\
 \end{tabularx}
 \textbf{自然衰变与射线}
@@ -31,7 +33,7 @@
   \item 统计规律
   \item 不受外界因素改变
 \end{itemize}
-\textbf{核式反应}
+\textbf{核反应}
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见核反应方程表}}]
 \begin{tabularx}{\columnwidth}{|c|X|}
   \hline
@@ -55,12 +57,34 @@
 \end{casetypebox}
 
 \subsection{结合能与比结合能}
+\begin{keypointbox}[title={\strut\textcolor{white}{\bfseries 重点知识点：结合能}}]
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{结合能}：把原子核完全拆成单个核子所需的能量，或由自由核子结合成原子核时释放的能量。
+  \item \textbf{比结合能}：$\bar E_b=\frac{E_b}{A}$，表示平均每个核子的结合能；比结合能越大，原子核通常越稳定。
+  \item \textbf{放能判断}：核反应后总结合能增大，差值以动能、光子能量等形式释放。
+  \item 若题目给的是比结合能，需先用 $E_b=A\bar E_b$ 求每个核的结合能，再比较反应前后总结合能。
+\end{itemize}
+\end{keypointbox}
+
 \subsection{质量亏损}
+\begin{keypointbox}[title={\strut\textcolor{white}{\bfseries 重点知识点：质量亏损}}]
+\begin{itemize}[leftmargin=1.5em]
+  \item 原子核质量小于组成它的自由质子和中子的质量总和，差值称为质量亏损。
+  \item 核反应放能时，反应前总静质量大于反应后总静质量，释放能量为
+        \[
+          Q=(m_{\text{初}}-m_{\text{末}})c^2.
+        \]
+  \item 若质量单位为 $\mathrm{u}$，可直接用 $Q=\Delta m\times 931.5\ \mathrm{MeV}$。
+  \item 若使用原子质量计算核反应能量，反应前后电子数相同且完全抵消时，可以直接代入原子质量；否则应统一用原子核质量。
+\end{itemize}
+\end{keypointbox}
 
 \begin{formulanotebox}
 核反应方程配平时必须同时满足质量数守恒与电荷数守恒，且核反应前后总质量一般不守恒（但总能量守恒）。
 
 半衰期是统计规律，对大量原子核成立；单个原子核何时衰变具有随机性。
+
+计算核反应放能时，质量亏损法和结合能法本质一致：质量减少对应反应后总结合能增加。
 \end{formulanotebox}
 
 \begin{keypointbox}
@@ -76,5 +100,20 @@
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：核反应方程}}]
-% TODO: 核反应方程配平题型解析待补充
+\textbf{配平方法：}
+\begin{itemize}[leftmargin=1.5em]
+  \item 先看质量数守恒，再看电荷数守恒，未知粒子的质量数和电荷数由差值确定。
+  \item 常见粒子要熟记：中子 $^1_0\mathrm{n}$、质子 $^1_1\mathrm{H}$、$\alpha$ 粒子 $^4_2\mathrm{He}$、电子 $^0_{-1}\mathrm{e}$、正电子 $^0_{+1}\mathrm{e}$。
+\end{itemize}
+
+\textbf{放能计算两种途径：}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{质量亏损法}：先算 $\Delta m=m_{\text{初}}-m_{\text{末}}$，再用 $Q=\Delta mc^2$；若质量用 $\mathrm{u}$，则 $Q=\Delta m\times 931.5\ \mathrm{MeV}$。
+  \item \textbf{结合能法}：先分别求反应物和生成物总结合能，再用
+        \[
+          Q=\sum E_{b,\text{生成物}}-\sum E_{b,\text{反应物}}.
+        \]
+        若给出比结合能，先乘质量数 $A$ 得到该核的结合能。
+  \item 放能反应满足 $Q>0$，对应反应后总静质量减小、总结合能增大。
+\end{itemize}
 \end{casetypebox}
