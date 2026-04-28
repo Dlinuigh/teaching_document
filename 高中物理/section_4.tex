@@ -1,62 +1,328 @@
-
 \subsection{万有引力}
 \begin{tabularx}{\columnwidth}{XX}
-  球体万有引力&$ F_{\text{万}}=\left\{
-    \begin{array}{ll}
-      \frac{GMm}{r^2}&r\ge R\\
-      \frac{GMmr}{R^3}&r<R\\
-    \end{array}
-    \right.$\\ % }
-    向心力简化式&$GM=v^2r$\\
-    &$GM=\omega^2r^3$\\
-    &$GM=ar^2$\\
-    &$GM=4\pi^2\frac{r^3}{T^2}$\\
-    密度公式&$\rho=\frac{3\pi}{GT^2}$\\
-    \multicolumn{2}{l}{\textbf{开普勒三大定律}}\\
-    周期定律&$\frac{a^3}{T^2}=k=\frac{GM}{4\pi^2}$\\
-    \multicolumn{2}{l}{\textbf{黄金代换}}\\
-    黄金代换&$GM=gR^2$\\
-    \multicolumn{2}{l}{\textbf{宇宙速度}}\\
-    第一宇宙速度&$v=\sqrt{\frac{GM}{R}}=\sqrt{Rg}$\\
-    \multicolumn{2}{l}{\textbf{追及问题}}\\
-    同向（最近到最远）&$t=\frac12\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}-T_{\text{小}}}$\\
-    同向（最近到最近）&$t=\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}-T_{\text{小}}}$\\
-    反向（最近到最远）&$t=\frac12\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}+T_{\text{小}}}$\\
-    反向（最近到最近）&$t=\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}+T_{\text{小}}}$\\
-    \multicolumn{2}{l}{\textbf{双星问题}}\\
-    质量半径关系&$m_1r_1=m_2r_2$\\
-    质量角速度关系&$G(m_1+m_2)=\omega^2(r_1+r_2)^3$\\
-  \end{tabularx}
+  球体万有引力    & $ F_{\text{万}}=\left\{
+    \begin{aligned}{ll}
+      \frac{GMm}{r^2}  & r\ge R \\
+      \frac{GMmr}{R^3} & r<R    \\
+    \end{aligned}
+  \right.$                                                                          \\
+  球体万有引力势能  & $E_p=-\frac{GMm}{r},r\ge R$                                           \\
+  向心力简化式    & $GM=v^2r$                                                             \\
+            & $GM=\omega^2r^3$                                                      \\
+            & $GM=ar^2$                                                             \\
+            & $GM=4\pi^2\frac{r^3}{T^2}$                                            \\
+  密度公式      & $\rho=\frac{3\pi}{GT^2}$                                              \\
+  \multicolumn{2}{l}{\textbf{开普勒三大定律}}                                              \\
+  周期定律      & $\frac{a^3}{T^2}=k=\frac{GM}{4\pi^2}$                                 \\
+  \multicolumn{2}{l}{\textbf{黄金代换}}                                                 \\
+  黄金代换      & $GM=gR^2$                                                             \\
+  \multicolumn{2}{l}{\textbf{宇宙速度}}                                                 \\
+  第一宇宙速度    & $v=\sqrt{\frac{GM}{R}}=\sqrt{Rg}$                                     \\
+  \multicolumn{2}{l}{\textbf{追及问题}}                                                 \\
+  同向（最近到最远） & $t=\frac12\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}-T_{\text{小}}}$ \\
+  同向（最近到最近） & $t=\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}-T_{\text{小}}}$        \\
+  反向（最近到最远） & $t=\frac12\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}+T_{\text{小}}}$ \\
+  反向（最近到最近） & $t=\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}+T_{\text{小}}}$        \\
+  \multicolumn{2}{l}{\textbf{双星问题}}                                                 \\
+  质量半径关系    & $m_1r_1=m_2r_2$                                                       \\
+  质量角速度关系   & $G(m_1+m_2)=\omega^2(r_1+r_2)^3$                                      \\
+\end{tabularx}
 
+\begin{formulanotebox}
+  万有引力与轨道运动公式使用时要先明确轨道类型（圆轨道、椭圆轨道）和研究对象（单星绕中心天体、双星系统），避免混用。\\
+  不要在椭圆轨道中使用向心力的公式，那些只能用于圆轨道，椭圆轨道由于半径不等于距离，所以半径都是错误的。\\
+  长轴顶点处曲率半径最小为$\frac{b^2}{a}$，对于左右的顶点曲率半径都是一样的，但是近地点的距离应该是$a-c$，远地点的距离应该是$a+c$，计算后会发现，靠近焦点的顶点曲率半径大于距离，远离焦点的顶点曲率半径小于距离。\\
+  如果根据此结论去计算那么会得到这样的方程：
+  \[
+    \left\{
+    \begin{aligned}
+      \frac{GMm}{d_{\text{近}}^2}=m\frac{v^2}{r_{\text{曲率半径}}}<m\frac{v^2}{d_{\text{近}}} \\
+      \frac{GMm}{d_{\text{远}}^2}=m\frac{v^2}{r_{\text{曲率半径}}}>m\frac{v^2}{d_{\text{远}}} \\
+    \end{aligned}
+    \right.
+  \]
+  上面的表述中注意距离与半径的区别。\\
+  第一宇宙速度、重力相关的公式中$R$都是地球半径，不要用错。其他时候$r$代表星球与中心天体的距离。
+\end{formulanotebox}
+
+\begin{keypointbox}
   \textbf{开普勒定律}
-
   \begin{itemize}
     \item 轨道定律：行星绕太阳的轨道是椭圆。
     \item 面积定律：行星与太阳的连线在单位时间内扫过的面积相等，近太阳时快、远太阳时慢。
     \item 周期定律：行星绕太阳的周期的平方与轨道半长轴的立方成正比。
   \end{itemize}
   常见考法：
-  面积定律是\textbf{同一行星}在不同位置的连线扫过面积速度相等。
+  面积定律是\textbf{同一行星}在不同位置的连线扫过面积速度相等。根据与中心点的连线扫过的面积判断运行的时间或者周期。
   周期定律是\textbf{同一中心天体}的不同行星周期与半长轴的关系。
-
   \textbf{行星变轨问题}
-
-\begin{formulanotebox}
-万有引力与轨道运动公式使用时要先明确轨道类型（圆轨道、椭圆轨道）和研究对象（单星绕中心天体、双星系统），避免混用。
-
-“向心力简化式”本质上来自 $F_{\text{万}}=F_{\text{向}}$，只适用于对应轨道条件，不可脱离轨道条件单独套用。
-\end{formulanotebox}
-
-\begin{keypointbox}
-\textbf{开普勒定律适用范围}：周期定律要求“同一中心天体”；面积定律比较的是同一行星在不同位置的面积速度。
-
-\textbf{变轨核心判断}：由椭圆轨道近地点/远地点速度比较与机械能变化判断推进或减速，不能只凭“离中心远近”判断速度变化。
+  环绕中心天体有三条轨道，两条圆形轨道、一条椭圆轨道与两个圆轨道相切。一共有两个切点，将与小圆轨道相切的点定为$P$，将与大圆轨道相切的点定为$Q$。小圆的环绕速度定为$v_1$，大圆的环绕速度定为$v_2$。\\
+  四个速度大小关系：$v_Q<v_2<v_1<v_P$。\\
+  从轨道半径小的变轨前往半径更大的轨道需要加速，但是一旦到达该轨道，运行速度实际会更小，原因是引力势能大于动能，增加的动能用于增大引力势能。
 \end{keypointbox}
 
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：开普勒定律应用}}]
-% TODO: 开普勒定律综合题型解析待补充
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：密度不均匀球体的万有引力}}]
+一个实心大球半径为$R$，原本密度为$\rho$，其中填充了一个半径为$r_0$、密度为$\rho'$的小球。设大球球心为$O$，小球球心为$O'$，$\overrightarrow{OO'}=\vec a$，$OO'=a$。研究点为$P$，记
+\[
+  \vec r=\overrightarrow{OP},\qquad
+  \vec s=\overrightarrow{O'P}=\vec r-\vec a.
+\]
+核心方法是叠加法：把整个物体看成“完整的密度为$\rho$的大球”，再叠加一个位于$O'$处、半径为$r_0$、密度为
+\[
+  \Delta\rho=\rho'-\rho
+\]
+的差值小球。若$\rho'>\rho$，差值小球是正质量，表示小球处密度更大；若$\rho'<\rho$，差值小球是负质量，表示小球处密度更小。\\
+记
+\[
+  M_R=\frac43\pi\rho R^3,\qquad
+  \Delta M=\frac43\pi\Delta\rho\,r_0^3.
+\]
+下面的$\vec g$表示单位质量受到的引力场强，测试质量$m$受到的引力就是$\vec F=m\vec g$。\\
+如果$P$在小球内部，即$|\vec s|<r_0$，大球贡献和差值小球贡献都按球内公式计算：
+\[
+  \vec g=-\frac43\pi G\rho\,\vec r-\frac43\pi G\Delta\rho\,\vec s.
+\]
+这说明小球内部的引力不是简单指向大球心或小球心，而是两个线性场的矢量和。\\
+如果$P$在小球外、大球内，即$|\vec s|>r_0$且$|\vec r|<R$，大球用球内公式，差值小球用球外公式：
+\[
+  \vec g=-\frac43\pi G\rho\,\vec r
+  -G\Delta M\frac{\vec s}{|\vec s|^3}.
+\]
+如果$P$在大球外，即$|\vec r|>R$，则两个球都可以看作质量集中在各自球心：
+\[
+  \vec g=-GM_R\frac{\vec r}{|\vec r|^3}
+  -G\Delta M\frac{\vec s}{|\vec s|^3}.
+\]
+特别注意，除非$P,O,O'$三点共线，否则这个结果不能直接合并成一个标量公式。\\
+若$P$在$OO'$连线上，可以把$O$指向$O'$作为正方向，令$OP=x$，则$O'P=x-a$。小球内有
+\[
+  g_x=-\frac43\pi G\left[\rho x+\Delta\rho(x-a)\right].
+\]
+小球外、大球内有
+\[
+  g_x=-\frac43\pi G\rho x
+  -G\Delta M\frac{x-a}{|x-a|^3}.
+\]
+大球外有
+\[
+  g_x=-GM_R\frac{x}{|x|^3}
+  -G\Delta M\frac{x-a}{|x-a|^3}.
+\]
+这些式子中的正负号会自动给出方向：$\Delta\rho>0$时差值小球吸引物体，$\Delta\rho<0$时相当于“少了一部分质量”，贡献方向与正质量小球相反。\\
+如果$P$不在$OO'$连线上，但仍在小球外、大球内，就要用矢量三角形处理。设
+\[
+  OP=r,\qquad O'P=s,\qquad \angle OPO'=\theta.
+\]
+大球贡献大小为
+\[
+  g_R=\frac43\pi G\rho r,
+\]
+方向沿$PO$；差值小球贡献大小为
+\[
+  g_0=\frac{G|\Delta M|}{s^2}.
+\]
+当$\Delta\rho>0$时，差值小球贡献方向沿$PO'$，两部分夹角就是$\theta$，合场强大小为
+\[
+  g=\sqrt{g_R^2+g_0^2+2g_Rg_0\cos\theta}.
+\]
+当$\Delta\rho<0$时，差值小球贡献方向与$PO'$相反，合场强大小为
+\[
+  g=\sqrt{g_R^2+g_0^2-2g_Rg_0\cos\theta}.
+\]
+这个题型的关键是不要试图给“不规则密度球体”直接套球壳定理，而是先补成完整均匀大球，再叠加一个密度差小球。
 \end{casetypebox}
 
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：行星变轨问题}}]
-% TODO: 行星变轨问题题型解析待补充
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：万有引力追及问题}}]
+两颗卫星绕同一中心天体做匀速圆周运动时，追及问题本质上只看两颗卫星相对中心天体的连线夹角如何变化。设两颗卫星的角速度大小分别为$\omega_1,\omega_2$，周期分别为$T_1,T_2$。\\
+如果两颗卫星同向运动，相对角速度为
+\[
+  \omega_{\text{相}}=|\omega_1-\omega_2|
+  =2\pi\left|\frac1{T_1}-\frac1{T_2}\right|.
+\]
+如果两颗卫星反向运动，相对角速度为
+\[
+  \omega_{\text{相}}=\omega_1+\omega_2
+  =2\pi\left(\frac1{T_1}+\frac1{T_2}\right).
+\]
+一旦使用相对角速度，同向和反向就可以统一处理。两颗卫星距离最近，表示两颗卫星与中心天体在同一直线且同侧，相对夹角为$0$；两颗卫星距离最远，表示两颗卫星与中心天体在同一直线且异侧，相对夹角为$\pi$。\\
+因此从最近到最近，或者从最远到最远，相对夹角都要变化$2\pi$，所用时间相同：
+\[
+  t_{\text{最近}\to\text{最近}}
+  =t_{\text{最远}\to\text{最远}}
+  =\frac{2\pi}{\omega_{\text{相}}}.
+\]
+从最近到最远，或者从最远到最近，相对夹角只需要变化$\pi$，所用时间是前者的一半：
+\[
+  t_{\text{最近}\to\text{最远}}
+  =t_{\text{最远}\to\text{最近}}
+  =\frac{\pi}{\omega_{\text{相}}}.
+\]
+如果题目给的是同向运动，并且$T_{\text{大}}>T_{\text{小}}$，则
+\[
+  \omega_{\text{相}}
+  =2\pi\left(\frac1{T_{\text{小}}}-\frac1{T_{\text{大}}}\right),
+\]
+所以
+\[
+  t_{\text{最近}\to\text{最近}}
+  =\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}-T_{\text{小}}},
+  \qquad
+  t_{\text{最近}\to\text{最远}}
+  =\frac12\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}-T_{\text{小}}}.
+\]
+如果题目给的是反向运动，则
+\[
+  \omega_{\text{相}}
+  =2\pi\left(\frac1{T_1}+\frac1{T_2}\right),
+\]
+所以
+\[
+  t_{\text{最近}\to\text{最近}}
+  =\frac{T_1T_2}{T_1+T_2},
+  \qquad
+  t_{\text{最近}\to\text{最远}}
+  =\frac12\frac{T_1T_2}{T_1+T_2}.
+\]
+这个题的关键不是分别记忆同向、反向的四个公式，而是先把问题改写成“相对夹角变化了多少”，再用相对角速度计算时间。
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：卫星信号遮挡问题}}]
+两颗卫星绕同一中心天体运动时，如果中心天体挡住了两颗卫星之间的视线，那么两颗卫星就会有一段时间难以直接通信。这个问题和日食、月食的模型很接近，本质都是判断“连接两点的直线是否被中间的球体截断”。\\
+\begin{center}
+\begin{tikzpicture}[scale=0.95, >=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (0,1);
+  \coordinate (S1) at (-2.2,1);
+  \coordinate (S2) at (3.0,1);
+
+  \fill[blue!20] (O) circle (1);
+  \draw[thick] (O) circle (1);
+  \node at (0,-1.25) {中心天体};
+  \fill (O) circle (1pt) node[below left] {$O$};
+  \fill (P) circle (1pt) node[above] {$P$};
+
+  \draw[very thick, red!70!black] (S1) -- (S2);
+  \node[red!70!black, above] at (1.35,1.05) {临界信号线};
+  \draw[dashed] (O) -- (S1) node[midway, above left] {$r_1$};
+  \draw[dashed] (O) -- (S2) node[midway, below right] {$r_2$};
+  \draw[dashed] (O) -- (P) node[midway, right] {$R$};
+  \draw (P) ++(0,-0.12) -- ++(-0.12,0) -- ++(0,0.12);
+
+  \fill[gray!75] (S1) circle (0.09) node[above left] {$S_1$};
+  \fill[gray!75] (S2) circle (0.09) node[above right] {$S_2$};
+
+  \draw[->] (0,0.45) arc (90:155.6:0.45);
+  \node at (-0.38,0.52) {$\alpha_1$};
+  \draw[->] (0,0.62) arc (90:18.4:0.62);
+  \node at (0.48,0.62) {$\alpha_2$};
+  \draw[->, blue!70!black] ({0.85*cos(18.4)},{0.85*sin(18.4)}) arc (18.4:155.6:0.85);
+  \node[blue!70!black] at (-0.15,0.93) {$\varphi_0=\alpha_1+\alpha_2$};
+\end{tikzpicture}
+\end{center}
+设两颗卫星轨道半径分别为$r_1,r_2$，角速度分别为$\omega_1,\omega_2$，中心天体半径为$R$。两颗卫星相对于中心天体的夹角记为$\varphi$。同向运动时
+\[
+  \omega_{\text{相}}=|\omega_1-\omega_2|,
+\]
+反向运动时
+\[
+  \omega_{\text{相}}=\omega_1+\omega_2.
+\]
+因此仍然只需要研究相对角速度。\\
+临界情况是两颗卫星之间的信号线刚好与中心天体相切。连接中心天体圆心$O$、卫星$S_1$和切点$P$，由于$OP\perp S_1P$，在直角三角形$OS_1P$中，设圆心处的临界角为$\alpha_1$，则
+\[
+  \cos\alpha_1=\frac{R}{r_1}.
+\]
+同理，对另一颗卫星有
+\[
+  \cos\alpha_2=\frac{R}{r_2}.
+\]
+所以刚好不被遮挡的临界中心角为
+\[
+  \varphi_0=\alpha_1+\alpha_2
+  =\arccos\frac{R}{r_1}+\arccos\frac{R}{r_2}.
+\]
+如果两颗卫星的相对夹角比较小，它们在中心天体同侧，信号线不会穿过中心天体；如果相对夹角接近$\pi$，两颗卫星分居中心天体两侧，就可能被遮挡。于是一个相对周期内，遮挡条件可以写成
+\[
+  \varphi_0<\varphi<2\pi-\varphi_0.
+\]
+因此每经过一个相对周期
+\[
+  T_{\text{相}}=\frac{2\pi}{\omega_{\text{相}}},
+\]
+两颗卫星被遮挡的时间为
+\[
+  t_{\text{遮挡}}
+  =\frac{2\pi-2\varphi_0}{\omega_{\text{相}}}
+  =\frac{2(\pi-\varphi_0)}{\omega_{\text{相}}}.
+\]
+能够直接通信的时间为
+\[
+  t_{\text{通信}}
+  =\frac{2\varphi_0}{\omega_{\text{相}}}.
+\]
+这个题的关键是先用切线找出临界角$\varphi_0$，再把卫星运动转化为相对夹角匀速变化；同向与反向只是在$\omega_{\text{相}}$的取法上不同。
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：日食和月食问题}}]
+日食和月食本质上都是三体近似共线时的遮挡问题。处理时不要从复杂的空间图像入手，而是取包含太阳、地球、月球中心的一张平面截面图，把太阳边缘射出的两条光线画成公切线，阴影区域就可以近似看成一个圆锥。\\
+\begin{center}
+\begin{tikzpicture}[scale=0.95, >=Stealth]
+  \node[anchor=west] at (-0.8,1.25) {\textbf{日食：月球影子落到地球上}};
+  \fill[yellow!60!orange] (0,0) circle (0.75);
+  \node at (0,-1.05) {太阳};
+  \fill[gray!70] (3,0) circle (0.32);
+  \node at (3,-0.75) {月球};
+  \fill[blue!45] (4.65,0) circle (0.45);
+  \node at (4.65,-0.95) {地球};
+  \fill[gray!35, opacity=0.65] (3,0.32) -- (4.95,0.04) -- (4.95,-0.04) -- (3,-0.32) -- cycle;
+  \draw[thick] (0,0.75) -- (5.1,-0.02);
+  \draw[thick] (0,-0.75) -- (5.1,0.02);
+  \draw[dashed] (-0.35,0) -- (5.2,0);
+  \node[gray!60!black] at (4.1,0.38) {本影};
+  \node[anchor=west] at (5.15,0.28) {日全食区域};
+
+  \begin{scope}[yshift=-3.0cm]
+    \node[anchor=west] at (-0.8,1.25) {\textbf{月食：月球进入地球影子}};
+    \fill[yellow!60!orange] (0,0) circle (0.75);
+    \node at (0,-1.05) {太阳};
+    \fill[blue!45] (2.6,0) circle (0.42);
+    \node at (2.6,-0.9) {地球};
+    \fill[gray!70] (4.8,0) circle (0.22);
+    \node at (4.8,-0.65) {月球};
+    \fill[gray!35, opacity=0.65] (2.6,0.42) -- (5.15,0.05) -- (5.15,-0.05) -- (2.6,-0.42) -- cycle;
+    \draw[thick] (0,0.75) -- (5.3,-0.02);
+    \draw[thick] (0,-0.75) -- (5.3,0.02);
+    \draw[dashed] (-0.35,0) -- (5.35,0);
+    \node[gray!60!black] at (3.9,0.35) {地球本影};
+    \node[anchor=west] at (5.15,0.25) {月食};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+设太阳半径为$R_S$，地球半径为$R_E$，月球半径为$R_M$；日地距离为$d_{SE}$，地月距离为$d_{EM}$。由于太阳远大于地球和月球，遮挡体后方会形成逐渐变细的本影锥。由相似三角形，月球本影锥的长度近似为
+\[
+  L_M=\frac{d_{SM}R_M}{R_S-R_M},
+\]
+其中$d_{SM}$为日月距离，通常可近似取$d_{SM}\approx d_{SE}$。如果
+\[
+  L_M>d_{EM},
+\]
+月球本影能够到达地球，地球上本影扫过的区域发生日全食；如果$L_M<d_{EM}$，月球本影到不了地球，月球看起来不能完全遮住太阳，中心区域看到的是日环食；处在半影区域则看到日偏食。\\
+同理，地球本影锥的长度近似为
+\[
+  L_E=\frac{d_{SE}R_E}{R_S-R_E}.
+\]
+月食发生时，地球在太阳和月球之间，月球进入地球的影子。因为通常有
+\[
+  L_E>d_{EM},
+\]
+所以地球本影能够延伸到月球轨道附近。月球进入地球本影时发生月偏食或月全食；只进入半影时发生半影月食。\\
+如果要进一步判断月球在轨道处是否完全进入地球本影，可以先求地球本影在月球距离处的截面半径。由相似三角形，
+\[
+  \rho_E=R_E-\frac{R_S-R_E}{d_{SE}}d_{EM}.
+\]
+若月球整体进入这段本影截面，近似条件是
+\[
+  \rho_E>R_M,
+\]
+并且月球中心足够靠近影锥轴线，则可以发生月全食。这个模型的核心是：日食看月球影子是否落到地球上，月食看月球是否进入地球影子；两者都用相似三角形描述影锥。
 \end{casetypebox}
