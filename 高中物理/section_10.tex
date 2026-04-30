@@ -1,80 +1,33 @@
 
-\subsection{静电场}
+\subsection{电场强度}
 
 \begin{tabularx}{\columnwidth}{XX}
-  \multicolumn{2}{l}{\textbf{基本定义与等式}}\\
-  场强定义&$E=\frac{F}{q}$\\
-  电势定义&$\varphi = \frac{E_p}{q}$\\
-  电势差定义&$U_{AB}=\varphi_A-\varphi_B$\\
-  电场力做功&$W_{AB}=qU_{AB}=E_{pA}-E_{pB}$\\
-  电势能变化&$\Delta E_p=-W_{\text{电}}$\\
-  \multicolumn{2}{l}{\textbf{匀强电场规律}}\\
-  电势差与场强关系&$U=Ed$（$d$ 为沿电场方向距离）\\
-  \multicolumn{2}{l}{\textbf{点电荷}}\\
-  库仑定律&$F=\frac{kQq}{r^2}$\\
-  点电荷电场强度&$E=\frac{kQ}{r^2}$\\
+  库仑定律&$F=k\dfrac{Qq}{r^2}$\\
+  电场强度定义&$E=\dfrac{F}{q}$\\
+  点电荷场强&$E=k\dfrac{Q}{r^2}$\\
   电场叠加&$\vec E=\vec E_1+\vec E_2+\cdots$\\
-  \multicolumn{2}{l}{\textbf{电容器}}\\
-  电容定义&$C=\frac{Q}{U}$\\
-  电容决定式&$C=\varepsilon_0 \varepsilon_r \frac{S}{d}$\\
-  真空介电常数关系&$k = \frac{1}{4\pi \varepsilon_0}$\\
-  电容器能量&$E = \frac{1}{2} C U^2 = \frac{1}{2}\frac{Q^2}{C} = \frac{Q U}{2}$\\
-  \multicolumn{2}{l}{\textbf{电场中的运动}}\\
-  加速电场动能&$qU=\frac{1}{2}mv^2,\quad v=\sqrt{\frac{2qU}{m}}$\\
-  加速电场动量&$qU=\frac{p^2}{2m},\quad p=\sqrt{2mqU}$\\
-  竖直加速度&$a_y=\frac{qU}{md}$\\
+  匀强电场&$E=\text{恒量}$\\
 \end{tabularx}
 
-其中 $C$ 为电容，$\varepsilon_0$ 为真空介电常数，$\varepsilon_r$ 为介质的相对介电常数，$S$ 为极板面积，$d$ 为极板间距离。
-
-\textbf{电容器描述：}
-电容器存储电能的元件，由两个导体之间隔着绝缘材料构成。平行板电容器是由两块平行放置的导体板组成，中间夹有绝缘介质。常用于研究电容器的基本性质。
-
-\textbf{电容器充放电：}
-电容器的充电过程是指在外加电压作用下，电容器两极板之间积累电荷的过程；放电过程是指电容器释放储存的电能，电荷流向外部电路的过程。只有在电容器两极板间存在电势差（即外加电源或电压）时，电容器才能充电。充电过程中，电流方向为正极板流入、负极板流出，直到两极板间的电势差等于外加电压时，充电过程结束，电流为零。
-
-\textbf{充电过程中电流和电压的变化：}
-电容器刚开始充电时，极板间电压为零，电流最大；随着充电进行，极板间电压逐渐升高，电流逐渐减小；当极板间电压等于外加电压时，电流减小到零，充电过程结束。
-
-电容器存在击穿电压，当电压过大时电容器中间的绝缘材料就会被击穿，使得电容器被破坏。
-
-\textbf{电容器注意事项：}
-电容器可以进行串并联，并联电容器，等效电容为电容器电容之和，串联电容器，等效电容规律和并联电阻相同。
-
-\textbf{静电场注意事项：}
-\begin{itemize}
-  \item 电场力做功只与电荷初末位置有关，与路径无关
-  \item 电势能增加，一般情况下，机械能减少
-  \item 电场力做功时需要进行投影：$W=qEd\cos\theta$
-  \item 电场线与等势面垂直
-  \item 在匀强电场中，两点所在直线的场强均匀，可以通过$E'=\frac{U}{d}$求出
-  \item 固定水平位移时，合速度最小时，水平与竖直方向速度相等
-\end{itemize}
-
 \begin{formulanotebox}
-电场强度、电势、电势能分别对应“力学效应”“位置状态”“能量状态”，解题时不要混用单位和物理含义。
+库仑定律适用于真空中静止点电荷；若电荷不能看成点电荷，不能直接把电荷量代入 $F=k\dfrac{Qq}{r^2}$。
 
-应用 $U=Ed$ 时需满足匀强电场且 $d$ 为沿场强方向的投影距离。
+$E=\dfrac{F}{q}$ 是定义式，场强由场源和位置决定，与试探电荷的电荷量、正负无关。
 \end{formulanotebox}
 
-\begin{keypointbox}
-\textbf{电势与做功关系}：电场力做功只与初末位置有关，与路径无关；常用“先判电势高低，再判电势能变化”。
+\begin{keypointbox}[title={\strut\textcolor{white}{\bfseries 重点知识点：电场强度}}]
+\textbf{场源电荷与试探电荷}：产生电场的电荷叫场源电荷，用来探测电场的电荷叫试探电荷。场强方向规定为正试探电荷在该点所受电场力方向。\\
 
-\textbf{电容器动态分析}：断开电源看 $Q$ 不变，接电源看 $U$ 不变，再结合 $C$ 的变化判断其他量变化。
+\textbf{矢量叠加}：多个点电荷产生的电场强度按矢量叠加，不能只把大小相加。对称分布电荷常先分解分量，再利用对称性抵消。\\
+
+\textbf{电场线}：电场线从正电荷或无穷远出发，终止于负电荷或无穷远；电场线越密，场强越大；电场线不相交。
 \end{keypointbox}
 
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：电场做功与电容器动态分析}}]
-\textbf{电场做功与电势能：}
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：场强叠加与零场点}}]
 \begin{itemize}[leftmargin=1.5em]
-  \item 先确定电荷正负，再用 $W_{AB}=qU_{AB}$ 判断电场力做功正负。
-  \item 电场力做正功时电势能减少，电场力做负功时电势能增加。
-  \item 匀强电场中只取沿电场方向的位移，$U=Ed$。
-\end{itemize}
-
-\textbf{电容器动态分析：}
-\begin{itemize}[leftmargin=1.5em]
-  \item 接电源时 $U$ 不变，先由 $C=\varepsilon_0\varepsilon_r\frac{S}{d}$ 判断 $C$，再由 $Q=CU$ 判断 $Q$。
-  \item 断开电源时 $Q$ 不变，先判断 $C$，再由 $U=\frac{Q}{C}$ 和 $E=\frac{U}{d}$ 判断电压、电场强度。
-  \item 插入电介质或增大极板面积会使 $C$ 增大，增大板间距会使 $C$ 减小。
+  \item 同一直线上两个点电荷产生的场强，先判断方向，再列代数式。
+  \item 等量同种电荷连线中点场强为零，垂直平分线上场强沿对称轴方向。
+  \item 等量异种电荷连线中点场强不为零，方向由正电荷指向负电荷。
+  \item 寻找零场点时，异种电荷的零场点在两电荷外侧，同种电荷的零场点在两电荷之间。
 \end{itemize}
 \end{casetypebox}

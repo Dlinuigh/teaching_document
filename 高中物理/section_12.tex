@@ -1,202 +1,33 @@
 
-\subsection{磁场}
+\subsection{安培力}
 
 \begin{tabularx}{\columnwidth}{XX}
-  \multicolumn{2}{l}{\textbf{磁场强度与力}}                     \\
-  磁场强度       & $B=\frac{F}{Il}$                           \\
-  安培力        & $F=Il\times B=BIl\sin\theta$               \\
-  洛伦兹力       & $F=qv\times B=qvB\sin\theta$               \\
-  \multicolumn{2}{l}{\textbf{带电粒子的运动}}                    \\
-  洛伦兹力做向心力   & $qvB=m\frac{v^2}{R}=m\omega^2R=mv\omega$   \\
-  半径         & $R=\frac{mv}{qB}$                          \\
-  周期         & $T=\frac{2\pi m}{qB}$                      \\
-  角速度        & $\omega=\frac{qB}{m}$                      \\
-  运动时间       & $t=\frac{\theta m}{qB}=\frac{\theta R}{v}$ \\
-  加速电场进入磁场半径 & $R=\frac1B\sqrt{\frac{2mU}{q}}$            \\
-  \multicolumn{2}{l}{\textbf{电磁应用}}                       \\
-  速度选择器      & $qE=qvB$                                   \\
-  质谱仪        & $R=\frac1B\sqrt{\frac{2mU}{q}}$            \\
-  霍尔电压       & $U=\frac1{nq}\frac{IB}{d}$                 \\
-  \multicolumn{2}{l}{\textbf{回旋加速器}}                      \\
-  最大速度       & $v_{max}=\frac{qBR}{m}$                    \\
-  最大动能       & $E_{kmax}=\frac{q^2B^2R^2}{2m}$            \\
-  电场周期       & $T=\frac{2\pi m}{qB}$                      \\
-  加速次数       & $n=\frac{qB^2R^2}{2mU}$                    \\
-  加速总时间      & $t=\frac{\pi BR^2}{2U}$                    \\
+  磁感应强度&$B=\dfrac{F}{Il}$\\
+  安培力&$F=BIl\sin\theta$\\
+  通电导线受力方向&左手定则\\
+  直导线磁场方向&安培定则\\
+  螺线管磁场方向&右手螺旋定则\\
 \end{tabularx}
 
-\textbf{磁场力注意事项：}
-\begin{itemize}
-  \item 地磁场水平方向上从南指向北
-  \item 竖直方向北半球有向下的分量，南半球有向上的分量
-  \item 磁场是真实存在的特殊物质，磁感线是人为创造的模型
-  \item 磁感线在磁体外部从N极指向S极，在磁体内部从S极指向N极
-  \item 小磁针N极受力方向为磁场方向
-  \item 安培定则：右手握住导线，大拇指指向电流方向，此时四指环绕方向为磁场方向
-  \item 右手螺旋定则：右手握住螺线管，四指环绕方向为电流方向，大拇指指向磁体内部磁场方向
-  \item 同向电流导线相互吸引，反向电流导线相互排斥
-  \item 左手定则：四指伸直指向电流方向，磁感线穿过掌心，大拇指指向安培力方向
-  \item 安培力方向与电流方向和磁场方向都垂直，电流方向和磁场方向垂直时安培力最大
-  \item 左手定则中四指指向正电荷移动方向与负电荷移动反方向
-  \item 洛伦兹力方向与速度方向和磁场方向都垂直，速度方向和磁场方向垂直时洛伦兹力最大
-  \item 洛伦兹力不能影响电荷的速度大小，只能改变电荷的运动方向
-  \item 洛伦兹力可以通过影响正压力的方式影响滑动摩擦力，进而影响速度
-  \item 沿电流方向速度引起的洛伦兹力分力是安培力的微观本质
-  \item 洛伦兹力分力可以做功，影响物体的能量分配
-\end{itemize}
-
-\textbf{电磁应用注意事项：}
-\begin{itemize}
-  \item 速度选择器提高精度可以增加板长、减小板间距
-  \item 速度选择器只能从一个方向进入
-  \item 速度选择器无法分辨电性
-  \item 质谱仪根据不同的比荷得到不同的半径
-  \item 质谱仪中比荷越大半径越小；比荷越小半径越大
-  \item 霍尔电压中，载流子的电性直接影响电压的正负极
-  \item 回旋加速器中，电场加速时间忽略不计
-  \item 回旋加速器加速总时间和粒子的比荷无关
-  \item 回旋加速器加速不同比荷的粒子需要调整电压频率
-\end{itemize}
-
-\textbf{带电粒子运动注意事项：}
-\begin{itemize}
-  \item 直线性边界下，进入夹角等于离开夹角，速度偏转角为$2\theta$
-  \item 速度偏转角就是圆周运动的圆心角
-  \item 两个对称进入磁场的粒子，从同一点对称离开磁场
-  \item 圆形磁场沿半径进入磁场，沿半径离开磁场
-  \item 平抛运动中，离开极板区域的最小速度为$v_0=\sqrt{al}$，并且此时夹角为$45^{\circ}$
-\end{itemize}
-
 \begin{formulanotebox}
-  安培力与洛伦兹力都满足叉乘方向关系，公式里的 $\sin\theta$ 反映的是速度（或电流方向）与磁场方向夹角，不垂直时要取分量。
+$F=BIl$ 只适用于电流方向与磁场方向垂直的情况；一般情形应使用 $F=BIl\sin\theta$，或取垂直于磁场的有效长度。
+
+磁感线是人为建立的模型，磁场是真实存在的物质形态。小磁针 N 极受力方向规定为该点磁场方向。
 \end{formulanotebox}
 
-\begin{keypointbox}
-  \textbf{磁场力本质}：磁场力始终垂直于瞬时速度，通常不改变速率，只改变运动方向；若速率变化，多由其他力做功导致。
+\begin{keypointbox}[title={\strut\textcolor{white}{\bfseries 重点知识点：磁场方向}}]
+\textbf{地磁场}：地磁场水平方向大致由地理南方指向地理北方；北半球有向下分量，南半球有向上分量。\\
 
-  \textbf{圆周偏转模型}：带电粒子入磁场问题常转化为几何关系+半径关系 $R=\frac{mv}{qB}$ 的联立。
+\textbf{电流磁效应}：直导线周围磁感线为同心圆；螺线管内部磁场类似条形磁铁，内部磁感线从 S 极指向 N 极。\\
+
+\textbf{安培力方向}：左手定则中四指指向电流方向，磁感线穿过掌心，大拇指指向安培力方向。
 \end{keypointbox}
 
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：旋转圆法}}]
-旋转圆法是带电粒子在匀强磁场中做圆周运动的总方法。已知入射点和速度方向时，轨迹圆心一定在入射点速度方向的垂线上。先由
-\[
-  R=\frac{mv}{qB}
-\]
-确定半径，再由边界条件确定轨迹圆，最后用
-\[
-  t=\frac{\theta}{2\pi}T=\frac{\theta m}{qB}
-\]
-求运动时间。
-
-若粒子从直线边界上一点射入，速度方向可在磁场内转动且半径 $R$ 固定，则粒子再次打到该边界的位置到入射点的距离为
-\[
-  x=2R\sin\alpha ,
-\]
-其中 $\alpha$ 为速度方向与边界的夹角。因此边界上能留下的最远距离为
-\[
-  x_{\max}=2R,
-\]
-对应 $\alpha=90^\circ$。这就是“旋转圆”求边界范围的基本结论。
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：通电导线受力与平衡}}]
+\begin{itemize}[leftmargin=1.5em]
+  \item 先判断磁场方向，再用左手定则判断安培力方向。
+  \item 同向平行电流相互吸引，反向平行电流相互排斥。
+  \item 导线在磁场中平衡时，安培力常与重力、拉力、弹力共同列平衡方程。
+  \item 若导线与磁场不垂直，只取垂直磁场方向的电流长度。
+\end{itemize}
 \end{casetypebox}
-
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：直线边界（旋转圆子问题）}}]
-\textbf{出发点在边界上}：设入射速度与边界夹角为 $\alpha$，轨迹半径为 $R$。入射点到再次出边界点的距离为
-\[
-  x=2R\sin\alpha .
-\]
-圆心角为 $2\alpha$，所以粒子在磁场中的运动时间为
-\[
-  t=\frac{2\alpha m}{qB}.
-\]
-这里 $\alpha$ 用弧度代入。
-
-\textbf{出发点在距边界 $h$ 处}：若速度平行边界，且 $0<h<2R$，轨迹圆与边界相交。设粒子第一次打到边界的水平距离为 $x$，则由弦长关系
-\[
-  x^2+(R-h)^2=R^2
-\]
-得
-\[
-  x=\sqrt{2Rh-h^2}.
-\]
-若题目给的是一般入射角，应先确定圆心到边界的距离，再用“弦长平方 + 弦心距平方 = 半径平方”求交点。
-\end{casetypebox}
-
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：双直线边界（旋转圆子问题）}}]
-设两边界平行，间距为 $d$，粒子从一侧边界垂直射入，轨迹半径为 $R$。到达另一边界时，沿宽度方向的位移满足
-\[
-  d=R(1-\cos\theta),
-\]
-其中 $\theta$ 为粒子转过的圆心角。于是
-\[
-  \cos\theta=1-\frac{d}{R},\qquad
-  x=R\sin\theta=\sqrt{2Rd-d^2}.
-\]
-这里 $x$ 是沿边界方向的位移。
-
-若 $d<R$，则 $0<\theta<90^\circ$，粒子穿出时偏转较小；若 $R<d<2R$，则 $90^\circ<\theta<180^\circ$，粒子仍可到达另一边界，但出射方向已经明显回转。若 $d\ge 2R$，该入射条件下粒子不能到达另一边界，会从入射侧返回。
-\end{casetypebox}
-
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：圆形磁场（旋转圆子问题）}}]
-设圆形磁场区域半径为 $r$，粒子从边界沿半径方向射入，粒子轨迹半径为 $R$。磁场圆心 $O$、入射点 $P$、轨迹圆心 $C$ 构成直角三角形：
-\[
-  OP=r,\qquad CP=R,\qquad OC=\sqrt{r^2+R^2}.
-\]
-设粒子在磁场中转过的圆心角为 $\theta$，由几何对称性有
-\[
-  \theta=2\arctan\frac{r}{R}.
-\]
-因此运动时间为
-\[
-  t=\frac{\theta m}{qB}
-  =\frac{2m}{qB}\arctan\frac{r}{R}.
-\]
-出射点由两个圆的另一个交点确定，出射速度方向与入射速度方向的夹角就是该圆心角 $\theta$。
-\end{casetypebox}
-
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：缩放圆问题}}]
-矩形区域中，粒子从固定位置沿固定方向入射且速度可调时，轨道半径
-\[
-  R=\frac{mv}{qB}
-\]
-随速度改变。临界轨迹通常与某条边或某个顶点相切。
-
-若入射方向平行于矩形下边界，轨迹圆心到下边界距离为 $R$。要刚好碰到上边界，高度 $H$ 需满足
-\[
-  H=2R \quad\Rightarrow\quad R=\frac{H}{2}.
-\]
-要刚好经过右上顶点 $(L,H)$，则由圆方程
-\[
-  L^2+(H-R)^2=R^2
-\]
-得
-\[
-  R=\frac{L^2+H^2}{2H}.
-\]
-这类题本质上就是把“速度可调”转化为“半径可缩放”，再比较各个临界半径。
-\end{casetypebox}
-
-\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：磁聚焦}}]
-同速同荷质比粒子在同一匀强磁场中半径相同：
-\[
-  R=\frac{mv}{qB}.
-\]
-磁聚焦题不要逐条轨迹硬算，优先寻找入射方向、出射方向和轨迹圆心的对称关系。
-
-\textbf{圆形磁场聚焦}：若磁场边界和粒子轨迹满足对称关系，所有粒子转过相同圆心角 $\theta$，运动时间相同：
-\[
-  t=\frac{\theta m}{qB}.
-\]
-
-\textbf{叶形磁场聚焦}：若边界由两个 $\frac14$ 圆弧组成，粒子在每段中常对应转过 $90^\circ$，单段运动时间为
-\[
-  t_1=\frac{T}{4}=\frac{\pi m}{2qB}.
-\]
-两段合计时间为
-\[
-  t=2t_1=\frac{\pi m}{qB}.
-\]
-\end{casetypebox}
-
-\begin{center}
-  \input{assets/magnetic_focusing}
-\end{center}

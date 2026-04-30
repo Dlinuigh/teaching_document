@@ -1,0 +1,38 @@
+
+\subsection{导体棒模型}
+
+\begin{tabularx}{\columnwidth}{XX}
+  动生电动势&$E=BLv$\\
+  回路电流&$I=\dfrac{E}{R}$\\
+  安培力&$F_A=BIL=\dfrac{B^2L^2v}{R}$\\
+  安培力冲量&$I_A=BLq$\\
+  感应电流功率&$P=EI=I^2R$\\
+  恒力最终速度&$v=\dfrac{FR}{B^2L^2}$\\
+\end{tabularx}
+
+\begin{formulanotebox}
+导体棒模型中 $E=BLv$ 需要有效长度、速度方向、磁场方向两两垂直；不垂直时要取有效分量。
+
+安培力方向一般阻碍相对运动或磁通量变化。含电源时不能只凭速度方向判断安培力，必须先判断回路总电流方向。
+\end{formulanotebox}
+
+\begin{keypointbox}[title={\strut\textcolor{white}{\bfseries 重点知识点：单棒模型}}]
+\textbf{纯电阻模型}：导体棒切割磁感线产生电动势，回路中电流使棒受到安培力。无外力时棒最终停止；有恒定外力时常趋于匀速，稳定条件为 $F=F_A$。\\
+
+\textbf{含电源模型}：动生电动势与电源电动势要代数相加，先判电流，再判安培力。稳定状态由安培力、外力、摩擦力等共同决定。\\
+
+\textbf{含电容模型}：若电容器电压来自 $U=BLv$，则
+\[
+  I=C\frac{\Delta U}{\Delta t}=CBLa,
+\]
+安培力 $F_A=CB^2L^2a$，表现为等效增大惯性。
+\end{keypointbox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：力、电、能联立}}]
+\begin{itemize}[leftmargin=1.5em]
+  \item 运动分析：用牛顿第二定律列 $F-F_A=ma$ 或平衡条件。
+  \item 电路分析：用 $E=BLv$ 和 $I=\frac{E}{R}$ 确定电流大小。
+  \item 能量分析：安培力做负功对应回路产生焦耳热，常用 $W_{\text{外}}=\Delta E_k+Q$。
+  \item 动量分析：安培力冲量可写成 $I_A=BLq=\frac{B^2L^2x}{R}$。
+\end{itemize}
+\end{casetypebox}

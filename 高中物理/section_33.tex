@@ -1,0 +1,37 @@
+
+\subsection{电源功率}
+
+\begin{tabularx}{\columnwidth}{XX}
+  电动势&$E=\dfrac{W_{\text{非静电力}}}{q}$\\
+  闭合电路欧姆定律&$E=I(R+r)$\\
+  路端电压&$U=E-Ir$\\
+  纯电阻功率&$P=UI=I^2R=\dfrac{U^2}{R}$\\
+  电源总功率&$P_{\text{总}}=EI$\\
+  电源输出功率&$P_{\text{出}}=UI$\\
+  电源效率&$\eta=\dfrac{P_{\text{出}}}{P_{\text{总}}}=\dfrac{U}{E}$\\
+\end{tabularx}
+
+\begin{formulanotebox}
+闭合电路中 $E$ 表示电源把其他形式能转化为电能的本领，$U$ 是外电路两端实际电压。电流越大，内阻分压 $Ir$ 越大，路端电压越小。
+
+非纯电阻元件中 $P=UI$ 是总功率，$P_{\text{热}}=I^2r$ 是发热功率，二者一般不相等。
+\end{formulanotebox}
+
+\begin{keypointbox}[title={\strut\textcolor{white}{\bfseries 重点知识点：电源功率}}]
+\textbf{输出功率最大}：纯电阻外电路中
+\[
+  P_{\text{出}}=\frac{E^2R}{(R+r)^2},
+\]
+当 $R=r$ 时输出功率最大，最大值为 $\frac{E^2}{4r}$，此时效率为 $50\%$。\\
+
+\textbf{变化趋势}：外电阻增大时，电流减小，电源总功率和内阻热功率减小，路端电压与效率增大。
+\end{keypointbox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：动态电路与功率极值}}]
+\begin{itemize}[leftmargin=1.5em]
+  \item 动态电路按“局部电阻变化 $\rightarrow$ 总电阻 $\rightarrow$ 总电流 $\rightarrow$ 路端电压 $\rightarrow$ 支路量”的顺序分析。
+  \item 纯电阻功率可在 $UI$、$I^2R$、$\frac{U^2}{R}$ 中选最方便的形式。
+  \item 电动机正常工作时不能用 $R=\frac{U}{I}$ 求线圈电阻；堵转或不转时才可近似看作纯电阻。
+  \item 短路电流为 $I_{\text{短}}=\frac{E}{r}$，实际题中要注意电源和导线安全。
+\end{itemize}
+\end{casetypebox}
