@@ -1,0 +1,102 @@
+% 水平圆盘两侧物体（重心不在圆心）：T、f_1、f_2 随 \omega^2
+% 横轴四刻度均匀；刻度旁为 \omega^2 公式。纵轴为力（取 \mu g=1,\ m_1=2,\ m_2=1,\ r_1=2,\ r_2=1 计算曲线），刻度旁为符号式。
+% x\in[0,1]\to u\in[0,1],\ [1,2]\to[1,4/3],\ [2,3]\to[4/3,2]，其中 u=\omega^2 r_1/(\mu g)。
+\begin{center}
+  \footnotesize
+  % \begin{tikzpicture}
+  %   \pgfmathsetmacro{\xmin}{-0.12}
+  %   \pgfmathsetmacro{\xmax}{3.12}
+  %   \begin{axis}[
+  %     width=0.94\columnwidth,
+  %     height=6.4cm,
+  %     xmin=\xmin,
+  %     xmax=\xmax,
+  %     ymin=-1.18,
+  %     ymax=2.38,
+  %     axis lines=middle,
+  %     x axis line style={-stealth},
+  %     y axis line style={-stealth},
+  %     xlabel={$\omega^2$},
+  %     xlabel near ticks,
+  %     ylabel={$T,\ f_1,\ f_2$},
+  %     ylabel near ticks,
+  %     xtick={0,1,2,3},
+  %     xticklabels={%
+  %       $0$,
+  %       $\dfrac{\mu g}{r_1}$,
+  %       $\dfrac{\mu m_1 g}{m_1 r_1-m_2 r_2}$,
+  %       $\dfrac{\mu (m_1+m_2) g}{m_1 r_1-m_2 r_2}$%
+  %     },
+  %     xticklabel style={align=center, font=\scriptsize},
+  %     ytick={-1,0,0.5,2/3,2},
+  %     yticklabels={%
+  %       $-\mu m_2 g$,
+  %       $0$,
+  %       $\dfrac{\mu m_2 g r_2}{r_1}$,
+  %       $\dfrac{\mu m_1 g\, m_2 r_2}{m_1 r_1-m_2 r_2}$,
+  %       $\mu m_1 g$%
+  %     },
+  %     yticklabel style={font=\scriptsize, align=right},
+  %     legend style={
+  %       at={(0.5,1.02)},
+  %       anchor=south,
+  %       legend columns=-1,
+  %       /tikz/every even column/.append style={column sep=0.5em},
+  %     },
+  %     legend cell align=left,
+  %     clip=false,
+  %   ]
+  %     % 竖直虚线：三临界
+  %     \addplot [dashed, gray!70, forget plot] coordinates {(1,-1.18) (1,2.38)};
+  %     \addplot [dashed, gray!70, forget plot] coordinates {(2,-1.18) (2,2.38)};
+  %     \addplot [dashed, gray!70, forget plot] coordinates {(3,-1.18) (3,2.38)};
+
+  %     % 水平虚线：特殊力值
+  %     \addplot [dashed, gray!55, forget plot] coordinates {(\xmin,-1) (\xmax,-1)};
+  %     \addplot [dashed, gray!55, forget plot] coordinates {(\xmin,0.5) (\xmax,0.5)};
+  %     \addplot [dashed, gray!55, forget plot] coordinates {(\xmin,2/3) (\xmax,2/3)};
+  %     \addplot [dashed, gray!55, forget plot] coordinates {(\xmin,2) (\xmax,2)};
+
+  %     % T（\mu g=1）：x\in[0,1] 为 0；x\in[1,3] 上 u 分段线性，T=2(u-1)
+  %     \addplot [very thick, black] coordinates {
+  %       (0,0) (1,0) (2,2/3) (3,2)
+  %     };
+  %     \addlegendentry{$T$}
+
+  %     % f_1
+  %     \addplot [very thick, red!75!black] coordinates {
+  %       (0,0) (1,2) (3,2)
+  %     };
+  %     \addlegendentry{$f_1$}
+
+  %     % f_2
+  %     \addplot [very thick, blue!75!black] coordinates {
+  %       (0,0) (1,0.5) (2,0) (3,-1)
+  %     };
+  %     \addlegendentry{$f_2$}
+  %   \end{axis}
+  % \end{tikzpicture}\\[0.4em]
+  \begingroup
+  \rowcolors{1}{white}{white}%
+  \begin{tabular}{|p{0.35\columnwidth}|p{0.1\columnwidth}|p{0.3\columnwidth}|}
+    \hline
+    阶段 & 拉力 $T$ & 摩擦力 $f_1,\ f_2$ \\
+    \hline
+    $\omega^2\leq \dfrac{\mu g}{r_1}$ &
+      无 &
+      两物体摩擦力均指向圆心，随 $\omega^2$ 增大 \\
+    \hline
+    $\dfrac{\mu g}{r_1}<\omega^2\leq \dfrac{\mu m_1 g}{m_1 r_1-m_2 r_2}$ &
+      出现并增大 &
+      $f_1$ 已达最大并保持；$f_2$ 先增至 $\dfrac{\mu m_2 g\,r_2}{r_1}$ 再减至 $0$ \\
+    \hline
+    $\dfrac{\mu m_1 g}{m_1 r_1-m_2 r_2}<\omega^2\leq \dfrac{\mu(m_1+m_2)g}{m_1 r_1-m_2 r_2}$ &
+      继续增大 &
+      $f_1$ 保持最大；$f_2$ 背离圆心增大至 $\mu m_2 g$ \\
+    \hline
+    $\omega^2>\dfrac{\mu(m_1+m_2)g}{m_1 r_1-m_2 r_2}$ &
+      \multicolumn{2}{p{0.58\columnwidth}|}{无法保持相对静止，两物体相对圆盘滑动} \\
+    \hline
+  \end{tabular}
+  \endgroup
+\end{center}

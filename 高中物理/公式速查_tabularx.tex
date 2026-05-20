@@ -1,0 +1,24 @@
+% 高中物理手册各节 tabularx 公式表汇编（与 handbook 一致）。
+% 内容来自：python3 tools/gen_formula_fill_from_tabularx.py 生成的 formula_fill_tabularx_answer_tables.tex
+% 编译：cd 高中物理 && xelatex 公式速查_tabularx.tex
+\documentclass{../cheatsheet}
+
+% 与 paper 手册接近的中文字体（cheatsheet.cls 未默认指定）
+\IfFontExistsTF{PingFang SC}{
+  \setCJKmainfont{PingFang SC}
+}{
+  \setCJKmainfont{Songti SC}
+}
+
+\begin{document}
+
+\fancyhead[L]{\textbf{高中物理 · 公式速查（tabularx）}}
+\fancyhead[R]{\thepage}
+{\small
+\rowcolors{2}{white}{blue!8}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{4pt}
+\input{formula_fill_tabularx_answer_tables.tex}
+}
+
+\end{document}
