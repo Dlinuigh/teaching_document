@@ -12,7 +12,8 @@
 \RequirePackage{fontspec}
 \RequirePackage[margin=3cm,left=2cm,right=2cm,a4paper]{geometry}
 \RequirePackage{graphicx}
-\RequirePackage{hyperref}
+\RequirePackage[pdfpagelabels=false]{hyperref}
+\RequirePackage{bookmark}
 \RequirePackage{mathtools}
 \RequirePackage{nameref}
 \RequirePackage{wrapfig}

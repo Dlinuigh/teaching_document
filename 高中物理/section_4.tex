@@ -65,18 +65,35 @@
 \end{keypointbox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：密度不均匀球体的万有引力}}]
-  \topicimage[0.3\columnwidth]{assets/万有引力球体.png}
-  \topicimage[0.3\columnwidth]{assets/万有引力割补法.png}
+  \begin{center}
+    \begin{minipage}[t]{0.3\columnwidth}
+      \centering
+      \includegraphics[width=\linewidth]{assets/万有引力球体.png}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.3\columnwidth}
+      \centering
+      \includegraphics[width=\linewidth]{assets/万有引力割补法.png}
+    \end{minipage}
+  \end{center}
   一个实心大球半径为$R$，原本密度为$\rho$，其中填充了一个半径为$r_0$、密度为$\rho'$的小球。设大球球心为$O$，小球球心为$O'$，
+  \[F=F_1\pm F_2\]
+  公式非常简洁，将原本的不规则物体分成两个球体，一个球体的密度为$\rho_1$，另一个球体的密度为$\rho_2-\rho_1$。接着引入了密度的万有引力公式为：\[F=\left\{
+    \begin{aligned}
+      \frac{4\pi G\rho m r}{3}, r<R\\
+      \frac{4\pi G\rho m R^3}{3r^2}, r\ge R
+    \end{aligned}
+  \right.\]
+  将两个球对应的密度和距离代入公式就能求出两个分力，注意最终的万有引力需要进行力的矢量合成。
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：万有引力追及问题}}]
   \begin{center}
-    \begin{minipage}{0.48\columnwidth}
+    \begin{minipage}{0.25\columnwidth}
       \centering
       \includegraphics[width=0.95\linewidth]{assets/追及问题反向最近到最远.png}
     \end{minipage}
-    \begin{minipage}{0.48\columnwidth}
+    \begin{minipage}{0.25\columnwidth}
       \centering
       \includegraphics[width=0.95\linewidth]{assets/追及问题同向最近到最远距离.png}
     \end{minipage}
@@ -121,12 +138,15 @@
     t_{\text{最近}\to\text{最远}}
     =\frac12\frac{T_{\text{大}}T_{\text{小}}}{T_{\text{大}}-T_{\text{小}}}.
   \]
+  
+\end{casetypebox}
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：万有引力追及问题}}]
   \begin{center}
-    \begin{minipage}{0.48\columnwidth}
+    \begin{minipage}{0.25\columnwidth}
       \centering
       \includegraphics[width=0.95\linewidth]{assets/追及问题反向最近到最近.png}
     \end{minipage}
-    \begin{minipage}{0.48\columnwidth}
+    \begin{minipage}{0.25\columnwidth}
       \centering
       \includegraphics[width=0.95\linewidth]{assets/追及问题同向最近到最近距离.png}
     \end{minipage}
@@ -149,8 +169,17 @@
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：卫星信号遮挡问题}}]
   两颗卫星绕同一中心天体运动时，如果中心天体挡住了两颗卫星之间的视线，那么两颗卫星就会有一段时间难以直接通信。这个问题和日食、月食的模型很接近，本质都是判断“连接两点的直线是否被中间的球体截断”。\\
-  \topicimage[0.3\columnwidth]{assets/中心天体遮挡信号同向.png}
-  \topicimage[0.3\columnwidth]{assets/中心天体遮挡信号反向运动.png}
+  \begin{center}
+    \begin{minipage}[t]{0.3\columnwidth}
+      \centering
+      \includegraphics[width=\linewidth]{assets/中心天体遮挡信号同向.png}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.3\columnwidth}
+      \centering
+      \includegraphics[width=\linewidth]{assets/中心天体遮挡信号反向运动.png}
+    \end{minipage}
+  \end{center}
   设两颗卫星轨道半径分别为$r_1,r_2$，角速度分别为$\omega_1,\omega_2$，中心天体半径为$R$。两颗卫星相对于中心天体的夹角记为$\varphi$。同向运动时
   \[
     \omega_{\text{相}}=|\omega_1-\omega_2|,
@@ -173,6 +202,10 @@
     \varphi_0=\alpha_1+\alpha_2
     =\arccos\frac{R}{r_1}+\arccos\frac{R}{r_2}.
   \]
+  
+\end{casetypebox}
+
+\begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：卫星信号遮挡问题}}]
   如果两颗卫星的相对夹角比较小，它们在中心天体同侧，信号线不会穿过中心天体；如果相对夹角接近$\pi$，两颗卫星分居中心天体两侧，就可能被遮挡。于是一个相对周期内，遮挡条件可以写成
   \[
     \varphi_0<\varphi<2\pi-\varphi_0.

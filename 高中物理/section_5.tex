@@ -38,7 +38,7 @@
 \end{keypointbox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：重力的来源}}]
-\topicimage[0.62\columnwidth]{assets/两极和赤道重力加速度.png}
+\topicimage[0.4\columnwidth]{assets/两极和赤道重力加速度.png}
   重力不是单纯的万有引力。地球表面的物体随地球一起自转，需要向地轴方向的向心力，因此万有引力的一部分要用来提供这个向心力，剩下由支持力或悬线拉力平衡的那部分才表现为通常所说的重力。\\
   如果忽略地球扁率，把地球看成半径为$R$、质量为$M$的球体，地球自转角速度为$\omega$。在两极，物体到地轴的距离为0，不需要随地球自转做圆周运动的向心力，所以
   \[
@@ -59,8 +59,7 @@
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：共点力平衡}}]
-\topicimage[0.56\columnwidth]{assets/分力固定大小.png}
-\topicimage[0.56\columnwidth]{assets/分力固定方向.png}
+  
   共点力平衡的核心是把所有力分解到两个互相垂直的方向上，分别列平衡方程：
   \[
     \left\{\begin{aligned}
@@ -73,7 +72,7 @@
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：斜面上的物体}}]
-\topicimage[0.60\columnwidth]{assets/斜面上物体.png}
+\topicimage[0.3\columnwidth]{assets/斜面上物体.png}
   斜面问题通常把坐标轴沿斜面和垂直斜面建立。若斜面倾角为$\theta$，物体质量为$m$，则重力分解为
   \[
     mg\sin\theta\quad\text{沿斜面向下},\qquad
@@ -112,15 +111,13 @@
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：绳与滑轮}}]
-\topicimage[0.58\columnwidth]{assets/固定杆滑轮活结.png}
+\topicimage[0.3\columnwidth]{assets/固定杆滑轮活结.png}
+固定杆的弹力大小和方向都无法直接确定，需要通过受力平衡进行分析。\\
+可自由移动的杆，在转动的方向上受力满足杠杆定理，如果是同一个支点，那么一定是两个力垂直于杆的方向分力大小相等。\\
   轻绳和轻滑轮的基本规则是：同一根轻绳上的张力大小相等，轻滑轮只改变力的方向，不改变张力大小。\\
   定滑轮只改变方向；动滑轮会让多段绳共同承担同一个物体。若一个动滑轮由两段绳向上拉住，且每段张力为$T$，则对动滑轮整体的向上拉力为
   \[
     2T.
-  \]
-  绳结问题一般看成共点力平衡。把绳结作为研究对象，所有绳的拉力都沿各自绳的方向背离绳结，然后列
-  \[
-    \sum F_x=0,\qquad \sum F_y=0.
   \]
   注意轻绳只能拉不能推，所以如果算出某段绳的张力为负，说明假设的绷紧状态不成立。
 \end{casetypebox}
@@ -149,46 +146,43 @@
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：轻杆与二力杆}}]
-\topicimage[0.56\columnwidth]{assets/铰链活动杆死结.png}
-\topicimage[0.58\columnwidth]{assets/圆形支持面两物体连接杆.png}
+  \begin{center}
+    \begin{minipage}[t]{0.3\columnwidth}
+      \centering
+      \includegraphics[width=\linewidth]{assets/铰链活动杆死结.png}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.3\columnwidth}
+      \centering
+      \includegraphics[width=\linewidth]{assets/圆形支持面两物体连接杆.png}
+    \end{minipage}
+  \end{center}
   轻杆和轻绳不同：轻绳只能提供拉力，轻杆既可以提供拉力，也可以提供压力。\\
   如果一根轻杆只在两端受力，并且自身重力忽略，那么它是二力杆。二力杆平衡时，两端力必须大小相等、方向相反、作用线共线，所以力一定沿杆方向。\\
   但如果杆上还有第三个力，例如杆中间挂了重物，或者杆受到墙面的支持力，那么它就不再是二力杆，不能直接说杆的作用力一定沿杆，需要重新分析这些力之间的平衡关系。
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：动态平衡问题}}]
+  
   动态平衡指物体始终处于平衡状态，但某个角度或某个力的方向在缓慢变化。因为每一瞬间都满足
   \[
     \vec F_1+\vec F_2+\vec F_3=0,
   \]
   所以三力平衡问题可以转化为力三角形问题。最常见的是一个力大小和方向都不变，例如重力；另外两个力随位置变化。\\
+  \begin{center}
+    \begin{minipage}[t]{0.3\columnwidth}
+      \centering
+      \includegraphics[width=\linewidth]{assets/分力固定大小.png}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.3\columnwidth}
+      \centering
+      \includegraphics[width=\linewidth]{assets/分力固定方向.png}
+    \end{minipage}
+  \end{center}
+  
   第一类：一个力大小方向不变，另一个力方向不变，第三个力大小和方向变化。设$\vec G$固定，$\vec F_1$方向固定，$\vec F_2$用来闭合三角形。随着$\vec F_1$大小变化，$\vec F_2$的端点在一条直线上移动；当$\vec F_2$垂直于$\vec F_1$方向时，$\vec F_2$最小。
-  \begin{center}
-  \begin{tikzpicture}[scale=0.9, >=Stealth]
-    \coordinate (O) at (0,0);
-    \coordinate (A) at (0,-1.6);
-    \coordinate (B) at (3.2,-1.6);
-    \draw[->, thick, blue] (O) -- (A) node[midway,left] {$\vec G$};
-    \draw[dashed] (A) -- (4.0,-1.6) node[right] {$\vec F_1$方向固定};
-    \draw[->, thick, red] (A) -- (B) node[midway,below] {$\vec F_1$};
-    \draw[->, thick, purple] (B) -- (O) node[midway,above right] {$\vec F_2$};
-    \draw[dotted] (0,-1.6) -- (0,0);
-    \node at (1.8,0.25) {力三角形闭合};
-  \end{tikzpicture}
-  \end{center}
   第二类：一个力大小方向不变，另一个力大小不变，第三个力大小和方向变化。设$\vec G$固定，$\vec F_1$大小固定，方向可变，则$\vec F_1$的端点在圆上移动，$\vec F_2$连接该端点和固定点。此时要通过圆与直线或圆与点的几何关系判断$\vec F_2$的大小变化。
-  \begin{center}
-  \begin{tikzpicture}[scale=0.9, >=Stealth]
-    \coordinate (O) at (0,0);
-    \coordinate (A) at (0,-1.7);
-    \coordinate (B) at (2.2,-0.6);
-    \draw[->, thick, blue] (O) -- (A) node[midway,left] {$\vec G$};
-    \draw[dashed, gray] (A) circle (2.2);
-    \draw[->, thick, red] (A) -- (B) node[midway,below right] {$|\vec F_1|$不变};
-    \draw[->, thick, purple] (B) -- (O) node[midway,above] {$\vec F_2$};
-    \node[gray] at (2.5,-1.9) {端点在圆上};
-  \end{tikzpicture}
-  \end{center}
   第三类：两个变化力的方向都在变，但它们和几何图形中的某个三角形始终相似。这时不要硬算分量，而是寻找力三角形和长度三角形的相似关系。若力三角形与几何三角形相似，则力的大小比等于对应边长比。\\
   动态平衡的核心是：每一瞬间都平衡，所以不是动力学问题；要看的是力三角形如何随几何条件变化。
 \end{casetypebox}

@@ -1,11 +1,10 @@
 \subsection{匀速圆周运动}
 \begin{tabularx}{\columnwidth}{XX}
   向心力 & $F_{\text{向}}=m\frac{v^2}{r}$ \\
-  向心力 & $F_{\text{向}}=ma_{\text{向}}$  \\
-  线速度 & $v=\omega r$                  \\
-  角速度 & $\omega=\frac{2\pi}{T}$       \\
+  向心力 & $F_{\text{向}}=ma_{\text{向}}$\\
+  线速度 & $v=\omega r$\\
+  角速度 & $\omega=\frac{2\pi}{T}$ \\
 \end{tabularx}
-
 
 \begin{formulanotebox}
   匀速圆周运动要求向心力恒定，速度大小不变，方向不断变化。\\
@@ -30,10 +29,11 @@
   \topicimage[0.25\columnwidth]{assets/圆锥摆.png}
   只受重力与拉力情况下的水平面圆周运动为圆锥摆。\\
   此时合力指向圆心，连接线与竖直方向有一个夹角$\theta$，线长为$l$，运动的角速度为$\omega$。那么可以有方程：
-  \[\left\{\begin{aligned}
-      g  & =\omega^2h   \\
+  \[\left\{
+    \begin{aligned}
+      g& =\omega^2h \\
       mg & =T\cos\theta \\
-      T  & =m\omega^2l  \\
+      T& =m\omega^2l\\
     \end{aligned}\right.\]
   上述方程说明了：
   \begin{itemize}
@@ -47,9 +47,10 @@
   \topicimage[0.25\columnwidth]{assets/特殊圆锥摆.png}
   有一种特殊的圆锥摆通过一条水平的半径再用线连接小球。\\
   此时结论较为特殊，记半径长度为$r_0$，线长为$l$，运动的角速度为$\omega$，连接线与竖直方向夹角为$\theta$。那么可以有方程：
-  \[\left\{\begin{aligned}
+  \[\left\{
+    \begin{aligned}
       mg\tan\theta & =m\omega^2(r_0+h\tan\theta) \\
-      T\cos\theta  & =mg                         \\
+      T\cos\theta& =mg \\
     \end{aligned}\right.\]
   正常圆锥摆的很多结论都不适用了，这肯定是一个大问题。有一个转换方法可以使得该问题成为正常的圆锥摆。在上面的公式中，半径为$r_0+h\theta$，如果我们通过构造一个旋转轴上的支点，并且$r_0=h_0\theta$，这样就能把$h_0+h$作为一个新的高度，重新得到前面的结论了。而构造的支点，也很容易理解，就是连接线的延长线与旋转轴的交点。\\
   可以通过相似三角形得到新的连接线长度、新的半径和高度，只要使用这些变量仍然可以有上述结论。
@@ -65,16 +66,18 @@
   \]
   这个式子对锐角、直角、钝角都成立：$\theta_2$为锐角时下方固定点在物体上方，$\theta_2$为直角时下方绳水平，$\theta_2$为钝角时下方固定点在物体下方。受力方程也可以统一写成
   \[
-    \left\{\begin{aligned}
-      T_1\cos\theta_1+T_2\cos\theta_2 & =mg,         \\
+    \left\{
+    \begin{aligned}
+      T_1\cos\theta_1+T_2\cos\theta_2 & =mg, \\
       T_1\sin\theta_1+T_2\sin\theta_2 & =m\omega^2r.
     \end{aligned}\right.
   \]
   \topicimage[0.25\columnwidth]{assets/双绳物体下方绳水平.png}
   若$\theta_2$为直角，则下方绳水平，没有竖直分力。此时$r=l_2$，并且
   \[
-    \left\{\begin{aligned}
-      T_1\cos\theta_1     & =mg,         \\
+    \left\{
+    \begin{aligned}
+      T_1\cos\theta_1 & =mg, \\
       T_1\sin\theta_1+T_2 & =m\omega^2r.
     \end{aligned}\right.
   \]
@@ -91,25 +94,25 @@
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：竖直平面两根绳吊着物体}}]
-  \topicimage[0.25\columnwidth]{assets/双绳物体下方绳朝上.png}
+  \topicimage[0.25\columnwidth]{assets/双绳问题下方绳朝下.png}
   若$\theta_2$为锐角，则$\cos\theta_2>0$，下方绳有向上的竖直分力，可以帮助平衡重力。此时既要求下方绳不松弛，又要求上方绳不松弛：
-\[
-  T_2>0\quad\Rightarrow\quad
-  \omega^2>\frac{g\tan\theta_1}{r},
-\]
-\[
-  T_1>0\quad\Rightarrow\quad
-  \omega^2<\frac{g\tan\theta_2}{r}.
-\]
-所以两根绳都绷紧的角速度范围是
-\[
-  \frac{g\tan\theta_1}{r}<\omega^2<\frac{g\tan\theta_2}{r}.
-\]
+  \[
+    T_2>0\quad\Rightarrow\quad
+    \omega^2>\frac{g\tan\theta_1}{r},
+  \]
+  \[
+    T_1>0\quad\Rightarrow\quad
+    \omega^2<\frac{g\tan\theta_2}{r}.
+  \]
+  所以两根绳都绷紧的角速度范围是
+  \[
+    \frac{g\tan\theta_1}{r}<\omega^2<\frac{g\tan\theta_2}{r}.
+  \]
 \end{casetypebox}
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：竖直平面两根绳吊着物体}}]
-  \topicimage[0.25\columnwidth]{assets/双绳问题下方绳朝下.png}
-  若$\theta_2$为钝角，则$\cos\theta_2<0$，下方绳的竖直分力向下，所以上方绳的竖直分力要同时平衡重力和下方绳的向下分力。由于
+  \topicimage[0.25\columnwidth]{assets/双绳物体下方绳朝上.png}
+  若$\theta_2$为钝角(图中为了简便标识了互补的角度)，则$\cos\theta_2<0$，下方绳的竖直分力向下，所以上方绳的竖直分力要同时平衡重力和下方绳的向下分力。由于
   \[
     T_1=\frac{mg\sin\theta_2-m\omega^2r\cos\theta_2}{D},
   \]
@@ -136,8 +139,7 @@
   请不要假想一个加速过程，此类问题只是判断物体能够与圆盘保持相对静止。\\
   引入一个角速度不断增大的过程会使得分析摩擦力更为困难，此类问题仅仅在问某个角速度下，物体的受力会如何，不涉及变化。\\
   关于假设一个角速度变化过程，你能得到什么？\\
-  物体的速度增大，那么需要更大的向心力，则径向摩擦力相应增大，并且还要有切向摩擦力这样才能进行加速，这两个力作为直角三角形的两条边，合成后得到真正的静摩擦力。\textbf{也就意味着径向摩擦力小于最大静摩擦力}。\\
-  所以对于此类问题请不要假设角速度变化过程。\\
+  物体的速度增大，那么需要更大的向心力，则径向摩擦力相应增大，并且还要有切向摩擦力这样才能进行加速，这两个力作为直角三角形的两条边，合成后得到真正的静摩擦力。\textbf{也就意味着径向摩擦力小于最大静摩擦力}。所以对于此类问题请不要假设角速度变化过程。\\
   两个物体放在水平圆盘的同一直径两侧，并且用轻绳连接时。如果重心在圆心，说明
   \[
     m_1r_1=m_2r_2.
@@ -154,7 +156,8 @@
   \[\omega^2 = \frac{\mu g}{r_1}\]，角速度小于该值不存在拉力，并且物体离中心越远越先达到摩擦力的临界状态。\\
   更大的角速度会使得存在拉力，可以列出方程组：
   \[
-    \left\{\begin{aligned}
+    \left\{
+    \begin{aligned}
       T+f_1 & =m_1\omega^2 r_1 \\
       T+f_2 & =m_2\omega^2 r_2
     \end{aligned}\right.
@@ -165,22 +168,9 @@
   \[\omega^2=\frac{\mu m_1 g}{m_1r_1-m_2r_2}\]
   然后向圆心以外进行增大，一直到$\mu m_2 g$。可以求出最终相对滑动的角速度：
   \[\omega^2=\frac{\mu g}{(\frac{m_1r_1-m_2r_2}{m_1+m_2})}\]
-  上述过程可以整理成表格：
-  \begin{center}
-    \begingroup
-    \small
-    \rowcolors{1}{}{}
-    \begin{tabular}{@{}p{0.31\columnwidth}p{0.18\columnwidth}p{0.42\columnwidth}@{}}
-      阶段                                                 & 拉力$T$                                                       & 摩擦力                        \\
-      $\omega^2\leq \dfrac{\mu g}{r_1}$                  & 无                                                           & 两物体摩擦力均指向圆心，并随$\omega^2$增大 \\
-      $\omega^2<\dfrac{\mu m_1g}{m_1r_1-m_2r_2}$      & 出现并增大                                                       & $f_2$指向圆心但逐渐减小             \\
-      $\omega^2=\dfrac{\mu m_1g}{m_1r_1-m_2r_2}$      &                                                             & $f_2=0$                    \\
-      $\omega^2<\dfrac{\mu(m_1+m_2)g}{m_1r_1-m_2r_2}$ & 继续增大                                                        & $f_2$反向并逐渐增大               \\
-      $\omega^2=\dfrac{\mu(m_1+m_2)g}{m_1r_1-m_2r_2}$ & 继续增大                                                        & $f_2$等于最大静摩擦力              \\
-      $\omega^2>\dfrac{\mu(m_1+m_2)g}{m_1r_1-m_2r_2}$    & \multicolumn{2}{p{0.60\columnwidth}@{}}{无法保持相对静止，两物体相对圆盘滑动}
-    \end{tabular}
-    \endgroup
-  \end{center}
+  上述过程可用拉力$T$与两物体摩擦力$f_1,f_2$随$\omega^2$变化的图像概括（指向圆心为正）；横轴以$y=0$为底、四刻度均匀并标三临界$\omega^2$，纵轴为力且刻度为典型拉力和摩擦力的符号式，竖直与水平虚线分别标临界角速度与典型力值：
+  \\
+  \input{assets/horizontal_disk_opposite_Tf_omega}
 \end{casetypebox}
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：水平圆盘、两侧物体、重心不在圆心}}]
   接着考虑其他情况，$r_1<r_2$，这样应该是$m_2$先达到摩擦力最大值。当角速度小于\[\omega^2=\frac{\mu g}{r_2}\]时都不存在拉力。\\
@@ -190,17 +180,21 @@
   \begin{center}
     \begingroup
     \small
-    \rowcolors{1}{}{}
-    \begin{tabular}{@{}p{0.31\columnwidth}p{0.18\columnwidth}p{0.42\columnwidth}@{}}
-      阶段                                                 & 拉力$T$                                                       & 摩擦力                        \\
-      $\omega^2\leq \dfrac{\mu g}{r_2}$                  & 无                                                           & 两物体摩擦力均指向圆心，并随$\omega^2$增大 \\
-      $\omega^2\leq\dfrac{\mu(m_1-m_2)g}{m_1r_1-m_2r_2}$ & 出现并增大                                                       & $m_2$摩擦力保持最大，$m_1$摩擦力继续增大  \\
-      $\omega^2>\dfrac{\mu(m_1-m_2)g}{m_1r_1-m_2r_2}$    & \multicolumn{2}{p{0.60\columnwidth}@{}}{无法保持相对静止，两物体相对圆盘滑动}
+    \rowcolors{1}{white}{white}%
+    \begin{tabular}{|p{0.31\columnwidth}|p{0.18\columnwidth}|p{0.42\columnwidth}|}
+      \hline
+      阶段 & 拉力$T$ & 摩擦力\\
+      \hline
+      $\omega^2\leq \dfrac{\mu g}{r_2}$& 无 & 两物体摩擦力均指向圆心，并随$\omega^2$增大 \\
+      \hline
+      $\omega^2\leq\dfrac{\mu(m_1-m_2)g}{m_1r_1-m_2r_2}$ & 出现并增大 & $m_2$摩擦力保持最大，$m_1$摩擦力继续增大\\
+      \hline
+      $\omega^2>\dfrac{\mu(m_1-m_2)g}{m_1r_1-m_2r_2}$& \multicolumn{2}{|p{0.58\columnwidth}|}{无法保持相对静止，两物体相对圆盘滑动}\\
+      \hline
     \end{tabular}
     \endgroup
   \end{center}
 \end{casetypebox}
-
 
 \begin{casetypebox}[title={\strut\textcolor{white}{\bfseries 常见题型：同侧摆放物体}}]
   \topicimage[0.25\columnwidth]{assets/水平圆盘同侧物体.png}
@@ -208,7 +202,8 @@
   和前面结论一样，离圆心越远越先达到摩擦力的临界。假设$r_1>r_2$，那么\[\omega^2=\frac{\mu g}{r_1}\]就是拉力不存在的最大角速度。
   更大的角速度，那么一定要存在拉力协调向心力。设内侧半径为$r_1$，外侧半径为$r_2$，拉力为$T$，摩擦力都先按指向圆心为正，则可以写成：
   \[
-    \left\{\begin{aligned}
+    \left\{
+    \begin{aligned}
       f_1-T & =m_1\omega^2r_1 \\
       T+f_2 & =m_2\omega^2r_2
     \end{aligned}\right.
@@ -218,12 +213,17 @@
   \begin{center}
     \begingroup
     \small
-    \rowcolors{1}{}{}
-    \begin{tabular}{@{}p{0.33\columnwidth}p{0.18\columnwidth}p{0.40\columnwidth}@{}}
-      阶段                                                 & 拉力$T$                                                       & 摩擦力                           \\
-      $\omega^2\leq\dfrac{\mu g}{r_1}$                   & 无                                                           & 两物体摩擦力均指向圆心，并随$\omega^2$增大    \\
-      $\omega^2\leq\dfrac{\mu(m_1+m_2)g}{m_1r_1+m_2r_2}$ & 出现并增大                                                       & 外侧$m_2$摩擦力保持最大，内侧$m_1$摩擦力继续增大 \\
-      $\omega^2>\dfrac{\mu(m_1+m_2)g}{m_1r_1+m_2r_2}$    & \multicolumn{2}{p{0.58\columnwidth}@{}}{无法保持相对静止，两物体相对圆盘滑动}
+    \rowcolors{1}{white}{white}%
+    \begin{tabular}{|p{0.33\columnwidth}|p{0.18\columnwidth}|p{0.40\columnwidth}|}
+      \hline
+      阶段 & 拉力$T$ & 摩擦力 \\
+      \hline
+      $\omega^2\leq\dfrac{\mu g}{r_1}$ & 无 & 两物体摩擦力均指向圆心，并随$\omega^2$增大\\
+      \hline
+      $\omega^2\leq\dfrac{\mu(m_1+m_2)g}{m_1r_1+m_2r_2}$ & 出现并增大 & 外侧$m_2$摩擦力保持最大，内侧$m_1$摩擦力继续增大 \\
+      \hline
+      $\omega^2>\dfrac{\mu(m_1+m_2)g}{m_1r_1+m_2r_2}$& \multicolumn{2}{|p{0.56\columnwidth}|}{无法保持相对静止，两物体相对圆盘滑动}\\
+      \hline
     \end{tabular}
     \endgroup
   \end{center}
